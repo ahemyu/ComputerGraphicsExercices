@@ -9,7 +9,7 @@ function drawIntoCanvas(canvas) {
 	// The image data layout is [height, width, channel], i.e. [200, 200, 4] in this case.
 	// For example, "img.data[842]" accesses the blue channel of the 10th pixel in the second row of the image.
 	// (0, 0) corresponds to the top left corner of the canvas. let img = context.createImageData(200, 200);
-
+	let img = context.createImageData(200, 200);	
 	// 'height' and 'width' are properties of the canvas object and can be referenced as seen below.
 	let width = canvas.width;
 	let height = canvas.height;

@@ -42,14 +42,7 @@ function drawPixelwiseCircle(canvas, center, radius, color) {
             img.data[i + 1] = color.y;	// access with x, y, z and w
             img.data[i + 2] = color[2]; // access like an array
             img.data[i + 3] = 255;
-        } else {
-            // Set background to white
-            img.data[i + 0] = 255;
-            img.data[i + 1] = 255;
-            img.data[i + 2] = 255;
-            img.data[i + 3] = 255;
         }
-
         // Increment coordinates AFTER using them
         x++;
         if (x == width){
