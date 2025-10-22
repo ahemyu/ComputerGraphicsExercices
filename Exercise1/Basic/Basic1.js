@@ -105,13 +105,14 @@ function drawContourCircle(canvas, center, radius_inner, width_contour, color_in
             x = 0;
         }
     }
-
+    /** Comment from me: I have no idea why my code already solved the problem, bc I would have guessed that this will create a boundary
+     * OUTSIDE of the circle only (bc I color with the contour colors all pixels that are between the inner radius and inner_radius + contour width)
+     * So a comment explaining why this works would be highly appreciated :)
+     */
+    
     context.putImageData(img, 0, 0);
 }
-/** Comment from me: I have no idea why my code already solved the problem, bc I would have guessed that this will create a boundary
- * OUTSIDE of the circle only (bc I color with the contour colors all pixels that are between the inner radius and inner_radius + contour width)
- * So a comment explaining why this works would be highly appreciated :)
- */
+
 /** __Draws a circle with a smooth contour on {canvas}__
  * 
  * @param {Vec} center - center of the circle
@@ -129,6 +130,62 @@ function drawSmoothCircle(canvas, center, radius_inner, width_contour, color_inn
     //                and extend it to get rid
     //                of the aliasing effects at
     //                the border.
+    
+    let width = canvas.width;
+	let height = canvas.height;
+    let x = 0;
+    let y = 0;
+    // TASK: 
+    // Provide a simple solution for smoothing such edges by mixing the colors sensibly. 
+    // Choose a one-pixel-wide border on the outer rim of both color transitions and give the pixels interpolated colors, 
+    // based on their particular distance to the circle center.
+    // so my initial guess is that I would need interpolate the pixels that directly lie on the inner border with inner color and contour color
+    // and for the outer border  I interpolate between contour color and white (?) 
+    // A pixel's final color should depend on what fraction of it is inside vs outside the circle.
 
+    for (let i = 0; i < 4 * width * height; i += 4) {
+        let distance = Math.sqrt(Math.pow((x-center[0]), 2) + Math.pow((y-center[1]), 2));
+        // so pixels whith distance radius_inner - 0.5 shall be colored completely with the color_inner
+        // pixels at distance radius_inner + 0.5 need to be colored completely with color_contour.
+        // and then from this logic we need to define a percentage, i.e. we start at 1 for inner color and it goes towards 0 until we reach 
+        // the outmost point on the "smoothness border"
+        // I need to use radius_inner + 0.5 and -0.5 to define the "width of the border" (which is 1 at the end) but how to I get t to be 0 for distance = radius_inner = 0.5 and 1 for 
+        let t_inner = distance - radius_inner + 0.5; //t represents how much of color_contour we use (and 1 -t how much color_inner)  
+
+        // this is the inner "smoothness border"
+        if (radius_inner - 0.5<= distance && distance <= radius_inner + 0.5){
+            img.data[i + 0] = Math.round((color_contour.r * t_inner)  + (color_inner.r * (1 - t_inner))); 
+            img.data[i + 1] = Math.round((color_contour.g * t_inner) +(color_inner.g * (1-t_inner)));
+            img.data[i + 2] = Math.round((color_contour.b * t_inner) + (color_inner.b * (1-t_inner)));
+            img.data[i + 3] = 255;
+        }
+        // outer smoothned border is at radius_inner + width_contour - 0.5 and vice versa 
+        let t_outer = distance - (radius_inner + width_contour - 0.5);
+        if((radius_inner + width_contour - 0.5) <= distance && distance <= (radius_inner + width_contour + 0.5)){
+            img.data[i + 0] = Math.round( (color_background.r * t_outer)  + (color_contour.r * (1 - t_outer))); 
+            img.data[i + 1] = Math.round((color_background.g * t_outer) +(color_contour.g * (1-t_outer)));
+            img.data[i + 2] = Math.round((color_background.b * t_outer) + (color_contour.b * (1-t_outer)));
+            img.data[i + 3] = 255;
+        }
+        // contour border  
+        if(radius_inner + 0.5 < distance && distance < (radius_inner + width_contour - 0.5) ){
+            img.data[i + 0] = color_contour.r;
+            img.data[i + 1] = color_contour.g;
+            img.data[i + 2] = color_contour.b;
+            img.data[i + 3] = 255;
+        }
+        // inside the circle 
+        if(distance < radius_inner - 0.5){
+            img.data[i + 0] = color_inner.r;
+            img.data[i + 1] = color_inner.g;
+            img.data[i + 2] = color_inner.b;
+            img.data[i + 3] = 255;
+        }
+        x++;
+        if (x == width){
+            y++;
+            x = 0;
+        }
+    }
     context.putImageData(img, 0, 0);
 }
