@@ -79,18 +79,12 @@ function drawContourCircle(canvas, center, radius_inner, width_contour, color_in
 
     //TODO: add the contour around the circle
     // we have the pixel width, so basically what we would need to do os for each pixel on the border (exactly those for whom the distance in x and y direction to the center is exactly the radius) 
-
-
-
-    console.log("WIDTH CONTOUR: ", width_contour);
     let width = canvas.width;
 	let height = canvas.height;
     let x = 0;
     let y = 0;
     for (let i = 0; i < 4 * width * height; i += 4) {
-        // Calculate distance before incrementing coordinates
-        let distanceSquared = Math.pow((x-center[0]), 2) + Math.pow((y-center[1]), 2);
-        let distance = Math.sqrt(distanceSquared)
+        let distance = Math.sqrt(Math.pow((x-center[0]), 2) + Math.pow((y-center[1]), 2));
         if( radius_inner <= distance && distance <= (radius_inner + width_contour) ){
             img.data[i + 0] = color_contour.r;
             img.data[i + 1] = color_contour.g;
@@ -114,7 +108,10 @@ function drawContourCircle(canvas, center, radius_inner, width_contour, color_in
 
     context.putImageData(img, 0, 0);
 }
-
+/** Comment from me: I have no idea why my code already solved the problem, bc I would have guessed that this will create a boundary
+ * OUTSIDE of the circle only (bc I color with the contour colors all pixels that are between the inner radius and inner_radius + contour width)
+ * So a comment explaining why this works would be highly appreciated :)
+ */
 /** __Draws a circle with a smooth contour on {canvas}__
  * 
  * @param {Vec} center - center of the circle
