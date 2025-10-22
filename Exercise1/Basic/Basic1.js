@@ -70,6 +70,48 @@ function drawContourCircle(canvas, center, radius_inner, width_contour, color_in
     //                and extend it to receive a
     //                contour around the circle.
 
+
+    // so the new params we have are the width of the contour and the color of it
+    // so based on only the width , we somehow need to be able to add the contour already, but how the fuck do we that? 
+    // The whole task: Extend your solution by adding a contour with given pixel width in a contour color.
+    //  One half of the contour should be inside the initial circle, the other half outside.
+    // Ok so I think it is easier to just draw the contour outside of the circle first, once I have that I can continue with the half thing 
+
+    //TODO: add the contour around the circle
+    // we have the pixel width, so basically what we would need to do os for each pixel on the border (exactly those for whom the distance in x and y direction to the center is exactly the radius) 
+
+
+
+    console.log("WIDTH CONTOUR: ", width_contour);
+    let width = canvas.width;
+	let height = canvas.height;
+    let x = 0;
+    let y = 0;
+    for (let i = 0; i < 4 * width * height; i += 4) {
+        // Calculate distance before incrementing coordinates
+        let distanceSquared = Math.pow((x-center[0]), 2) + Math.pow((y-center[1]), 2);
+        let distance = Math.sqrt(distanceSquared)
+        if( radius_inner <= distance && distance <= (radius_inner + width_contour) ){
+            img.data[i + 0] = color_contour.r;
+            img.data[i + 1] = color_contour.g;
+            img.data[i + 2] = color_contour.b;
+            img.data[i + 3] = 255;
+        }
+ 
+        if(distance < radius_inner){
+            img.data[i + 0] = color_inner.r;
+            img.data[i + 1] = color_inner.g;
+            img.data[i + 2] = color_inner.b;
+            img.data[i + 3] = 255;
+        }
+        //increment coordinates
+        x++;
+        if (x == width){
+            y++;
+            x = 0;
+        }
+    }
+
     context.putImageData(img, 0, 0);
 }
 
