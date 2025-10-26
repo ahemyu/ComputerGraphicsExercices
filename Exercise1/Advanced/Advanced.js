@@ -82,7 +82,7 @@ function f_c(z, c) {
     // TODO 1.4a):      Compute the result of function f_c for a given z and
     //                  a given c. Use the complex helper functions.
 
-
+    return add_c(mult_c(z, z), c); //TODO: Might be wrong 
 
 }
 
@@ -91,8 +91,21 @@ function countIterationsNaive(start_z, c, max_iter) {
     //                  z is declared diverged as soon as its absolute value
     //                  is greater than 2. If the sequence does not diverge during
     //                  the first max_iter iterations, return max_iter. Use
-    //                  function f_c().
-
+    //                  the function f_c
+    // we need to check if the given z already diverged
+    let first_check = f_c(start_z, c);
+    if(abs_c(first_check) > 2){
+        return 1;
+    }
+    // now we need to compute all following numbers in the sequence until z diverges or we reach max_iter
+    let z = first_check;
+    for (let i = 2; i < max_iter; i++) {
+        z = f_c(z, c);
+        if(abs_c(z) > 2){
+            return i;
+        }
+    }
+    return max_iter;
 }
 
 function countIterationsNoBanding(start_z, c, max_iter) {
@@ -136,6 +149,13 @@ function getColorForIter(iter, max_iter, color_scheme_index) {
         //                  numbers for which the sequence diverges should be
         //                  shaded white. Use the given parameter max_iter.
 
+        if(iter < max_iter){
+            //sequence diverges so we need to return white
+            color = new Vec(255, 255, 255);
+        }else{
+            // return black
+            color = new Vec(0, 0, 0);
+        }
 
 
     } else if (colorscheme == "greyscale") {
@@ -207,12 +227,18 @@ function mandelbrotSet(image, id, max_iter, color_scheme_index, use_naive_getIte
         //                  you will need to pass the given 'max_iter' and
         //                  'color_scheme_index' where required).
 
-        let rgb = new Vec((c.re + 0.5) * 255, (c.im + 0.5) * 255, 0);
+
+        let start_z = new ComplexNumber(0, 0); // we start with z_n = 0
+        // now we need to get back the number of iterations the c can hold up (before it diverges or struggles until max_iter to reach the set)
+        let iterations = countIterations(start_z, c, max_iter)
+
+        // now get the color for the current pixel
+        let color = getColorForIter(iterations, max_iter, color_scheme_index);
 
 
-        image.data[i] = rgb.r;
-        image.data[i + 1] = rgb.g;
-        image.data[i + 2] = rgb.b;
+        image.data[i] = color.r;
+        image.data[i + 1] = color.g;
+        image.data[i + 2] = color.b;
         image.data[i + 3] = 255;
     }
 }
