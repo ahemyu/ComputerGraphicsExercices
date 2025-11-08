@@ -2,6 +2,14 @@
 
 function Basic3(canvas) {
 
+    // Your task is to draw a orange circle around the center of the quad with the radius r = 0.8.
+    //  Additionally, use a smoothing margin for anti-aliasing with a width smoothMargin = 0.01. Implement the following subtasks:
+    // Create a uniform variable vec2 canvasSize and retrieve its location in your JavaScript application. 
+    // Note: If you do not use the variable in your shader it might be possible that you cannot retrieve its location. 
+    // Pass the canvas size to the shader uniform using gl.uniform2f().
+    // Map the fragment's coordinate gl_FragCoord.xy into the range [-1,1]^2. Hint: You can debug using gl_FragColor = vec4(abs(uv), 0.0, 1.0);.
+    // Discard all fragments outside the radius r; color all fragments inside with orange.
+    // Interpolate the opacity (gl_FragColor.a) for all fragments inside [r - smoothMargin, r]. You can use the GLSL function clamp()
     let gl = canvas.getContext("experimental-webgl", { preserveDrawingBuffer: true });
     if (!gl) throw new Error("Could not initialise WebGL, sorry :-(\nTo enable WebGL support in your browser, go to about:config and skip the warning.\nSearch for webgl.disabled and set its value to false.");
 
@@ -57,7 +65,8 @@ function Basic3(canvas) {
     // TODO 3.3)	Define a constant variable (uniform) to 
     //              "send" the canvas size to all fragments.
 
-
+    let uniformLocation = gl.getUniformLocation(shaderProgram, "canvasSize");
+    gl.uniform2f(uniformLocation, canvas.width, canvas.height);
 
 
     gl.drawElements(gl.TRIANGLES, indices.length, gl.UNSIGNED_SHORT, 0);
