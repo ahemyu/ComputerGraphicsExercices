@@ -6,7 +6,7 @@ precision mediump float;
 //				communication between vertex and
 //				fragment shader.
 
-
+varying vec3 color;
 uniform bool wireframe;
 
 void main(void)
@@ -16,7 +16,7 @@ void main(void)
 
 	// TODO 3.2a)	Give each pixel the interpolated
 	//				triangle color.
-	gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+	gl_FragColor = vec4(color, 1.0);
 	
 
 	if (wireframe) {
