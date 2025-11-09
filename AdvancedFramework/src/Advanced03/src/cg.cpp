@@ -53,7 +53,11 @@ void CG::update(float dt) {
     // The sun rotates counter-clockwise (when using the default camera) in 30 days around its own axis. Hint: Convert the time given in days to angular velocity in rad/day. Use the parameter sunRotationTime.
     // The sun is tilted in respect to the ecliptic plane by 7.25 degrees. Use the parameter sunObliquity.
 
-    sun = mat4(1); // <- Change this line
+    // TODO: calculate angular velocity with the given timescale and sunRotationTime
+    // so it does a 360 degree( or 2 pi) rotation in sunRotationTime days. so if we just divide 365 (2 PI) by suinRotationTime we get the angle we need to rotate. 
+    float rotation_angle = glm::radians(time* (360/sunRotationTime)); //this is the angle by which we need to rotate counterclockwisea
+
+    sun = glm::scale(vec3(sunRadius)) * glm::rotate(rotation_angle, vec3(0,0,1))* glm::rotate(sunObliquity, vec3(1,0,0)); // we first tilt, then rotate then scale
 
     // b) Earth
     //TODO: Compute the 4x4 transformation matrix of the earth. The following properties must be met:

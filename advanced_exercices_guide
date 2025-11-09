@@ -15,3 +15,6 @@
 and then run with 
 cd AdvancedFramework
 ./src/Advanced03/Advancedn
+
+bc of arch linux setup I have to run it with
+env SDL_VIDEODRIVER=x11 ./Advanced03
