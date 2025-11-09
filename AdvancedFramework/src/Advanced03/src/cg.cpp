@@ -83,7 +83,15 @@ void CG::update(float dt) {
     // The moon orbit is inclined by 5.14 degrees relative to the ecliptic plane (see image above). Use the parameter moonOrbitalInclination.
     // The moon is tilted in respect to the ecliptic plane by 1.54 degrees (see image above). Use the parameter moonObliquity.
 
-    moon =  glm::translate(vec3(earthOrbitRadius + moonOrbitRadius, 0, 0)); // <- Change this line
+    
+    glm::mat4 scale_moon = glm::scale(vec3(moonRadius));
+    float revolution_angle_moon = glm::radians(time * (360 / moonRevolutionTime));
+    
+    glm::mat4 revolution_moon = glm::translate(vec3(earth[3][0] + (moonOrbitRadius * glm::cos(revolution_angle_moon)), earth[3][1] + (moonOrbitRadius * glm::sin(revolution_angle_moon)) , 0)); //TODO: need to add offset of earth here bc we want to revolute around earth and not sun  
+    float rotation_angle_moon = glm::radians(time*(360/moonRotationTime));
+    glm::mat4 rotation_moon = glm::rotate(rotation_angle_moon, vec3(0,0,1));
+    glm::mat4 tilt_moon= glm::rotate(moonObliquity, vec3(1,0,0));
+    moon = revolution_moon * scale_moon * rotation_moon * tilt_moon;
 
     // d) Orbit Rings
     earthOrbit = glm::scale(vec3(earthOrbitRadius));
