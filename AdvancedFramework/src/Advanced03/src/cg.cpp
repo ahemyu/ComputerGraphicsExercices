@@ -55,9 +55,9 @@ void CG::update(float dt) {
 
     // TODO: calculate angular velocity with the given timescale and sunRotationTime
     // so it does a 360 degree( or 2 pi) rotation in sunRotationTime days. so if we just divide 365 (2 PI) by suinRotationTime we get the angle we need to rotate. 
-    float rotation_angle = glm::radians(time* (360/sunRotationTime)); //this is the angle by which we need to rotate counterclockwisea
+    float rotation_angle_sun = glm::radians(time* (360/sunRotationTime)); //this is the angle by which we need to rotate counterclockwisea
 
-    sun = glm::scale(vec3(sunRadius)) * glm::rotate(rotation_angle, vec3(0,0,1))* glm::rotate(sunObliquity, vec3(1,0,0)); // we first tilt, then rotate then scale
+    sun = glm::scale(vec3(sunRadius)) * glm::rotate(rotation_angle_sun, vec3(0,0,1))* glm::rotate(sunObliquity, vec3(1,0,0)); // we first tilt, then rotate then scale
 
     // b) Earth
     //TODO: Compute the 4x4 transformation matrix of the earth. The following properties must be met:
@@ -66,7 +66,14 @@ void CG::update(float dt) {
     // The earth rotates counter-clockwise in 0.997 days around its own axis. Use the parameter earthRotationTime.
     // The earth is tilted in respect to the ecliptic plane by 23.4 degrees. Use the parameter earthObliquity.
 
-    earth = glm::translate(vec3(earthOrbitRadius, 0, 0)); // <- Change this line
+    glm::mat4 scale = glm::scale(vec3(earthRadius));
+    float revolution_angle_earth = glm::radians(time * (360 / earthRevolutionTime));
+    
+    glm::mat4 revolution = glm::translate(vec3(earthOrbitRadius * glm::cos(revolution_angle_earth), earthOrbitRadius * glm::sin(revolution_angle_earth) , 0)); //TODO: think abt the translation 
+    float rotation_angle_earth_own_axis = glm::radians(time*(360/earthRotationTime));
+    glm::mat4 rotation = glm::rotate(rotation_angle_earth_own_axis, vec3(0,0,1));
+    glm::mat4 tilt = glm::rotate(earthObliquity, vec3(1,0,0));
+    earth = revolution * scale * rotation * tilt;
 
     // c) Moon
     //TODO:      Compute the 4x4 transformation matrix of the moon. The following properties must be met:
