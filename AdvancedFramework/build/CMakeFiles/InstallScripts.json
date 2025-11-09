@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/cmake_install.cmake",
+		"/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/glew-cmake/cmake_install.cmake",
+		"/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/cmake_install.cmake",
+		"/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src/cmake_install.cmake",
+		"/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced03/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -39,13 +39,39 @@ void CG::update(float dt) {
     //				mat4 glm::scale(vec3 v);
     //				mat4 glm::rotate(float angle, vec3 axis);
 
+    //     Tips and notes:
+    // The earth revolves around the sun in a circle (It is actually an ellipsis, but we use an approximation here). The plane containing this circle is called ecliptic plane.
+    // To keep it simple, we define the ecliptic plane as the x-y plane.
+    // By default, the camera is looking in -z direction with x pointing to the right and y upwards.
+    // The camera can be controlled with W,A,S,D and the left mouse button.
+    // The sun is at the origin (0,0,0) of our coordinate system and all given parameters are relative to it.
+    // The loaded models for the planet and the ring have a radius of 1. 
+
     // a) Sun
+    //TODO: Compute the 4x4 transformation matrix of the sun. The following properties must be met:
+    // The sun has a radius of 1.5. Use the parameter sunRadius.
+    // The sun rotates counter-clockwise (when using the default camera) in 30 days around its own axis. Hint: Convert the time given in days to angular velocity in rad/day. Use the parameter sunRotationTime.
+    // The sun is tilted in respect to the ecliptic plane by 7.25 degrees. Use the parameter sunObliquity.
+
     sun = mat4(1); // <- Change this line
 
     // b) Earth
+    //TODO: Compute the 4x4 transformation matrix of the earth. The following properties must be met:
+    // The earth has a radius of 0.5. Use the parameter earthRadius.
+    // The earth revolves counter-clockwise around the sun in 365.256 days at a distance of 5. Use the parameters earthRevolutionTime and earthOrbitRadius.
+    // The earth rotates counter-clockwise in 0.997 days around its own axis. Use the parameter earthRotationTime.
+    // The earth is tilted in respect to the ecliptic plane by 23.4 degrees. Use the parameter earthObliquity.
+
     earth = glm::translate(vec3(earthOrbitRadius, 0, 0)); // <- Change this line
 
     // c) Moon
+    //TODO:      Compute the 4x4 transformation matrix of the moon. The following properties must be met:
+    // The moon has a radius of 0.2. Use the parameter moonRadius.
+    // The moon revolves counter-clockwise around the earth in 27.32 days at a distance of 1. Use the parameters moonRevolutionTime and moonOrbitRadius.
+    // The moon rotates counter-clockwise in 27.32 days around its own axis. Use the parameter moonRotationTime. Sidenote: The moon rotates at the same speed as it revolves around the earth. That is why we always see the same side of the moon.
+    // The moon orbit is inclined by 5.14 degrees relative to the ecliptic plane (see image above). Use the parameter moonOrbitalInclination.
+    // The moon is tilted in respect to the ecliptic plane by 1.54 degrees (see image above). Use the parameter moonObliquity.
+
     moon =  glm::translate(vec3(earthOrbitRadius + moonOrbitRadius, 0, 0)); // <- Change this line
 
     // d) Orbit Rings

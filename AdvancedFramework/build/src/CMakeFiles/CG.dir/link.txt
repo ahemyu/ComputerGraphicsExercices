@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCG.a CMakeFiles/CG.dir/framework/camera.cpp.o CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o CMakeFiles/CG.dir/framework/mesh.cpp.o CMakeFiles/CG.dir/framework/obj_loader.cpp.o CMakeFiles/CG.dir/framework/shaderManager.cpp.o CMakeFiles/CG.dir/framework/texture.cpp.o CMakeFiles/CG.dir/framework/window.cpp.o
+/usr/bin/ranlib libCG.a

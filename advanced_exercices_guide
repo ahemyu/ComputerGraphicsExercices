@@ -1,0 +1,17 @@
+  For every new exercise: 
+
+  1. Copy the exercise folder to the framework:
+  cp -r Exercise04/Advanced04 AdvancedFramework/src/
+  2. Reconfigure CMake to detect the new exercise:
+  cd AdvancedFramework
+  cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -Wno-dev -DSDL_PIPEWIRE=OFF
+  3. Build:
+  cmake --build build --parallel
+
+  When You Modify Code in an Existing Exercise:
+  cd AdvancedFramework
+  cmake --build build --parallel
+
+and then run with 
+cd AdvancedFramework
+./src/Advanced03/Advancedn
