@@ -156,14 +156,14 @@ function Basic4_2(canvas, alpha, steps) {
         // TODO 3.4b)	Implement a linear transformation 
         //			    performing a shear along the x axis. 
         //              Replace the following code.
-        return new LinearTransformation([1, 0, 0, 1]);
+        return new LinearTransformation([1, shearX, 0, 1]);
     }
 
     function ShearingY(shearY) {
         // TODO 3.4b)	Implement a linear transformation 
         //			    performing a shear along the y axis. 
         //              Replace the following code.
-        return new LinearTransformation([1, 0, 0, 1]);
+        return new LinearTransformation([1, 0, shearY, 1]);
     }
 
     function applyShearing1(triangle, alpha) {
@@ -171,8 +171,12 @@ function Basic4_2(canvas, alpha, steps) {
         //			    of triangle, call shearingX with the 
         //			    corresponding parameters!
         //              Use ApplyLinearTransformation() to transform the corner points.
-        let triangle1 = new Triangle(triangle.a, triangle.b, triangle.c);
-
+        let triangle1 = new Triangle
+            (
+                ApplyLinearTransformation(ShearingX(-Math.tan(alpha/2)), triangle.a),  
+                ApplyLinearTransformation(ShearingX(-Math.tan(alpha/2)), triangle.b),   
+                ApplyLinearTransformation(ShearingX(-Math.tan(alpha/2)), triangle.c)
+            );
         return triangle1;
     }
 
@@ -181,7 +185,12 @@ function Basic4_2(canvas, alpha, steps) {
         //			    of triangle1, call shearingY with the 
         //			    corresponding parameters!
         //              Use ApplyLinearTransformation() to transform the corner points.
-        let triangle2 = new Triangle(triangle1.a, triangle1.b, triangle1.c);
+        let triangle2 = new Triangle
+            (
+                ApplyLinearTransformation(ShearingY(Math.sin(alpha)), triangle1.a),  
+                ApplyLinearTransformation(ShearingY(Math.sin(alpha)), triangle1.b),   
+                ApplyLinearTransformation(ShearingY(Math.sin(alpha)), triangle1.c)
+            );
 
         return triangle2;
     }
@@ -191,7 +200,12 @@ function Basic4_2(canvas, alpha, steps) {
         //			    of triangle2, call shearingX with the 
         //			    corresponding parameters!
         //              Use ApplyLinearTransformation() to transform the corner points.
-        let triangle3 = new Triangle(triangle2.a, triangle2.b, triangle2.c);
+        let triangle3 = new Triangle
+            (
+                ApplyLinearTransformation(ShearingX(-Math.tan(alpha/2)), triangle2.a),  
+                ApplyLinearTransformation(ShearingX(-Math.tan(alpha/2)), triangle2.b),   
+                ApplyLinearTransformation(ShearingX(-Math.tan(alpha/2)), triangle2.c)
+            );
 
         return triangle3;
     }
