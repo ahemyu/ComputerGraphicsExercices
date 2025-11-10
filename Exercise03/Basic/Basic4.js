@@ -267,7 +267,18 @@ function Basic4_3(canvas, transformations) {
         //			    of the affine transformation equivalent
         //			    to the composition of affineTransf1 and
         //			    affineTransf2.
-        return new AffineTransformation([1, 0, 0, 1], [0, 0]);
+
+        let t1 = affineTransf1.t;
+        let t2 = affineTransf2.t;
+        
+        let A1_2 = CompositeLinearTransformations(affineTransf2, affineTransf1);
+        let A2_t1 = ApplyLinearTransformation(affineTransf2, new Point(t1[0], t1[1]));
+
+        let tx = A2_t1.x + t2[0];
+        let ty = A2_t1.y + t2[1];
+        let t = [tx, ty];
+
+        return new AffineTransformation(A1_2.A, t);
 
     }
 
