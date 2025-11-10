@@ -69,7 +69,7 @@ void CG::update(float dt) {
     glm::mat4 scale = glm::scale(vec3(earthRadius));
     float revolution_angle_earth = glm::radians(time * (360 / earthRevolutionTime));
     
-    glm::mat4 revolution = glm::translate(vec3(earthOrbitRadius * glm::cos(revolution_angle_earth), earthOrbitRadius * glm::sin(revolution_angle_earth) , 0)); //TODO: think abt the translation 
+    glm::mat4 revolution = glm::translate(vec3(earthOrbitRadius * glm::cos(revolution_angle_earth), earthOrbitRadius * glm::sin(revolution_angle_earth) , 0)); 
     float rotation_angle_earth_own_axis = glm::radians(time*(360/earthRotationTime));
     glm::mat4 rotation = glm::rotate(rotation_angle_earth_own_axis, vec3(0,0,1));
     glm::mat4 tilt = glm::rotate(earthObliquity, vec3(1,0,0));
@@ -87,7 +87,7 @@ void CG::update(float dt) {
     glm::mat4 scale_moon = glm::scale(vec3(moonRadius));
     float revolution_angle_moon = glm::radians(time * (360 / moonRevolutionTime));
     
-    glm::mat4 revolution_moon = glm::translate(vec3(earth[3][0] + (moonOrbitRadius * glm::cos(revolution_angle_moon)), earth[3][1] + (moonOrbitRadius * glm::sin(revolution_angle_moon)) , 0)); //TODO: need to add offset of earth here bc we want to revolute around earth and not sun  
+    glm::mat4 revolution_moon = glm::translate(vec3(earth[3][0] + (moonOrbitRadius * glm::cos(revolution_angle_moon)), earth[3][1] + (moonOrbitRadius * glm::sin(revolution_angle_moon)) , 0)); 
     float rotation_angle_moon = glm::radians(time*(360/moonRotationTime));
     glm::mat4 rotation_moon = glm::rotate(rotation_angle_moon, vec3(0,0,1));
     glm::mat4 tilt_moon= glm::rotate(moonObliquity, vec3(1,0,0));
@@ -95,7 +95,8 @@ void CG::update(float dt) {
 
     // d) Orbit Rings
     earthOrbit = glm::scale(vec3(earthOrbitRadius));
-    moonOrbit = glm::translate(vec3(earthOrbitRadius + moonOrbitRadius, 0, 0)); // <- Change this line
+    // Visualize the orbit of the moon. Calculate the transformation matrix moonOrbit such that the ring is rendered at the correct location.
+    moonOrbit = glm::translate(vec3(earth[3][0], earth[3][1] ,0)); // <- Change this line
 }
 
 void CG::render() {
