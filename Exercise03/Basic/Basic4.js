@@ -72,16 +72,17 @@ function Basic4_1(canvas, operation, value) {
         //			    performing a rotation by the angle 
         //			    alpha and replace the following line
         //			    by the appropriate code.
-        return new LinearTransformation([1, 0, 0, 1]);
-    }
+        // return new LinearTransformation([Math.cos(alpha), Math.sin(alpha), -Math.sin(alpha), Math.cos(alpha)]); //clockwise
+        return new LinearTransformation([Math.cos(alpha), -Math.sin(alpha), Math.sin(alpha), Math.cos(alpha)]); //counter clockwise
 
+    }
     function Scaling(scale) {
         // TODO 3.4a)	Implement a linear transformation 
         //			    performing an isotropic scaling by 
         //			    the scaling factor scale and replace
         //			    the following line by the appropriate 
         //			    code.
-        return new LinearTransformation([1, 0, 0, 1]);
+        return new LinearTransformation([scale, 0, 0, scale]);
     }
 
     function ShearingX(shearX) {
@@ -89,7 +90,7 @@ function Basic4_1(canvas, operation, value) {
         //			    performing a shear along the x axis. 
         //			    Replace the following line by the
         //			    appropriate code.
-        return new LinearTransformation([1, 0, 0, 1]);
+        return new LinearTransformation([1, shearX, 0, 1]);
     }
 
     if (canvas.id == "canvasBasic4_1") {
