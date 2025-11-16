@@ -31,7 +31,7 @@ function Basic1_1(canvas) {
         //              is the x component and point2D[1] is the z 
         //              component (Hint: have a look at the bottom left 
         //              of the output image, there you will see the x-z axis).
-        
+
         return point2D[0]; //we just throw away the z-component
     }
 
@@ -139,8 +139,18 @@ function Basic1_2(canvas, eye, imagePlane) {
         //              everything to camera space. The variable 'imagePlane'
         //              gives you the z value of the image plane (You also have 
         //              to transform it to camera space coordinates.).
-        return 0.0;
-        
+
+        //TODO: convert point2D from world space to camera space 
+        let pointCamera_x = point2D[0] - eye[0];
+        let pointCamera_z = point2D[1] - eye[1];
+        //TODO: convert imagePlane from world space to camera space 
+        let imagePlane_camera = imagePlane - eye[1];
+
+        //Now just divide the x component by imagePlane?         
+        let projected_x = (pointCamera_x / pointCamera_z) * imagePlane_camera;
+
+        //TODO: return the 1D coordinate on the image plane. 
+        return projected_x;
     }
 
     ////////////////////////////////////
