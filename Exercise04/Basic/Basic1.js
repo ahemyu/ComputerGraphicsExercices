@@ -31,7 +31,8 @@ function Basic1_1(canvas) {
         //              is the x component and point2D[1] is the z 
         //              component (Hint: have a look at the bottom left 
         //              of the output image, there you will see the x-z axis).
-        return 0.0;
+        
+        return point2D[0]; //we just throw away the z-component
     }
 
     ////////////////////////////////////
