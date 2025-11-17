@@ -1,5 +1,5 @@
 submodules/SDL/CMakeFiles/SDL2-static.dir/wayland-generated-protocols/fractional-scale-v1-protocol.c.o: \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/wayland-generated-protocols/fractional-scale-v1-protocol.c \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/wayland-generated-protocols/fractional-scale-v1-protocol.c \
  /usr/include/stdc-predef.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
  /usr/include/stdlib.h /usr/include/bits/libc-header-start.h \

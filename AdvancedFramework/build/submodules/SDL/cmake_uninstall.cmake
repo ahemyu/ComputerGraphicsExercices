@@ -1,8 +1,8 @@
-if (NOT EXISTS "/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/install_manifest.txt")
-    message(FATAL_ERROR "Cannot find install manifest: \"/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/install_manifest.txt\"")
-endif(NOT EXISTS "/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/install_manifest.txt")
+if (NOT EXISTS "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/install_manifest.txt")
+    message(FATAL_ERROR "Cannot find install manifest: \"/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/install_manifest.txt\"")
+endif(NOT EXISTS "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/install_manifest.txt")
 
-file(READ "/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/install_manifest.txt" files)
+file(READ "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 foreach (file ${files})
     message(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

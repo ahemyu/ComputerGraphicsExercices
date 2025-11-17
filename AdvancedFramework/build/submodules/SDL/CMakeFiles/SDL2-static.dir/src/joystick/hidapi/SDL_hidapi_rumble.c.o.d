@@ -1,15 +1,15 @@
 submodules/SDL/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.c.o: \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/SDL_hidapi_rumble.c \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/SDL_hidapi_rumble.c \
  /usr/include/stdc-predef.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../dynapi/SDL_dynapi.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../dynapi/SDL_dynapi_overrides.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../dynapi/SDL_dynapi.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../dynapi/SDL_dynapi_overrides.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
  /usr/include/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
@@ -55,31 +55,31 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
  /usr/include/bits/iscanonical.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/float.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_thread.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_atomic.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_timer.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/SDL_hidapijoystick_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_atomic.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_hints.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_joystick.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_guid.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_gamecontroller.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_rwops.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_sensor.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_joystick.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_hidapi.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../usb_ids.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/SDL_hidapi_rumble.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/SDL_systhread.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/SDL_thread_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/pthread/SDL_systhread_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/pthread/../../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_thread.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_atomic.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_timer.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/SDL_hidapijoystick_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_atomic.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_hints.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_joystick.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_guid.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_gamecontroller.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_rwops.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_sensor.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_joystick.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_hidapi.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../usb_ids.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/SDL_hidapi_rumble.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/SDL_systhread.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/SDL_thread_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/pthread/SDL_systhread_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/pthread/../../SDL_internal.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
  /usr/include/linux/sched/types.h /usr/include/linux/types.h \
  /usr/include/asm/types.h /usr/include/asm-generic/types.h \
@@ -93,5 +93,5 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/joystick/hidapi/SDL_hidapi_rumble.
  /usr/include/bits/types/struct_itimerspec.h /usr/include/bits/setjmp.h \
  /usr/include/bits/types/struct___jmp_buf_tag.h \
  /usr/include/bits/pthread_stack_min-dynamic.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/../SDL_error_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/.././SDL_internal.h
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/../SDL_error_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/joystick/hidapi/../../thread/.././SDL_internal.h

@@ -1,15 +1,15 @@
 submodules/SDL/CMakeFiles/SDL2-static.dir/src/audio/jack/SDL_jackaudio.c.o: \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/SDL_jackaudio.c \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/SDL_jackaudio.c \
  /usr/include/stdc-predef.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../dynapi/SDL_dynapi.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../dynapi/SDL_dynapi_overrides.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../dynapi/SDL_dynapi.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../dynapi/SDL_dynapi_overrides.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
  /usr/include/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
@@ -55,20 +55,20 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/audio/jack/SDL_jackaudio.c.o: \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
  /usr/include/bits/iscanonical.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/float.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_timer.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_audio.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_endian.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_thread.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_atomic.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_rwops.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../SDL_audio_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_timer.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_audio.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_endian.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_thread.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_atomic.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_rwops.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../SDL_audio_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../SDL_internal.h \
  /usr/include/samplerate.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/SDL_jackaudio.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/SDL_jackaudio.h \
  /usr/include/jack/jack.h /usr/include/jack/systemdeps.h \
  /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
  /usr/include/linux/sched/types.h /usr/include/linux/types.h \
@@ -84,16 +84,16 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/audio/jack/SDL_jackaudio.c.o: \
  /usr/include/bits/types/struct___jmp_buf_tag.h \
  /usr/include/bits/pthread_stack_min-dynamic.h /usr/include/jack/types.h \
  /usr/include/jack/transport.h /usr/include/jack/weakmacros.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../SDL_sysaudio.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_thread.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../SDL_dataqueue.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/.././SDL_audio_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_loadso.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/SDL_systhread.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/SDL_thread_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/pthread/SDL_systhread_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/pthread/../../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/../SDL_error_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/.././SDL_internal.h
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../SDL_sysaudio.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_thread.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../SDL_dataqueue.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/.././SDL_audio_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_loadso.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/SDL_systhread.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/SDL_thread_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/pthread/SDL_systhread_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/pthread/../../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/../SDL_error_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/audio/jack/../../thread/.././SDL_internal.h

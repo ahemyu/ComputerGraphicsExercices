@@ -1,15 +1,15 @@
 submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.o: \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_surface.c \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_surface.c \
  /usr/include/stdc-predef.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../dynapi/SDL_dynapi.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../dynapi/SDL_dynapi_overrides.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../dynapi/SDL_dynapi.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../dynapi/SDL_dynapi_overrides.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
  /usr/include/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
@@ -55,29 +55,29 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.o: \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
  /usr/include/bits/iscanonical.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/float.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_video.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_pixels.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_endian.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_rect.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_rwops.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_surface.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_blendmode.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_sysvideo.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_messagebox.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_video.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mouse.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_shape.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_thread.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_atomic.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_metal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_vulkan_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/wayland/SDL_waylanddyn.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/wayland/../../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_video.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_pixels.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_endian.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_rect.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_rwops.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_surface.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_blendmode.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_sysvideo.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_messagebox.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_video.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mouse.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_shape.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_thread.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_atomic.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_metal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_vulkan_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/wayland/SDL_waylanddyn.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/wayland/../../SDL_internal.h \
  /usr/include/wayland-cursor.h /usr/include/wayland-util.h \
  /usr/include/xkbcommon/xkbcommon.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
@@ -87,24 +87,24 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.o: \
  /usr/include/xkbcommon/xkbcommon-compose.h \
  /usr/include/wayland-client-core.h /usr/include/wayland-util.h \
  /usr/include/wayland-version.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/wayland/SDL_waylandsym.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/wayland-generated-protocols/wayland-client-protocol.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/wayland/SDL_waylandsym.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/wayland-generated-protocols/wayland-client-protocol.h \
  /usr/include/wayland-client.h /usr/include/wayland-client-core.h \
  /usr/include/wayland-client-protocol.h /usr/include/wayland-egl.h \
  /usr/include/wayland-egl-core.h /usr/include/libdecor-0/libdecor.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vk_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan_core.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h264std.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codecs_common.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h264std_encode.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h264std.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h265std.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h265std_encode.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h265std.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h264std_decode.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h265std_decode.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan_wayland.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vk_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan_core.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h264std.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codecs_common.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h264std_encode.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h264std.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h265std.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h265std_encode.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h265std.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h264std_decode.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/../vk_video/vulkan_video_codec_h265std_decode.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan_wayland.h \
  /usr/include/xcb/xcb.h /usr/include/sys/uio.h \
  /usr/include/bits/types/struct_iovec.h /usr/include/bits/uio_lim.h \
  /usr/include/bits/uio-ext.h /usr/include/pthread.h /usr/include/sched.h \
@@ -122,13 +122,13 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.o: \
  /usr/include/bits/types/struct___jmp_buf_tag.h \
  /usr/include/bits/pthread_stack_min-dynamic.h /usr/include/xcb/xproto.h \
  /usr/include/xcb/xcb.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan_xcb.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan_xcb.h \
  /usr/include/X11/Xlib.h /usr/include/X11/X.h \
  /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan_xlib.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_vulkan.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_blit.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_cpuinfo.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/./khronos/vulkan/vulkan_xlib.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_vulkan.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_blit.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_cpuinfo.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/mm3dnow.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/mmintrin.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/prfchwintrin.h \
@@ -243,25 +243,25 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/SDL_surface.c.o: \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/avx10_2copyintrin.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/movrsintrin.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/amxmovrsintrin.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_endian.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_surface.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_RLEaccel_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_pixels_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_yuv_c.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../render/SDL_sysrender.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../render/../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_render.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_events.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_keyboard.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_keycode.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_scancode.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mouse.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_joystick.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_guid.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_gamecontroller.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_sensor.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_quit.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_gesture.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_touch.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../render/SDL_yuv_sw_c.h
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_endian.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_surface.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_RLEaccel_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_pixels_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/SDL_yuv_c.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../render/SDL_sysrender.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../render/../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_render.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_events.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_keyboard.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_keycode.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_scancode.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mouse.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_joystick.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_guid.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_gamecontroller.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_sensor.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_quit.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_gesture.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_touch.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_mutex.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/../render/SDL_yuv_sw_c.h

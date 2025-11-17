@@ -1,7 +1,7 @@
 submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.o: \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/src/glew.c \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/src/glew.c \
  /usr/include/stdc-predef.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/include/GL/glew.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/include/GL/glew.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
@@ -13,7 +13,7 @@ submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.o: \
  /usr/include/bits/time64.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/include/GL/glxew.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/include/GL/glxew.h \
  /usr/include/X11/Xlib.h /usr/include/sys/types.h \
  /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
  /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \

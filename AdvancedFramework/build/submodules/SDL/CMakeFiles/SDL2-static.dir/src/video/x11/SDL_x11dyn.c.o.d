@@ -1,15 +1,15 @@
 submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o: \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/SDL_x11dyn.c \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/SDL_x11dyn.c \
  /usr/include/stdc-predef.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/../../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/../../dynapi/SDL_dynapi.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/../../dynapi/SDL_dynapi_overrides.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/../../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/../../dynapi/SDL_dynapi.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/../../dynapi/SDL_dynapi_overrides.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
  /usr/include/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
@@ -55,8 +55,8 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o: \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
  /usr/include/bits/iscanonical.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/float.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/SDL_x11dyn.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/SDL_x11dyn.h \
  /usr/include/X11/Xlib.h /usr/include/X11/X.h \
  /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
  /usr/include/X11/Xutil.h /usr/include/X11/keysym.h \
@@ -100,7 +100,7 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o: \
  /usr/include/X11/extensions/scrnsaver.h \
  /usr/include/X11/extensions/saver.h /usr/include/X11/extensions/shape.h \
  /usr/include/X11/extensions/shapeconst.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/SDL_x11sym.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_name.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_loadso.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/x11/SDL_x11sym.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_name.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_loadso.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework
+CMAKE_SOURCE_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build
+CMAKE_BINARY_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/glew-cmake//CMakeFiles/progress.marks
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/glew-cmake//CMakeFiles/progress.marks
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/clean
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/preinstall
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/preinstall
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 submodules/glew-cmake/CMakeFiles/libglew_static.dir/rule:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/CMakeFiles/libglew_static.dir/rule
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/CMakeFiles/libglew_static.dir/rule
 .PHONY : submodules/glew-cmake/CMakeFiles/libglew_static.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ libglew_static: submodules/glew-cmake/CMakeFiles/libglew_static.dir/rule
 
 # fast build rule for target.
 libglew_static/fast:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/build
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/build
 .PHONY : libglew_static/fast
 
 src/glew.o: src/glew.c.o
@@ -180,7 +180,7 @@ src/glew.o: src/glew.c.o
 
 # target to build an object file
 src/glew.c.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.o
 .PHONY : src/glew.c.o
 
 src/glew.i: src/glew.c.i
@@ -188,7 +188,7 @@ src/glew.i: src/glew.c.i
 
 # target to preprocess a source file
 src/glew.c.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.i
 .PHONY : src/glew.c.i
 
 src/glew.s: src/glew.c.s
@@ -196,7 +196,7 @@ src/glew.s: src/glew.c.s
 
 # target to generate assembly for a file
 src/glew.c.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.s
 .PHONY : src/glew.c.s
 
 # Help Target
@@ -226,6 +226,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

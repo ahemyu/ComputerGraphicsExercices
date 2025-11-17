@@ -1,15 +1,15 @@
 submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/kmsdrm/SDL_kmsdrmdyn.c.o: \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.c \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.c \
  /usr/include/stdc-predef.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/../../SDL_internal.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/../../dynapi/SDL_dynapi.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/../../dynapi/SDL_dynapi_overrides.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/../../SDL_internal.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/../../dynapi/SDL_dynapi.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/../../dynapi/SDL_dynapi_overrides.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include-config-release/SDL2/SDL_config.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_platform.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/begin_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/close_code.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_assert.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_stdinc.h \
  /usr/include/sys/types.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
  /usr/include/bits/timesize.h /usr/include/sys/cdefs.h \
@@ -55,8 +55,8 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/kmsdrm/SDL_kmsdrmdyn.c.o: \
  /usr/include/bits/mathcalls.h /usr/include/bits/mathcalls-narrow.h \
  /usr/include/bits/iscanonical.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/float.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_log.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/SDL_kmsdrmdyn.h \
  /usr/include/xf86drm.h /usr/include/libdrm/drm.h \
  /usr/include/linux/types.h /usr/include/asm/types.h \
  /usr/include/asm-generic/types.h /usr/include/asm-generic/int-ll64.h \
@@ -69,7 +69,7 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/src/video/kmsdrm/SDL_kmsdrmdyn.c.o: \
  /usr/include/libdrm/drm_mode.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
  /usr/include/gbm.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/SDL_kmsdrmsym.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_name.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_loadso.h \
- /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/src/video/kmsdrm/SDL_kmsdrmsym.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_name.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_loadso.h \
+ /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/include/SDL2/SDL_error.h

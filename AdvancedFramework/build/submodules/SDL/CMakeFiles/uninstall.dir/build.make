@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework
+CMAKE_SOURCE_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build
+CMAKE_BINARY_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build
 
 # Utility rule file for uninstall.
 
@@ -67,7 +67,7 @@ include submodules/SDL/CMakeFiles/uninstall.dir/compiler_depend.make
 include submodules/SDL/CMakeFiles/uninstall.dir/progress.make
 
 submodules/SDL/CMakeFiles/uninstall:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL && /usr/bin/cmake -P /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/cmake_uninstall.cmake
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL && /usr/bin/cmake -P /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/cmake_uninstall.cmake
 
 submodules/SDL/CMakeFiles/uninstall.dir/codegen:
 .PHONY : submodules/SDL/CMakeFiles/uninstall.dir/codegen
@@ -81,10 +81,10 @@ submodules/SDL/CMakeFiles/uninstall.dir/build: uninstall
 .PHONY : submodules/SDL/CMakeFiles/uninstall.dir/build
 
 submodules/SDL/CMakeFiles/uninstall.dir/clean:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL && $(CMAKE_COMMAND) -P CMakeFiles/uninstall.dir/cmake_clean.cmake
 .PHONY : submodules/SDL/CMakeFiles/uninstall.dir/clean
 
 submodules/SDL/CMakeFiles/uninstall.dir/depend:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/submodules/SDL/CMakeFiles/uninstall.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : submodules/SDL/CMakeFiles/uninstall.dir/depend
 

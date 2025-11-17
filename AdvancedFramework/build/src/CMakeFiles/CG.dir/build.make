@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework
+CMAKE_SOURCE_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build
+CMAKE_BINARY_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/CG.dir/depend.make
@@ -73,144 +73,144 @@ src/CMakeFiles/CG.dir/codegen:
 .PHONY : src/CMakeFiles/CG.dir/codegen
 
 src/CMakeFiles/CG.dir/framework/camera.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/camera.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/camera.cpp
+src/CMakeFiles/CG.dir/framework/camera.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/camera.cpp
 src/CMakeFiles/CG.dir/framework/camera.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/CG.dir/framework/camera.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/camera.cpp.o -MF CMakeFiles/CG.dir/framework/camera.cpp.o.d -o CMakeFiles/CG.dir/framework/camera.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/camera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src/CMakeFiles/CG.dir/framework/camera.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/camera.cpp.o -MF CMakeFiles/CG.dir/framework/camera.cpp.o.d -o CMakeFiles/CG.dir/framework/camera.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/camera.cpp
 
 src/CMakeFiles/CG.dir/framework/camera.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/camera.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/camera.cpp > CMakeFiles/CG.dir/framework/camera.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/camera.cpp > CMakeFiles/CG.dir/framework/camera.cpp.i
 
 src/CMakeFiles/CG.dir/framework/camera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/camera.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/camera.cpp -o CMakeFiles/CG.dir/framework/camera.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/camera.cpp -o CMakeFiles/CG.dir/framework/camera.cpp.s
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui.cpp
+src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui.cpp
 src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o -MF CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o.d -o CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o -MF CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o.d -o CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui.cpp
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/imgui/imgui.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui.cpp > CMakeFiles/CG.dir/framework/imgui/imgui.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui.cpp > CMakeFiles/CG.dir/framework/imgui/imgui.cpp.i
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/imgui/imgui.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui.cpp -o CMakeFiles/CG.dir/framework/imgui/imgui.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui.cpp -o CMakeFiles/CG.dir/framework/imgui/imgui.cpp.s
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_draw.cpp
+src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_draw.cpp
 src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o -MF CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o.d -o CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o -MF CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o.d -o CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_draw.cpp
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_draw.cpp > CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_draw.cpp > CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.i
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_draw.cpp -o CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_draw.cpp -o CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.s
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_impl_sdl_gl3.cpp
+src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_impl_sdl_gl3.cpp
 src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o -MF CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o.d -o CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_impl_sdl_gl3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o -MF CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o.d -o CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_impl_sdl_gl3.cpp
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_impl_sdl_gl3.cpp > CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_impl_sdl_gl3.cpp > CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.i
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_impl_sdl_gl3.cpp -o CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_impl_sdl_gl3.cpp -o CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.s
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_orient.cpp
+src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_orient.cpp
 src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o -MF CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o.d -o CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_orient.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o -MF CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o.d -o CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_orient.cpp
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_orient.cpp > CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_orient.cpp > CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.i
 
 src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_orient.cpp -o CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/imgui/imgui_orient.cpp -o CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.s
 
 src/CMakeFiles/CG.dir/framework/mesh.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/mesh.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/mesh.cpp
+src/CMakeFiles/CG.dir/framework/mesh.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/mesh.cpp
 src/CMakeFiles/CG.dir/framework/mesh.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/CG.dir/framework/mesh.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/mesh.cpp.o -MF CMakeFiles/CG.dir/framework/mesh.cpp.o.d -o CMakeFiles/CG.dir/framework/mesh.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/mesh.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/CG.dir/framework/mesh.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/mesh.cpp.o -MF CMakeFiles/CG.dir/framework/mesh.cpp.o.d -o CMakeFiles/CG.dir/framework/mesh.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/mesh.cpp
 
 src/CMakeFiles/CG.dir/framework/mesh.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/mesh.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/mesh.cpp > CMakeFiles/CG.dir/framework/mesh.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/mesh.cpp > CMakeFiles/CG.dir/framework/mesh.cpp.i
 
 src/CMakeFiles/CG.dir/framework/mesh.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/mesh.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/mesh.cpp -o CMakeFiles/CG.dir/framework/mesh.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/mesh.cpp -o CMakeFiles/CG.dir/framework/mesh.cpp.s
 
 src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/obj_loader.cpp
+src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/obj_loader.cpp
 src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o -MF CMakeFiles/CG.dir/framework/obj_loader.cpp.o.d -o CMakeFiles/CG.dir/framework/obj_loader.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/obj_loader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o -MF CMakeFiles/CG.dir/framework/obj_loader.cpp.o.d -o CMakeFiles/CG.dir/framework/obj_loader.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/obj_loader.cpp
 
 src/CMakeFiles/CG.dir/framework/obj_loader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/obj_loader.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/obj_loader.cpp > CMakeFiles/CG.dir/framework/obj_loader.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/obj_loader.cpp > CMakeFiles/CG.dir/framework/obj_loader.cpp.i
 
 src/CMakeFiles/CG.dir/framework/obj_loader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/obj_loader.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/obj_loader.cpp -o CMakeFiles/CG.dir/framework/obj_loader.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/obj_loader.cpp -o CMakeFiles/CG.dir/framework/obj_loader.cpp.s
 
 src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/shaderManager.cpp
+src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/shaderManager.cpp
 src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o -MF CMakeFiles/CG.dir/framework/shaderManager.cpp.o.d -o CMakeFiles/CG.dir/framework/shaderManager.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/shaderManager.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o -MF CMakeFiles/CG.dir/framework/shaderManager.cpp.o.d -o CMakeFiles/CG.dir/framework/shaderManager.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/shaderManager.cpp
 
 src/CMakeFiles/CG.dir/framework/shaderManager.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/shaderManager.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/shaderManager.cpp > CMakeFiles/CG.dir/framework/shaderManager.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/shaderManager.cpp > CMakeFiles/CG.dir/framework/shaderManager.cpp.i
 
 src/CMakeFiles/CG.dir/framework/shaderManager.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/shaderManager.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/shaderManager.cpp -o CMakeFiles/CG.dir/framework/shaderManager.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/shaderManager.cpp -o CMakeFiles/CG.dir/framework/shaderManager.cpp.s
 
 src/CMakeFiles/CG.dir/framework/texture.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/texture.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/texture.cpp
+src/CMakeFiles/CG.dir/framework/texture.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/texture.cpp
 src/CMakeFiles/CG.dir/framework/texture.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/CG.dir/framework/texture.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/texture.cpp.o -MF CMakeFiles/CG.dir/framework/texture.cpp.o.d -o CMakeFiles/CG.dir/framework/texture.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/texture.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src/CMakeFiles/CG.dir/framework/texture.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/texture.cpp.o -MF CMakeFiles/CG.dir/framework/texture.cpp.o.d -o CMakeFiles/CG.dir/framework/texture.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/texture.cpp
 
 src/CMakeFiles/CG.dir/framework/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/texture.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/texture.cpp > CMakeFiles/CG.dir/framework/texture.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/texture.cpp > CMakeFiles/CG.dir/framework/texture.cpp.i
 
 src/CMakeFiles/CG.dir/framework/texture.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/texture.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/texture.cpp -o CMakeFiles/CG.dir/framework/texture.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/texture.cpp -o CMakeFiles/CG.dir/framework/texture.cpp.s
 
 src/CMakeFiles/CG.dir/framework/window.cpp.o: src/CMakeFiles/CG.dir/flags.make
-src/CMakeFiles/CG.dir/framework/window.cpp.o: /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/window.cpp
+src/CMakeFiles/CG.dir/framework/window.cpp.o: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/window.cpp
 src/CMakeFiles/CG.dir/framework/window.cpp.o: src/CMakeFiles/CG.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/CG.dir/framework/window.cpp.o"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/window.cpp.o -MF CMakeFiles/CG.dir/framework/window.cpp.o.d -o CMakeFiles/CG.dir/framework/window.cpp.o -c /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/window.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src/CMakeFiles/CG.dir/framework/window.cpp.o"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/CG.dir/framework/window.cpp.o -MF CMakeFiles/CG.dir/framework/window.cpp.o.d -o CMakeFiles/CG.dir/framework/window.cpp.o -c /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/window.cpp
 
 src/CMakeFiles/CG.dir/framework/window.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/CG.dir/framework/window.cpp.i"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/window.cpp > CMakeFiles/CG.dir/framework/window.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/window.cpp > CMakeFiles/CG.dir/framework/window.cpp.i
 
 src/CMakeFiles/CG.dir/framework/window.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/CG.dir/framework/window.cpp.s"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src/framework/window.cpp -o CMakeFiles/CG.dir/framework/window.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/framework/window.cpp -o CMakeFiles/CG.dir/framework/window.cpp.s
 
 # Object files for target CG
 CG_OBJECTS = \
@@ -240,19 +240,19 @@ src/libCG.a: src/CMakeFiles/CG.dir/framework/texture.cpp.o
 src/libCG.a: src/CMakeFiles/CG.dir/framework/window.cpp.o
 src/libCG.a: src/CMakeFiles/CG.dir/build.make
 src/libCG.a: src/CMakeFiles/CG.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libCG.a"
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && $(CMAKE_COMMAND) -P CMakeFiles/CG.dir/cmake_clean_target.cmake
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CG.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX static library libCG.a"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && $(CMAKE_COMMAND) -P CMakeFiles/CG.dir/cmake_clean_target.cmake
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/CG.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/CG.dir/build: src/libCG.a
 .PHONY : src/CMakeFiles/CG.dir/build
 
 src/CMakeFiles/CG.dir/clean:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src && $(CMAKE_COMMAND) -P CMakeFiles/CG.dir/cmake_clean.cmake
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src && $(CMAKE_COMMAND) -P CMakeFiles/CG.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/CG.dir/clean
 
 src/CMakeFiles/CG.dir/depend:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/src /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src/CMakeFiles/CG.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/CMakeFiles/CG.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/CG.dir/depend
 

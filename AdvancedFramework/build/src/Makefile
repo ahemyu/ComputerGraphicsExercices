@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework
+CMAKE_SOURCE_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build
+CMAKE_BINARY_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/src//CMakeFiles/progress.marks
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src//CMakeFiles/progress.marks
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/CG.dir/rule:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/CG.dir/rule
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/CG.dir/rule
 .PHONY : src/CMakeFiles/CG.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ CG: src/CMakeFiles/CG.dir/rule
 
 # fast build rule for target.
 CG/fast:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/build
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/build
 .PHONY : CG/fast
 
 framework/camera.o: framework/camera.cpp.o
@@ -180,7 +180,7 @@ framework/camera.o: framework/camera.cpp.o
 
 # target to build an object file
 framework/camera.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/camera.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/camera.cpp.o
 .PHONY : framework/camera.cpp.o
 
 framework/camera.i: framework/camera.cpp.i
@@ -188,7 +188,7 @@ framework/camera.i: framework/camera.cpp.i
 
 # target to preprocess a source file
 framework/camera.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/camera.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/camera.cpp.i
 .PHONY : framework/camera.cpp.i
 
 framework/camera.s: framework/camera.cpp.s
@@ -196,7 +196,7 @@ framework/camera.s: framework/camera.cpp.s
 
 # target to generate assembly for a file
 framework/camera.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/camera.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/camera.cpp.s
 .PHONY : framework/camera.cpp.s
 
 framework/imgui/imgui.o: framework/imgui/imgui.cpp.o
@@ -204,7 +204,7 @@ framework/imgui/imgui.o: framework/imgui/imgui.cpp.o
 
 # target to build an object file
 framework/imgui/imgui.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.o
 .PHONY : framework/imgui/imgui.cpp.o
 
 framework/imgui/imgui.i: framework/imgui/imgui.cpp.i
@@ -212,7 +212,7 @@ framework/imgui/imgui.i: framework/imgui/imgui.cpp.i
 
 # target to preprocess a source file
 framework/imgui/imgui.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.i
 .PHONY : framework/imgui/imgui.cpp.i
 
 framework/imgui/imgui.s: framework/imgui/imgui.cpp.s
@@ -220,7 +220,7 @@ framework/imgui/imgui.s: framework/imgui/imgui.cpp.s
 
 # target to generate assembly for a file
 framework/imgui/imgui.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui.cpp.s
 .PHONY : framework/imgui/imgui.cpp.s
 
 framework/imgui/imgui_draw.o: framework/imgui/imgui_draw.cpp.o
@@ -228,7 +228,7 @@ framework/imgui/imgui_draw.o: framework/imgui/imgui_draw.cpp.o
 
 # target to build an object file
 framework/imgui/imgui_draw.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.o
 .PHONY : framework/imgui/imgui_draw.cpp.o
 
 framework/imgui/imgui_draw.i: framework/imgui/imgui_draw.cpp.i
@@ -236,7 +236,7 @@ framework/imgui/imgui_draw.i: framework/imgui/imgui_draw.cpp.i
 
 # target to preprocess a source file
 framework/imgui/imgui_draw.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.i
 .PHONY : framework/imgui/imgui_draw.cpp.i
 
 framework/imgui/imgui_draw.s: framework/imgui/imgui_draw.cpp.s
@@ -244,7 +244,7 @@ framework/imgui/imgui_draw.s: framework/imgui/imgui_draw.cpp.s
 
 # target to generate assembly for a file
 framework/imgui/imgui_draw.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_draw.cpp.s
 .PHONY : framework/imgui/imgui_draw.cpp.s
 
 framework/imgui/imgui_impl_sdl_gl3.o: framework/imgui/imgui_impl_sdl_gl3.cpp.o
@@ -252,7 +252,7 @@ framework/imgui/imgui_impl_sdl_gl3.o: framework/imgui/imgui_impl_sdl_gl3.cpp.o
 
 # target to build an object file
 framework/imgui/imgui_impl_sdl_gl3.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.o
 .PHONY : framework/imgui/imgui_impl_sdl_gl3.cpp.o
 
 framework/imgui/imgui_impl_sdl_gl3.i: framework/imgui/imgui_impl_sdl_gl3.cpp.i
@@ -260,7 +260,7 @@ framework/imgui/imgui_impl_sdl_gl3.i: framework/imgui/imgui_impl_sdl_gl3.cpp.i
 
 # target to preprocess a source file
 framework/imgui/imgui_impl_sdl_gl3.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.i
 .PHONY : framework/imgui/imgui_impl_sdl_gl3.cpp.i
 
 framework/imgui/imgui_impl_sdl_gl3.s: framework/imgui/imgui_impl_sdl_gl3.cpp.s
@@ -268,7 +268,7 @@ framework/imgui/imgui_impl_sdl_gl3.s: framework/imgui/imgui_impl_sdl_gl3.cpp.s
 
 # target to generate assembly for a file
 framework/imgui/imgui_impl_sdl_gl3.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_impl_sdl_gl3.cpp.s
 .PHONY : framework/imgui/imgui_impl_sdl_gl3.cpp.s
 
 framework/imgui/imgui_orient.o: framework/imgui/imgui_orient.cpp.o
@@ -276,7 +276,7 @@ framework/imgui/imgui_orient.o: framework/imgui/imgui_orient.cpp.o
 
 # target to build an object file
 framework/imgui/imgui_orient.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.o
 .PHONY : framework/imgui/imgui_orient.cpp.o
 
 framework/imgui/imgui_orient.i: framework/imgui/imgui_orient.cpp.i
@@ -284,7 +284,7 @@ framework/imgui/imgui_orient.i: framework/imgui/imgui_orient.cpp.i
 
 # target to preprocess a source file
 framework/imgui/imgui_orient.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.i
 .PHONY : framework/imgui/imgui_orient.cpp.i
 
 framework/imgui/imgui_orient.s: framework/imgui/imgui_orient.cpp.s
@@ -292,7 +292,7 @@ framework/imgui/imgui_orient.s: framework/imgui/imgui_orient.cpp.s
 
 # target to generate assembly for a file
 framework/imgui/imgui_orient.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/imgui/imgui_orient.cpp.s
 .PHONY : framework/imgui/imgui_orient.cpp.s
 
 framework/mesh.o: framework/mesh.cpp.o
@@ -300,7 +300,7 @@ framework/mesh.o: framework/mesh.cpp.o
 
 # target to build an object file
 framework/mesh.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/mesh.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/mesh.cpp.o
 .PHONY : framework/mesh.cpp.o
 
 framework/mesh.i: framework/mesh.cpp.i
@@ -308,7 +308,7 @@ framework/mesh.i: framework/mesh.cpp.i
 
 # target to preprocess a source file
 framework/mesh.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/mesh.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/mesh.cpp.i
 .PHONY : framework/mesh.cpp.i
 
 framework/mesh.s: framework/mesh.cpp.s
@@ -316,7 +316,7 @@ framework/mesh.s: framework/mesh.cpp.s
 
 # target to generate assembly for a file
 framework/mesh.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/mesh.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/mesh.cpp.s
 .PHONY : framework/mesh.cpp.s
 
 framework/obj_loader.o: framework/obj_loader.cpp.o
@@ -324,7 +324,7 @@ framework/obj_loader.o: framework/obj_loader.cpp.o
 
 # target to build an object file
 framework/obj_loader.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/obj_loader.cpp.o
 .PHONY : framework/obj_loader.cpp.o
 
 framework/obj_loader.i: framework/obj_loader.cpp.i
@@ -332,7 +332,7 @@ framework/obj_loader.i: framework/obj_loader.cpp.i
 
 # target to preprocess a source file
 framework/obj_loader.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/obj_loader.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/obj_loader.cpp.i
 .PHONY : framework/obj_loader.cpp.i
 
 framework/obj_loader.s: framework/obj_loader.cpp.s
@@ -340,7 +340,7 @@ framework/obj_loader.s: framework/obj_loader.cpp.s
 
 # target to generate assembly for a file
 framework/obj_loader.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/obj_loader.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/obj_loader.cpp.s
 .PHONY : framework/obj_loader.cpp.s
 
 framework/shaderManager.o: framework/shaderManager.cpp.o
@@ -348,7 +348,7 @@ framework/shaderManager.o: framework/shaderManager.cpp.o
 
 # target to build an object file
 framework/shaderManager.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/shaderManager.cpp.o
 .PHONY : framework/shaderManager.cpp.o
 
 framework/shaderManager.i: framework/shaderManager.cpp.i
@@ -356,7 +356,7 @@ framework/shaderManager.i: framework/shaderManager.cpp.i
 
 # target to preprocess a source file
 framework/shaderManager.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/shaderManager.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/shaderManager.cpp.i
 .PHONY : framework/shaderManager.cpp.i
 
 framework/shaderManager.s: framework/shaderManager.cpp.s
@@ -364,7 +364,7 @@ framework/shaderManager.s: framework/shaderManager.cpp.s
 
 # target to generate assembly for a file
 framework/shaderManager.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/shaderManager.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/shaderManager.cpp.s
 .PHONY : framework/shaderManager.cpp.s
 
 framework/texture.o: framework/texture.cpp.o
@@ -372,7 +372,7 @@ framework/texture.o: framework/texture.cpp.o
 
 # target to build an object file
 framework/texture.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/texture.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/texture.cpp.o
 .PHONY : framework/texture.cpp.o
 
 framework/texture.i: framework/texture.cpp.i
@@ -380,7 +380,7 @@ framework/texture.i: framework/texture.cpp.i
 
 # target to preprocess a source file
 framework/texture.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/texture.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/texture.cpp.i
 .PHONY : framework/texture.cpp.i
 
 framework/texture.s: framework/texture.cpp.s
@@ -388,7 +388,7 @@ framework/texture.s: framework/texture.cpp.s
 
 # target to generate assembly for a file
 framework/texture.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/texture.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/texture.cpp.s
 .PHONY : framework/texture.cpp.s
 
 framework/window.o: framework/window.cpp.o
@@ -396,7 +396,7 @@ framework/window.o: framework/window.cpp.o
 
 # target to build an object file
 framework/window.cpp.o:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/window.cpp.o
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/window.cpp.o
 .PHONY : framework/window.cpp.o
 
 framework/window.i: framework/window.cpp.i
@@ -404,7 +404,7 @@ framework/window.i: framework/window.cpp.i
 
 # target to preprocess a source file
 framework/window.cpp.i:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/window.cpp.i
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/window.cpp.i
 .PHONY : framework/window.cpp.i
 
 framework/window.s: framework/window.cpp.s
@@ -412,7 +412,7 @@ framework/window.s: framework/window.cpp.s
 
 # target to generate assembly for a file
 framework/window.cpp.s:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/window.cpp.s
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/framework/window.cpp.s
 .PHONY : framework/window.cpp.s
 
 # Help Target
@@ -469,6 +469,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

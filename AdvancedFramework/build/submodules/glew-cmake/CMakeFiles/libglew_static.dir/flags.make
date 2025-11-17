@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = -DGLEW_NO_GLU -DGLEW_STATIC
 
-C_INCLUDES = -I/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/include
+C_INCLUDES = -I/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/include
 
 C_FLAGS = -O3 -DNDEBUG
 

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework
+CMAKE_SOURCE_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build
+CMAKE_BINARY_DIR = /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -92,20 +92,24 @@ clean: src/clean
 # Recursive "all" directory target.
 src/all: src/CMakeFiles/CG.dir/all
 src/all: src/Advanced03/all
+src/all: src/Advanced04/all
 .PHONY : src/all
 
 # Recursive "codegen" directory target.
 src/codegen: src/CMakeFiles/CG.dir/codegen
 src/codegen: src/Advanced03/codegen
+src/codegen: src/Advanced04/codegen
 .PHONY : src/codegen
 
 # Recursive "preinstall" directory target.
 src/preinstall: src/Advanced03/preinstall
+src/preinstall: src/Advanced04/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
 src/clean: src/CMakeFiles/CG.dir/clean
 src/clean: src/Advanced03/clean
+src/clean: src/Advanced04/clean
 .PHONY : src/clean
 
 #=============================================================================
@@ -126,6 +130,25 @@ src/Advanced03/preinstall:
 # Recursive "clean" directory target.
 src/Advanced03/clean: src/Advanced03/CMakeFiles/Advanced03.dir/clean
 .PHONY : src/Advanced03/clean
+
+#=============================================================================
+# Directory level rules for directory src/Advanced04
+
+# Recursive "all" directory target.
+src/Advanced04/all: src/Advanced04/CMakeFiles/Advanced04.dir/all
+.PHONY : src/Advanced04/all
+
+# Recursive "codegen" directory target.
+src/Advanced04/codegen: src/Advanced04/CMakeFiles/Advanced04.dir/codegen
+.PHONY : src/Advanced04/codegen
+
+# Recursive "preinstall" directory target.
+src/Advanced04/preinstall:
+.PHONY : src/Advanced04/preinstall
+
+# Recursive "clean" directory target.
+src/Advanced04/clean: src/Advanced04/CMakeFiles/Advanced04.dir/clean
+.PHONY : src/Advanced04/clean
 
 #=============================================================================
 # Directory level rules for directory submodules/SDL
@@ -177,14 +200,14 @@ submodules/glew-cmake/clean: submodules/glew-cmake/CMakeFiles/libglew_static.dir
 submodules/glew-cmake/CMakeFiles/libglew_static.dir/all:
 	$(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Built target libglew_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Built target libglew_static"
 .PHONY : submodules/glew-cmake/CMakeFiles/libglew_static.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/glew-cmake/CMakeFiles/libglew_static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/glew-cmake/CMakeFiles/libglew_static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : submodules/glew-cmake/CMakeFiles/libglew_static.dir/rule
 
 # Convenience name for target.
@@ -194,7 +217,7 @@ libglew_static: submodules/glew-cmake/CMakeFiles/libglew_static.dir/rule
 # codegen rule for target.
 submodules/glew-cmake/CMakeFiles/libglew_static.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Finished codegen for target libglew_static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Finished codegen for target libglew_static"
 .PHONY : submodules/glew-cmake/CMakeFiles/libglew_static.dir/codegen
 
 # clean rule for target.
@@ -209,14 +232,14 @@ submodules/glew-cmake/CMakeFiles/libglew_static.dir/clean:
 submodules/SDL/CMakeFiles/sdl_headers_copy.dir/all:
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/sdl_headers_copy.dir/build.make submodules/SDL/CMakeFiles/sdl_headers_copy.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/sdl_headers_copy.dir/build.make submodules/SDL/CMakeFiles/sdl_headers_copy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target sdl_headers_copy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Built target sdl_headers_copy"
 .PHONY : submodules/SDL/CMakeFiles/sdl_headers_copy.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SDL/CMakeFiles/sdl_headers_copy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 25
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SDL/CMakeFiles/sdl_headers_copy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : submodules/SDL/CMakeFiles/sdl_headers_copy.dir/rule
 
 # Convenience name for target.
@@ -226,7 +249,7 @@ sdl_headers_copy: submodules/SDL/CMakeFiles/sdl_headers_copy.dir/rule
 # codegen rule for target.
 submodules/SDL/CMakeFiles/sdl_headers_copy.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/sdl_headers_copy.dir/build.make submodules/SDL/CMakeFiles/sdl_headers_copy.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Finished codegen for target sdl_headers_copy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98,99,100 "Finished codegen for target sdl_headers_copy"
 .PHONY : submodules/SDL/CMakeFiles/sdl_headers_copy.dir/codegen
 
 # clean rule for target.
@@ -241,14 +264,14 @@ submodules/SDL/CMakeFiles/sdl_headers_copy.dir/clean:
 submodules/SDL/CMakeFiles/SDL2main.dir/all: submodules/SDL/CMakeFiles/sdl_headers_copy.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/SDL2main.dir/build.make submodules/SDL/CMakeFiles/SDL2main.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/SDL2main.dir/build.make submodules/SDL/CMakeFiles/SDL2main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=75 "Built target SDL2main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=75 "Built target SDL2main"
 .PHONY : submodules/SDL/CMakeFiles/SDL2main.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SDL/CMakeFiles/SDL2main.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 26
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SDL/CMakeFiles/SDL2main.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : submodules/SDL/CMakeFiles/SDL2main.dir/rule
 
 # Convenience name for target.
@@ -258,7 +281,7 @@ SDL2main: submodules/SDL/CMakeFiles/SDL2main.dir/rule
 # codegen rule for target.
 submodules/SDL/CMakeFiles/SDL2main.dir/codegen: submodules/SDL/CMakeFiles/sdl_headers_copy.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/SDL2main.dir/build.make submodules/SDL/CMakeFiles/SDL2main.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=75 "Finished codegen for target SDL2main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=75 "Finished codegen for target SDL2main"
 .PHONY : submodules/SDL/CMakeFiles/SDL2main.dir/codegen
 
 # clean rule for target.
@@ -273,14 +296,14 @@ submodules/SDL/CMakeFiles/SDL2main.dir/clean:
 submodules/SDL/CMakeFiles/SDL2-static.dir/all: submodules/SDL/CMakeFiles/sdl_headers_copy.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/SDL2-static.dir/build.make submodules/SDL/CMakeFiles/SDL2-static.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/SDL2-static.dir/build.make submodules/SDL/CMakeFiles/SDL2-static.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74 "Built target SDL2-static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74 "Built target SDL2-static"
 .PHONY : submodules/SDL/CMakeFiles/SDL2-static.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SDL/CMakeFiles/SDL2-static.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 96
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 95
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SDL/CMakeFiles/SDL2-static.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : submodules/SDL/CMakeFiles/SDL2-static.dir/rule
 
 # Convenience name for target.
@@ -290,7 +313,7 @@ SDL2-static: submodules/SDL/CMakeFiles/SDL2-static.dir/rule
 # codegen rule for target.
 submodules/SDL/CMakeFiles/SDL2-static.dir/codegen: submodules/SDL/CMakeFiles/sdl_headers_copy.dir/all
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/SDL2-static.dir/build.make submodules/SDL/CMakeFiles/SDL2-static.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74 "Finished codegen for target SDL2-static"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74 "Finished codegen for target SDL2-static"
 .PHONY : submodules/SDL/CMakeFiles/SDL2-static.dir/codegen
 
 # clean rule for target.
@@ -305,14 +328,14 @@ submodules/SDL/CMakeFiles/SDL2-static.dir/clean:
 submodules/SDL/CMakeFiles/uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/uninstall.dir/build.make submodules/SDL/CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/uninstall.dir/build.make submodules/SDL/CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : submodules/SDL/CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 submodules/SDL/CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 submodules/SDL/CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : submodules/SDL/CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -322,7 +345,7 @@ uninstall: submodules/SDL/CMakeFiles/uninstall.dir/rule
 # codegen rule for target.
 submodules/SDL/CMakeFiles/uninstall.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/uninstall.dir/build.make submodules/SDL/CMakeFiles/uninstall.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Finished codegen for target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Finished codegen for target uninstall"
 .PHONY : submodules/SDL/CMakeFiles/uninstall.dir/codegen
 
 # clean rule for target.
@@ -338,14 +361,14 @@ src/CMakeFiles/CG.dir/all: submodules/glew-cmake/CMakeFiles/libglew_static.dir/a
 src/CMakeFiles/CG.dir/all: submodules/SDL/CMakeFiles/SDL2-static.dir/all
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=1,2,3 "Built target CG"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=2,3,4 "Built target CG"
 .PHONY : src/CMakeFiles/CG.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/CG.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 99
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 98
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/CG.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/CG.dir/rule
 
 # Convenience name for target.
@@ -355,7 +378,7 @@ CG: src/CMakeFiles/CG.dir/rule
 # codegen rule for target.
 src/CMakeFiles/CG.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target CG"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=2,3,4 "Finished codegen for target CG"
 .PHONY : src/CMakeFiles/CG.dir/codegen
 
 # clean rule for target.
@@ -372,14 +395,14 @@ src/Advanced03/CMakeFiles/Advanced03.dir/all: submodules/SDL/CMakeFiles/SDL2-sta
 src/Advanced03/CMakeFiles/Advanced03.dir/all: src/CMakeFiles/CG.dir/all
 	$(MAKE) $(MAKESILENT) -f src/Advanced03/CMakeFiles/Advanced03.dir/build.make src/Advanced03/CMakeFiles/Advanced03.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/Advanced03/CMakeFiles/Advanced03.dir/build.make src/Advanced03/CMakeFiles/Advanced03.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Built target Advanced03"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Built target Advanced03"
 .PHONY : src/Advanced03/CMakeFiles/Advanced03.dir/all
 
 # Build rule for subdir invocation for target.
 src/Advanced03/CMakeFiles/Advanced03.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 99
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 98
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Advanced03/CMakeFiles/Advanced03.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : src/Advanced03/CMakeFiles/Advanced03.dir/rule
 
 # Convenience name for target.
@@ -389,13 +412,47 @@ Advanced03: src/Advanced03/CMakeFiles/Advanced03.dir/rule
 # codegen rule for target.
 src/Advanced03/CMakeFiles/Advanced03.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f src/Advanced03/CMakeFiles/Advanced03.dir/build.make src/Advanced03/CMakeFiles/Advanced03.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/drive/Master/Erst/CG/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Finished codegen for target Advanced03"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num= "Finished codegen for target Advanced03"
 .PHONY : src/Advanced03/CMakeFiles/Advanced03.dir/codegen
 
 # clean rule for target.
 src/Advanced03/CMakeFiles/Advanced03.dir/clean:
 	$(MAKE) $(MAKESILENT) -f src/Advanced03/CMakeFiles/Advanced03.dir/build.make src/Advanced03/CMakeFiles/Advanced03.dir/clean
 .PHONY : src/Advanced03/CMakeFiles/Advanced03.dir/clean
+
+#=============================================================================
+# Target rules for target src/Advanced04/CMakeFiles/Advanced04.dir
+
+# All Build rule for target.
+src/Advanced04/CMakeFiles/Advanced04.dir/all: submodules/glew-cmake/CMakeFiles/libglew_static.dir/all
+src/Advanced04/CMakeFiles/Advanced04.dir/all: submodules/SDL/CMakeFiles/SDL2-static.dir/all
+src/Advanced04/CMakeFiles/Advanced04.dir/all: src/CMakeFiles/CG.dir/all
+	$(MAKE) $(MAKESILENT) -f src/Advanced04/CMakeFiles/Advanced04.dir/build.make src/Advanced04/CMakeFiles/Advanced04.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/Advanced04/CMakeFiles/Advanced04.dir/build.make src/Advanced04/CMakeFiles/Advanced04.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=1 "Built target Advanced04"
+.PHONY : src/Advanced04/CMakeFiles/Advanced04.dir/all
+
+# Build rule for subdir invocation for target.
+src/Advanced04/CMakeFiles/Advanced04.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 99
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Advanced04/CMakeFiles/Advanced04.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
+.PHONY : src/Advanced04/CMakeFiles/Advanced04.dir/rule
+
+# Convenience name for target.
+Advanced04: src/Advanced04/CMakeFiles/Advanced04.dir/rule
+.PHONY : Advanced04
+
+# codegen rule for target.
+src/Advanced04/CMakeFiles/Advanced04.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f src/Advanced04/CMakeFiles/Advanced04.dir/build.make src/Advanced04/CMakeFiles/Advanced04.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles --progress-num=1 "Finished codegen for target Advanced04"
+.PHONY : src/Advanced04/CMakeFiles/Advanced04.dir/codegen
+
+# clean rule for target.
+src/Advanced04/CMakeFiles/Advanced04.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/Advanced04/CMakeFiles/Advanced04.dir/build.make src/Advanced04/CMakeFiles/Advanced04.dir/clean
+.PHONY : src/Advanced04/CMakeFiles/Advanced04.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
