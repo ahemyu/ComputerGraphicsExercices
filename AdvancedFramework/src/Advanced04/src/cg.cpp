@@ -124,6 +124,8 @@ void CG::renderParticles() {
     // Render particles with alpha blending.
     // Use glBlendFunc.
     // Don't forget enabling and disabling blending via glEnable() and glDisable().
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable( GL_BLEND );
 
 
     for(Particle& p : particles) {
@@ -160,6 +162,8 @@ void CG::renderParticles() {
         glUniform1fv(4, 1, &timeTmp);
         planeMesh.render();
     }
+    glDisable(GL_BLEND);
+
 
 }
 
