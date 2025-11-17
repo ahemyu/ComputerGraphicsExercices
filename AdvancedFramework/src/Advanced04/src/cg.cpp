@@ -207,6 +207,16 @@ void CG::renderParticleShadows() {
     // Render particles with alpha blending.
     // Remove Z-figthing with glPolygonOffset.
     // Don't forget enabling and disabling everything.
+
+
+    // Polygon offset
+    glEnable(GL_POLYGON_OFFSET_FILL);
+    glPolygonOffset(-1, -1);
+
+    //alpha blending
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    glEnable(GL_BLEND);
+
     for(Particle& p : particles) {
         mat3 v = orthonormalBasis(lightDir);
         mat4 particleTransformation =  glm::translate(p.position) *  mat4(v) * glm::rotate(glm::radians(90.0f), vec3(1, 0, 0));
@@ -215,6 +225,9 @@ void CG::renderParticleShadows() {
         glUniform1fv(6, 1, &timeTmp);
         planeMesh.render();
     }
+
+    glDisable(GL_BLEND);
+    glDisable(GL_POLYGON_OFFSET_FILL);
 
 }
 
