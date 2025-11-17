@@ -81,10 +81,14 @@ void CG::renderOpaqueGeometryShadows() {
     // Remove Z-fighting with glPolygonOffset. Use -1 for both parameters.
     // Don't forget enabling and disabling polygon offsetting via glEnable() and glDisable().
 
+    glEnable(GL_POLYGON_OFFSET_FILL);
+    glPolygonOffset(-1, -1);
+    
     glUniform4fv(2, 1, &vec4(0, 0, 0, 1)[0]);
     glUniformMatrix4fv(1, 1, GL_FALSE, &teapot[0][0]);
     teapotMesh.render();
-
+    glDisable(GL_POLYGON_OFFSET_FILL);
+    
 }
 
 void CG::renderParticles() {
