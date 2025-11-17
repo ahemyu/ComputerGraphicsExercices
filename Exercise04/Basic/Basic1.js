@@ -140,16 +140,13 @@ function Basic1_2(canvas, eye, imagePlane) {
         //              gives you the z value of the image plane (You also have 
         //              to transform it to camera space coordinates.).
 
-        //TODO: convert point2D from world space to camera space 
+        // convert to camera space
         let pointCamera_x = point2D[0] - eye[0];
         let pointCamera_z = point2D[1] - eye[1];
-        //TODO: convert imagePlane from world space to camera space 
         let imagePlane_camera = imagePlane - eye[1];
 
-        //Now just divide the x component by imagePlane?         
         let projected_x = (pointCamera_x / pointCamera_z) * imagePlane_camera;
 
-        //TODO: return the 1D coordinate on the image plane. 
         return projected_x;
     }
 
@@ -240,12 +237,19 @@ function Basic1_2(canvas, eye, imagePlane) {
 ////////   4.1c)   ////////
 ///////////////////////////
 
-
+/*
+In this subtask we have a freely movable camera. You can use the left mouse button to set a new camera center (eye). 
+Using CTRL + mouse button you can change the point the camera looks at. Your task is to implement the required methods to set up the camera matrix, 
+the inverse camera matrix and the perspective transformation matrix (have a look at the TODOs in Camera.update and mat3.perspective). 
+The camera matrix transforms a point from world space to camera space. The inverse camera matrix transforms a point from camera space to world space. 
+Finally, you have to project a point given in world space coordinates to the canonical volume. Therefore, you have to implement the function Camera.projectPoint. 
+*/ 
 function Basic1_3(canvas, eye, fovy_factor, near, far, lookAtPoint, render_only_canonical_volume) {
 
     /**
      * a camera rendering a 2D scene to a 1D line
      */
+    // World Point → [Camera Matrix] → Camera Space → [Projection Matrix] → Homogeneous Projected Point → [Dehomogenize] → Canonical Volume
     class Camera {
         constructor(eye, fovy, near, far, lookAtPoint){
             this.eye = eye;
@@ -255,7 +259,7 @@ function Basic1_3(canvas, eye, fovy_factor, near, far, lookAtPoint, render_only_
             this.lookAtPoint = lookAtPoint;
 
             // the cameraMatrix transforms from world space to camera space
-            this.cameraMatrix = id3();
+            this.cameraMatrix = id3(); //full trafo, translation(camera should be at origin) + rotation (camera should be aligned with an axis)
             // the cameraMatrixInverse transforms from camera space to world space
             this.cameraMatrixInverse = id3();
             // projection matrix
@@ -290,9 +294,12 @@ function Basic1_3(canvas, eye, fovy_factor, near, far, lookAtPoint, render_only_
             //              into the negative view direction.
             //              Use column-major order!
 
-            let out = new Mat(  [0, 0, 0],
-                                [0, 0, 0],
-                                [0, 0, 0]
+            // projection matrix does: 1. apply perspective division (x/z) and 2. remaps visible frustum to [-1, 1] (the space between near and far)            
+            let s = 1 / Math.tan(fovy / 2);  // scale factor based on field of view
+
+            let out = new Mat(  [s, 0, 0],
+                                [0, (far+near)/(near-far), -1],
+                                [0, 2*far*near/(near-far), 0]
             )
 
             return out;
@@ -303,17 +310,28 @@ function Basic1_3(canvas, eye, fovy_factor, near, far, lookAtPoint, render_only_
          * setup matrices
          */
         update() {
-            // note: opengl looks into the negative viewDir!
-            let negViewDir = sub(this.eye, this.lookAtPoint).normalized();
+            // note: opengl looks into the negative viewdir!
+            let negviewdir = sub(this.eye, this.lookAtPoint).normalized(); //needs to align with +z axis
 
-            // TODO 4.1c)   Set up the camera matrix and the inverse camera matrix.
-            //              The cameraMatrix transforms from world space to camera space.
-            //              The cameraMatrixInverse transforms from camera space to world space.
-            //              You can use num.js where necessary. Use column-major order!
-            //              It can be handy to compute the inverted matrix first.
+            // todo 4.1c)   set up the camera matrix and the inverse camera matrix.
+            //              the cameramatrix transforms from world space to camera space.
+            //              the cameramatrixinverse transforms from camera space to world space.
+            //              you can use num.js where necessary. use column-major order!
+            //              it can be handy to compute the inverted matrix first.
+            let dx = negviewdir[0];
+            let dz = negviewdir[1];
+            this.cameraMatrixInverse = new Mat(
+                [dz, -dx, 0],
+                [dx, dz, 0],
+                [this.eye[0], this.eye[1], 1]
+            ); //(dz,-dx) is perpendicular to negviewdir with det=1 (proper rotation) 
 
-            // TODO 4.1c)   Set up the projection matrix using this.perspective(...), 
+            this.cameraMatrix = this.cameraMatrixInverse.inv();
+
+            // todo 4.1c)   set up the projection matrix using this.perspective(...), 
             //              which has to be implemented!
+
+            this.projectionMatrix = this.perspective(this.fovy, this.near, this.far);
 
         }
 
@@ -331,7 +349,15 @@ function Basic1_3(canvas, eye, fovy_factor, near, far, lookAtPoint, render_only_
             //              before returning it! You can use num.js where
             //              necessary.
 
-            return [0.0, 0.0];
+            let point2D_homo = [point2D[0], point2D[1], 1];
+
+            let point2D_camera = this.cameraMatrix.mul(point2D_homo);
+
+            let point2D_projected = this.projectionMatrix.mul(point2D_camera);
+
+            let point2D_projected_dehomo = [point2D_projected[0] / point2D_projected[2], point2D_projected[1] / point2D_projected[2]]
+
+            return point2D_projected_dehomo;
         }
 
         render(context, canvas_id) {
