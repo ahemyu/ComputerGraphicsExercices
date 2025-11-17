@@ -173,6 +173,25 @@ static mat3 orthonormalBasis(vec3 dir) {
     // Create an orthonormal basis from the unit vector "dir" and store it in "v".
 	// The last column (v[2]) should be the negative "dir".
 	// Use cross products to obtain the other two vectors.
+
+    // so we can just choose any vector that is NOT parallel to dir to compute first cross product
+    // choose the smallest value of dir and use that axis's base vector as w 
+    vec3 w = vec3(); 
+    if (dir[0] < dir[1] && dir[0] < dir[2]){
+        w = vec3(1,0,0);
+    }else if(dir[1] < dir[0] && dir[1] < dir[2]){
+        w = vec3(0,1,0);
+    }else {
+        w = vec3(0,0,1);
+    }
+    // now we got w which is not parallel to dir
+    vec3 firstOrtho = cross(w, dir);
+
+    // now just use dir and firstOrtho to get secondOrtho
+    vec3 secondOrtho = cross(dir, firstOrtho);
+
+    v = mat3(firstOrtho, secondOrtho, -1 * dir);
+
     return v;
 }
 
