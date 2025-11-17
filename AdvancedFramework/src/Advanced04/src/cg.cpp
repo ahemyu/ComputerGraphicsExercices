@@ -113,7 +113,25 @@ void CG::renderParticles() {
 		// The upper left 3x3 part of a matrix can be obtained by mat3(matrix),
 		// a 3x3 matrix can be transformed to a 4x4 one by mat4(matrix).
 
-        mat4 particleTransformation =  glm::translate(p.position); // <- Change this line
+        // so we first need to rotate the particle from x-z plane to x-y plane
+        // then apply the inverse of camera's rotation (which is just transpose for rotation matrices)
+
+        //Rotate the particle by 90 degrees on the x axis
+        mat4 rotation = rotate(radians(90.0f), vec3(1, 0, 0));
+        
+        // get the view matrix of the current camera
+        glm::mat4 view = Camera::getCurrent()->getViewMatrix();
+
+        // extract the rotation
+        mat3 rotationView = mat3(view);
+
+        // compute the inverse, which for rotation matrix is just inverse
+        mat3 rotationViewInverse = transpose(rotationView);
+        
+        // now turn it back to 4D
+        mat4 rotationViewInverse4D = mat4(rotationViewInverse);
+
+        mat4 particleTransformation = translate(p.position) * rotationViewInverse4D * rotation;// <- Change this line
 
         glUniformMatrix4fv(1, 1, GL_FALSE, &particleTransformation[0][0]);
         float timeTmp = time + p.timeOffset;
