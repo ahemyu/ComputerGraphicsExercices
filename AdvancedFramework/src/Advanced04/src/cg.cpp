@@ -49,6 +49,28 @@ void CG::update(float dt) {
         // Use the following methods to get random values:
         // float glm::linearRand(float min, float max);
         // vec3 glm::linearRand(vec3 min, vec3 max);
+
+        
+        if(p.lifeTime < 0) { 
+            //TODO: reset the particle
+            // Reset position to particleStart.
+            p.position = particleStart;
+            // Set lifetime to a random value.
+            p.lifeTime = linearRand(0.0, 10.0); //TODO: This looks nice I think but maybe "better" values are possible 
+            // Set timeoffset to a random value.
+            p.timeOffset = linearRand(0.0, 10.0); // TODO: not sure about this 
+            // Set velocity to a random multiple of planeNormal. Before multiplying with a constant, offset it by adding a small random vector to create a 'cone like' emission behaviour.    
+            vec3 randomOffset = linearRand(vec3(-0.5), vec3(0.5));
+            //set to a random multiple of planeNormal
+            float randomMultiple = linearRand(0.5, 2.0); // between half and double speed 
+            vec3 randomDir = planeNormal + randomOffset;
+            p.velocity = randomMultiple * randomDir;
+
+        }else {
+            // update state of alive particle
+            //TODO: p_n+1= p_n + v * Δt
+            p.position = p.position + p.velocity * dt;
+        }
     }
 }
 
