@@ -97,28 +97,34 @@ function PhongLighting(context, point, normal, eye, pointLight, albedo, showVect
 
     //reflection vector
     // from slides:r = 2(n dot l)n - l
-
     let r = normal.sca(2 * normal.dot(l)).sub(l);
 
     // 2. Compute the ambient part, use 0.1 * albedo as ambient material property.
     //    You can check your results by setting "color" (defined below) to only ambient part - 
     //    this should give you constant dark green.
 
+    let ambient = albedo.sca(0.1);
+
     // 3. Compute the diffuse part, use 0.5 * albedo as diffuse material property.
     //    You can check your results by setting "color" (defined below) to only diffuse part - 
     //    this should give you a color which gets lighter the more the plane's normal coincides with the direction to the light.
-
+    // from lectures: L_diff = k_diff * I_in * (normal.dot(l))
+    let diffuse = (albedo.sca(0.5)).sca(clamp(normal.dot(l), 0, normal.dot(l)));
+    
     // 4. Compute the specular part, assume an attenuated white specular material property (0.4 * [1.0, 1.0, 1.0]).
     //    Use the defined shiny factor.
     //    You can check your results by setting "color" (defined below) to only diffuse part - 
     //    this should give you a grey spotlight where view direction and reflection vector coincide.
+    
+    // from lectures: L_spec = k_spec * I_in * (v.dot(r))^n_s   (I_n = 1; n_s = shiny) 
     let shiny = 30.0;
+    let k_spec = new Vec(0.4, 0.4, 0.4);
+    let spec = k_spec.sca(Math.pow(clamp(v.dot(r), 0, v.dot(r)), shiny));
 
     // 5. Add ambient, diffuse and specular color.
     //    Store the result in the variable color - replace the following dummy line:
-    let color = new Vec(0.0, 0.0, 0.0);
-
-
+    let color = ambient.add(diffuse).add(spec);
+    console.log("COLOR: \n", color);
 
 
     if (showVectors) {
