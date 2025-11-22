@@ -124,7 +124,6 @@ function PhongLighting(context, point, normal, eye, pointLight, albedo, showVect
     // 5. Add ambient, diffuse and specular color.
     //    Store the result in the variable color - replace the following dummy line:
     let color = ambient.add(diffuse).add(spec);
-    console.log("COLOR: \n", color);
 
 
     if (showVectors) {
@@ -345,13 +344,21 @@ function Basic1_2(canvas, nLineSegments, amplitude, eye_pos, light_pos) {
 
             // 1. Compute representor of the primitive (-> midpoint on the line segment).
 
+            let startPoint = lineSegments[i][0];
+            let endPoint = lineSegments[i][1];
+
+            let midpoint = new Vec((startPoint[0] + endPoint[0]) / 2, (startPoint[1] + endPoint[1]) / 2);
+
             // 2. Compute the normal of the line segment.
+            let directonStartToEnd = endPoint.sub(startPoint);
+            // perependiucular vector  of v (x, y) is v'=(y, -x) (bc in canvas y goes down)
+            let normal = new Vec(directonStartToEnd[1], -directonStartToEnd[0]).normalized();
 
             // 3. Use the function PhongLighting that you implemented in the previous assignment to evaluate the color.
+            let color = PhongLighting(context, midpoint, normal, eye_pos, light_pos, albedo, false);
 
             // 4. Set the stroke color (use setStrokeStyle() defined in this .js-file).
-
-
+            setStrokeStyle(context, color);
 
             // draw the line segment
             context.beginPath();
