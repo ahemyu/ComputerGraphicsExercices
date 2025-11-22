@@ -71,14 +71,34 @@ function arrow(context, fromx, fromy, tox, toy, text) {
  */
 function PhongLighting(context, point, normal, eye, pointLight, albedo, showVectors) {
 
+    /* Phong Lighting approximates the illumination of a surface point p seen from a position eye
+    ,assuming that the perceived color of the surface point is composed out of an ambient part, which tries to model the indirect light from the environment, a diffuse part and a specular part.
+
+    Below you see the eye, the position of the point light source (light) and the surface. The surface is sampled at certain points. You can set a user specific sample using the left mouse button. 
+    Your task is to implement the Phong Lighting, 
+    therefore you have to implement the function PhongLighting(). 
+    Note: The light emitted from the light source is assumed to be white so that you can ignore the terms I_amb and I_in in the Phong formulae.
+    */ 
+
     // TODO 5.1a) Implement Phong lighting - follow the stepwise instructions below:
 
     // 1. Compute view vector v, light vector l and the reflected light vector r (all pointing away from the point and normalized!).
     //    Note: To help you implementing this task, we draw the computed vectors for the user specified sample point.
     //    Replace the following dummy lines:
-    let v = new Vec(0.0, 0.0);
-    let l = new Vec(0.0, 0.0);
-    let r = new Vec(0.0, 0.0);
+    // view vector
+    let v = eye.sub(point).normalized();
+
+    //light vector
+    // we will need the point_light I think? 
+    // direction from x to point_light is just point - pointLight?
+    // or do I need to divide by the length as well (like we did for view vector?)
+
+    let l = pointLight.sub(point).normalized();
+
+    //reflection vector
+    // from slides:r = 2(n dot l)n - l
+
+    let r = normal.sca(2 * normal.dot(l)).sub(l);
 
     // 2. Compute the ambient part, use 0.1 * albedo as ambient material property.
     //    You can check your results by setting "color" (defined below) to only ambient part - 
