@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced05//CMakeFiles/progress.marks
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Advanced05/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Advanced05/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,135 +148,80 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Advanced05/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Advanced05/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named libglew_static
+# Convenience name for target.
+src/Advanced05/CMakeFiles/Advanced05.dir/rule:
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/Advanced05/CMakeFiles/Advanced05.dir/rule
+.PHONY : src/Advanced05/CMakeFiles/Advanced05.dir/rule
 
-# Build rule for target.
-libglew_static: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libglew_static
-.PHONY : libglew_static
-
-# fast build rule for target.
-libglew_static/fast:
-	$(MAKE) $(MAKESILENT) -f submodules/glew-cmake/CMakeFiles/libglew_static.dir/build.make submodules/glew-cmake/CMakeFiles/libglew_static.dir/build
-.PHONY : libglew_static/fast
-
-#=============================================================================
-# Target rules for targets named sdl_headers_copy
-
-# Build rule for target.
-sdl_headers_copy: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 sdl_headers_copy
-.PHONY : sdl_headers_copy
-
-# fast build rule for target.
-sdl_headers_copy/fast:
-	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/sdl_headers_copy.dir/build.make submodules/SDL/CMakeFiles/sdl_headers_copy.dir/build
-.PHONY : sdl_headers_copy/fast
-
-#=============================================================================
-# Target rules for targets named SDL2main
-
-# Build rule for target.
-SDL2main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL2main
-.PHONY : SDL2main
-
-# fast build rule for target.
-SDL2main/fast:
-	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/SDL2main.dir/build.make submodules/SDL/CMakeFiles/SDL2main.dir/build
-.PHONY : SDL2main/fast
-
-#=============================================================================
-# Target rules for targets named SDL2-static
-
-# Build rule for target.
-SDL2-static: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 SDL2-static
-.PHONY : SDL2-static
-
-# fast build rule for target.
-SDL2-static/fast:
-	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/SDL2-static.dir/build.make submodules/SDL/CMakeFiles/SDL2-static.dir/build
-.PHONY : SDL2-static/fast
-
-#=============================================================================
-# Target rules for targets named uninstall
-
-# Build rule for target.
-uninstall: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 uninstall
-.PHONY : uninstall
-
-# fast build rule for target.
-uninstall/fast:
-	$(MAKE) $(MAKESILENT) -f submodules/SDL/CMakeFiles/uninstall.dir/build.make submodules/SDL/CMakeFiles/uninstall.dir/build
-.PHONY : uninstall/fast
-
-#=============================================================================
-# Target rules for targets named CG
-
-# Build rule for target.
-CG: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CG
-.PHONY : CG
-
-# fast build rule for target.
-CG/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/CG.dir/build.make src/CMakeFiles/CG.dir/build
-.PHONY : CG/fast
-
-#=============================================================================
-# Target rules for targets named Advanced03
-
-# Build rule for target.
-Advanced03: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Advanced03
-.PHONY : Advanced03
-
-# fast build rule for target.
-Advanced03/fast:
-	$(MAKE) $(MAKESILENT) -f src/Advanced03/CMakeFiles/Advanced03.dir/build.make src/Advanced03/CMakeFiles/Advanced03.dir/build
-.PHONY : Advanced03/fast
-
-#=============================================================================
-# Target rules for targets named Advanced04
-
-# Build rule for target.
-Advanced04: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Advanced04
-.PHONY : Advanced04
-
-# fast build rule for target.
-Advanced04/fast:
-	$(MAKE) $(MAKESILENT) -f src/Advanced04/CMakeFiles/Advanced04.dir/build.make src/Advanced04/CMakeFiles/Advanced04.dir/build
-.PHONY : Advanced04/fast
-
-#=============================================================================
-# Target rules for targets named Advanced05
-
-# Build rule for target.
-Advanced05: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Advanced05
+# Convenience name for target.
+Advanced05: src/Advanced05/CMakeFiles/Advanced05.dir/rule
 .PHONY : Advanced05
 
 # fast build rule for target.
 Advanced05/fast:
-	$(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/build
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/build
 .PHONY : Advanced05/fast
+
+src/cg.o: src/cg.cpp.o
+.PHONY : src/cg.o
+
+# target to build an object file
+src/cg.cpp.o:
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/src/cg.cpp.o
+.PHONY : src/cg.cpp.o
+
+src/cg.i: src/cg.cpp.i
+.PHONY : src/cg.i
+
+# target to preprocess a source file
+src/cg.cpp.i:
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/src/cg.cpp.i
+.PHONY : src/cg.cpp.i
+
+src/cg.s: src/cg.cpp.s
+.PHONY : src/cg.s
+
+# target to generate assembly for a file
+src/cg.cpp.s:
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/src/cg.cpp.s
+.PHONY : src/cg.cpp.s
+
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -290,15 +235,13 @@ help:
 	@echo "... install/strip"
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... sdl_headers_copy"
-	@echo "... uninstall"
-	@echo "... Advanced03"
-	@echo "... Advanced04"
 	@echo "... Advanced05"
-	@echo "... CG"
-	@echo "... SDL2-static"
-	@echo "... SDL2main"
-	@echo "... libglew_static"
+	@echo "... src/cg.o"
+	@echo "... src/cg.i"
+	@echo "... src/cg.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 
@@ -310,6 +253,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
