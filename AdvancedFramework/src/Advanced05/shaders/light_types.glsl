@@ -35,12 +35,12 @@ struct Light
     int type;
     bool enable;
     vec3 color;
-    float diffuseIntensity;
+    float diffuseIntensity; //I_n
 
-    float specularIntensity;
+    float specularIntensity; //I_n
     float shiny;
 
-    float ambientIntensity;
+    float ambientIntensity; //I_n
 
     //only for spot and point light
     vec3 position;
@@ -57,7 +57,7 @@ struct Light
 };
 
 
-layout (location = 2) uniform vec3 objectColor;
+layout (location = 2) uniform vec3 objectColor; // surface color 
 layout (location = 3) uniform vec3 cameraPosition;
 layout (location = 4) uniform bool cellShading = false;
 
@@ -68,7 +68,7 @@ layout (location = 29) uniform Light pointLight;
 
 layout (location = 0) out vec3 out_color;
 
-in vec3 normal;
+in vec3 normal; //do we need to norm it again?
 in vec3 positionWorldSpace;
 
 
@@ -81,16 +81,26 @@ vec3 phong(
     //TODO 5.4 a)
     //Compute the diffuse, specular and ambient term of the phong lighting model.
     //Use the following parameters of the light object:
-    //  light.color
-    //  light.diffuseIntensity
-    //  light.specularIntensity
-    //  light.shiny
-    //  light.ambientIntensity
+    //  light.color is this I_n? 
+    //  light.diffuseIntensity k_diff
+    //  light.specularIntensity k_spec
+    //  light.shiny n_s
+    //  light.ambientIntensity k_amb
 	//as well as the other function parameters.
 
-    vec3 color_ambient  = vec3(0);
-	vec3 color_diffuse  = vec3(0);
-    vec3 color_specular = vec3(0);
+    //TODO: ambient term, not sure if I_n is color?
+    vec3 color_ambient  = light.color * light.ambientIntensity * surfaceColor;
+
+
+    //TODO: diffuse term: k_diff * max(dot(normalNormed, lightDir), 0.0);
+	vec3 color_diffuse  = light.color * light.diffuseIntensity * max(dot(n, l), 0.0) * surfaceColor;
+
+
+    //TODO: spec term: k_spec * pow(max(dot(v, r), 0.0), shiny);
+    vec3 r = 2.0 * (dot(n, l)) * n - l; //TODO: do I need to normalize it?
+
+    vec3 color_specular = light.color * light.specularIntensity * pow(max(dot(v, r), 0.0), light.shiny); //TODO: do we need to multiply with surfaceColor?? 
+    
     return color_ambient + color_diffuse + color_specular;
 }
 
