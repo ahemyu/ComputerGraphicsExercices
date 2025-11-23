@@ -393,6 +393,42 @@ function Basic1_2(canvas, nLineSegments, amplitude, eye_pos, light_pos) {
 ////////   5.1c)   ////////
 ///////////////////////////
 
+function computeVertexNormal(lineSegments, segmentIndex, nLineSegments, isStartVertex) {
+    // Compute normal of current segment
+    let startPoint = lineSegments[segmentIndex][0];
+    let endPoint = lineSegments[segmentIndex][1];
+    let direction = endPoint.sub(startPoint);
+    let currentNormal = new Vec(direction[1], -direction[0]).normalized();
+
+    if (isStartVertex) {
+        // Start vertex of current segment
+        if (segmentIndex === 0) {
+            // First segment, use only current segment normal
+            return currentNormal;
+        } else {
+            // Interior start vertex so average with previous segment normal
+            let prevStart = lineSegments[segmentIndex - 1][0];
+            let prevEnd = lineSegments[segmentIndex - 1][1];
+            let prevDirection = prevEnd.sub(prevStart);
+            let prevNormal = new Vec(prevDirection[1], -prevDirection[0]).normalized();
+            return currentNormal.add(prevNormal).normalized();
+        }
+    } else {
+        // End vertex of current segment
+        if (segmentIndex === nLineSegments - 1) {
+            // Last segment so use only current segment normal
+            return currentNormal;
+        } else {
+            // Interior end vertex, average with next segment normal
+            let nextStart = lineSegments[segmentIndex + 1][0];
+            let nextEnd = lineSegments[segmentIndex + 1][1];
+            let nextDirection = nextEnd.sub(nextStart);
+            let nextNormal = new Vec(nextDirection[1], -nextDirection[0]).normalized();
+            return currentNormal.add(nextNormal).normalized();
+        }
+    }
+}
+
 function Basic1_3(canvas, nLineSegments, amplitude, eye_pos, light_pos) {
     if (canvas.id == "canvasGouraudShading") {
         // reset the slider and the checkboxes
@@ -468,19 +504,35 @@ function Basic1_3(canvas, nLineSegments, amplitude, eye_pos, light_pos) {
         // draw surface (line segments) using flat shading
         for (let i = 0; i < nLineSegments; ++i) {
 
+            /*
+            In contrast to Flat Shading, Gouraud Shading computes the color at the vertices and interpolates the color linearly over the primitives.
+            Follow the TODOs in Basic1_2 and implement Gouraud Shading for the line segments
+            */
             // TODO 5.1c) Implement Gouraud Shading of the line segments - follow the stepwise instructions below:
 
             // 1. Compute vertex normals by interpolating between normals of adjacent line segments (weighted by line segment length!). Take care of border cases.
+            let startPoint = lineSegments[i][0];
+            let endPoint = lineSegments[i][1];
 
+            let normalLeftVertex = computeVertexNormal(lineSegments, i, nLineSegments, true);
+            let normalRightVertex = computeVertexNormal(lineSegments, i, nLineSegments, false);
 
             // 2. Evaluate the color at the vertices using the PhongLighting function.
-
+            let colorLeftVertex = PhongLighting(context, startPoint, normalLeftVertex, eye, pointLight, albedo, false);
+            let colorRightVertex = PhongLighting(context, endPoint, normalRightVertex, eye, pointLight, albedo, false);
 
             // 3. Use the linear gradient stroke style of the context to linearly interpolate the vertex colors over the primitive (https://www.w3schools.com/TAgs/canvas_createlineargradient.asp).
             //    The color triples can be scaled from [0,1] to [0,255] using the function floatToColor().
             //    To apply the gradient, set context.strokeStyle to your linear gradient.
 
+            const grd = context.createLinearGradient(startPoint[0], startPoint[1], endPoint[0], endPoint[1]);
+            // first we need to convert the colorTriples which are in in [0,1 ] to [0,255]
+            let colorLeftVertexRgb = floatToColor(colorLeftVertex);
+            let colorRightVertexRgb = floatToColor(colorRightVertex);
+            grd.addColorStop(0, `rgb(${colorLeftVertexRgb[0]}, ${colorLeftVertexRgb[1]}, ${colorLeftVertexRgb[2]})`);
+            grd.addColorStop(1, `rgb(${colorRightVertexRgb[0]}, ${colorRightVertexRgb[1]}, ${colorRightVertexRgb[2]})`);
 
+            context.strokeStyle = grd;
 
             // draw line segment
             context.beginPath();
