@@ -150,7 +150,20 @@ void main()
     {
         //TODO 5.4 c)
         //Use the uniforms "pointLight" and "objectColor" to compute "colorPoint".
-        colorPoint = vec3(0); //<- change this line
+        // as we have pointLight the lightdir is diff for each point (it is lightpos-worldPos)
+        vec3 l = pointLight.position - positionWorldSpace;
+        float r = length(l);
+        vec3 lNormed = normalize(l);
+        // TODO: calculate the attenuated light intensity (dependent on ditance r to the emitting point)
+
+        // first call phong to get I_0
+
+        vec3 i0 = phong(pointLight, objectColor, n, lNormed, v);
+
+        // now calculate the remaining intensity I 
+        vec3 i = i0 / (pointLight.attenuation[0] + pointLight.attenuation[1] * r + pointLight.attenuation[2] * r * r);
+
+        colorPoint = i; //<- change this line
     }
 
     if(spotLight.enable)
