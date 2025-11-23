@@ -142,7 +142,8 @@ void main()
     {
         // TODO 5.4 b)
         // Use the uniforms "directionalLight" and "objectColor" to compute "colorDirectional". 
-        colorDirectional = vec3(0); //<- change this line
+        // but we also need l!!
+        colorDirectional = phong(directionalLight, objectColor, n, directionalLight.direction, v ); //<- change this line
     }
 
     if(pointLight.enable)
