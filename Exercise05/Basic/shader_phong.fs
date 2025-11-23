@@ -76,7 +76,17 @@ void main(void)
 	//				uniform.
 
 	// L_spec = k_spec * (dot(v, r))^n_s
-	color_specular = vec3(0);
+
+	//TODO: get view vector v ; use the cameraMatrixInverse  somehow (where do I get cameraposition in camera space??), it is just the origin ofc (baka)
+
+	vec3 cameraPosWorld = vec3(cameraMatrixInverse * vec4(0.0, 0.0, 0.0, 1.0)); 
+	vec3 v = cameraPosWorld - worldPosition;
+	v = normalize(v);
+
+	//TODO: get reflection vector r, which is r = 2 * (𝑛∘𝑙)*n − 𝑙
+	vec3 r = 2.0 * dot(normalNormed, lightDir) * normalNormed - lightDir;
+
+	color_specular = k_spec * pow(max(dot(v, r), 0.0), shiny);
 
 
 	///////////////////////////////////
@@ -86,6 +96,5 @@ void main(void)
     if(ambient) color_result += color_ambient;
     if(diffuse) color_result += color_diffuse;
     if(specular) color_result += color_specular;
-	jjjkkkkkkkkjllljjhjkk
 	gl_FragColor = vec4(color_result, 1.0);
 }
