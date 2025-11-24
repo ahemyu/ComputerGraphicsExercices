@@ -170,7 +170,35 @@ void main()
     {
         //TODO 5.4 d)
         //Use the uniforms "spotLight" and "objectColor" to compute "colorSpot".
-        colorSpot = vec3(0); //<- change this line
+        vec3 l = spotLight.position - positionWorldSpace;
+        float r = length(l);
+        vec3 lNormed = normalize(l);
+
+        // first call phong to get I_0
+        vec3 i0 = phong(spotLight, objectColor, n, lNormed, v);
+
+        // now calculate the remaining intensity I 
+        vec3 i = i0 / (spotLight.attenuation[0] + spotLight.attenuation[1] * r + spotLight.attenuation[2] * r * r);
+
+        ////compute cone with spotLight.angle and spotLight.direction /////
+
+        // compute the angle of the current fragment with respect to the cone and set the intensity to 0 if this angle is larger than the cone angle.
+        vec3 lNormedFlipped = -1.0 * lNormed; //vector pointing from lightSource to the pixel
+
+        float currentAngle = acos(dot(spotLight.direction, lNormedFlipped)); //angle between spotlight center and light direction
+
+        //compare currentAngle spotLight.angle to determine if point is inside cone 
+        if(currentAngle > spotLight.angle){ //spotLight.angle represents the max width of the highlight cone
+            i =  vec3(0); // poinbt is outside the cone so set brightness to 0;
+        }
+        //Remove the hard edge by fading out the intensity towards the cone angle. The angle at which fading should start can be computed by multiplying the cone angle with the sharpness parameter of the spot light. 
+        //For example, with coneAngle=80 and sharpness=0.8, the spotlight intensity should fade out between 64 and 80 degrees. Use the built-in smoothStep function. 
+
+        float fadingStart = spotLight.sharpness * spotLight.angle;
+        // use smoothstep function to fade out the brightness
+        i *= smoothstep(spotLight.angle, fadingStart, currentAngle);
+
+        colorSpot = i; //<- change this line
     }
 
 
