@@ -88,18 +88,17 @@ vec3 phong(
     //  light.ambientIntensity k_amb
 	//as well as the other function parameters.
 
-    //TODO: ambient term, not sure if I_n is color?
     vec3 color_ambient  = light.color * light.ambientIntensity * surfaceColor;
 
 
-    //TODO: diffuse term: k_diff * max(dot(normalNormed, lightDir), 0.0);
+    //diffuse term: k_diff * max(dot(normalNormed, lightDir), 0.0);
 	vec3 color_diffuse  = light.color * light.diffuseIntensity * max(dot(n, l), 0.0) * surfaceColor;
 
 
-    //TODO: spec term: k_spec * pow(max(dot(v, r), 0.0), shiny);
+    //spec term: k_spec * pow(max(dot(v, r), 0.0), shiny);
     vec3 r = 2.0 * (dot(n, l)) * n - l; //TODO: do I need to normalize it?
 
-    vec3 color_specular = light.color * light.specularIntensity * pow(max(dot(v, r), 0.0), light.shiny); //TODO: do we need to multiply with surfaceColor?? 
+    vec3 color_specular = light.color * light.specularIntensity * pow(max(dot(v, r), 0.0), light.shiny) * surfaceColor; // not sure if we need to multiply with surfaceColor 
     
     return color_ambient + color_diffuse + color_specular;
 }
@@ -126,7 +125,27 @@ vec3 hsv2rgb(vec3 c)
 }
 
 
+float quantize_brightness(float brightness){
 
+    if(brightness < 0.33){
+        return 0.0;
+    }else if(brightness < 0.66){
+        return 0.5;
+    }else { 
+        return 1.0;
+    }
+}
+
+vec3 get_quantized_color(vec3 color){
+
+    vec3 colordirectionalhsv = rgb2hsv(color);
+    // third element is the value(brighness)
+    float brightness = colordirectionalhsv[2];
+    brightness = quantize_brightness(brightness);
+    colordirectionalhsv[2] = brightness;
+    //convert hsv back to rgb
+    return hsv2rgb(colordirectionalhsv);
+}
 
 void main()
 {
@@ -154,7 +173,7 @@ void main()
         vec3 l = pointLight.position - positionWorldSpace;
         float r = length(l);
         vec3 lNormed = normalize(l);
-        // TODO: calculate the attenuated light intensity (dependent on ditance r to the emitting point)
+        //calculate the attenuated light intensity (dependent on ditance r to the emitting point)
 
         // first call phong to get I_0
 
@@ -201,12 +220,23 @@ void main()
         colorSpot = i; //<- change this line
     }
 
-
-
     if(cellShading)
     {
         //TODO 5.4 e)
+        // In this task you are asked to implement simple cell shading. The basic principle is that the colors are quantized, creating the look that the image was drawn by hand with a finite amount of colors.
+        //Implement the color quantization in light_types.glsl. Each light color (for the three light types) should be quantized before they are added up. 
+        //The quantization should happen in HSV color space on the brightness value. Use the functions rgb2hsv and hsv2rgb to convert between RGB and HSV. 
+        //The quantized HSV color for each light should take only three possible brightness values (0, 0.5 and 1), which should cover equally sized value spans of the original brightness value. 
 
+        //quantize directionalColor
+        // cobvert rgb to hsv
+        colorDirectional = get_quantized_color(colorDirectional);
+        //quantize colorSpot
+        colorSpot = get_quantized_color(colorSpot);
+        //quantize colorPoint
+        colorPoint = get_quantized_color(colorPoint);
+
+        out_color = colorDirectional + colorSpot + colorPoint;
     }else
     {
         out_color = colorDirectional + colorSpot + colorPoint;
