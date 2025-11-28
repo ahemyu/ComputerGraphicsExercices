@@ -106,16 +106,31 @@ function Basic1a(canvas, texture, texDimU, texDimV, sample_nearest) {
 
         // TODO 6.1a)   Implement bilinear interpolation of the texture stored in the global variable "texture"
         // 1. Given the current uv coordinates, determine the uv coordinates of the 4 surrounding pixels (use Math.floor / Math.ceil).
-
+        let u_ceil = Math.ceil(u);
+        let u_floor = Math.floor(u);
+        let v_ceil = Math.ceil(v);
+        let v_floor = Math.floor(v);
         // 2. Compute the linear indices of the surrounding pixels (e.g. idx = texDimU * v + u;).
+        // texDimU * v means skipping the necessary amoiunt of rows
+        //  then we need add the column to get out index
+        let bottomLeft = texDimU * v_floor + u_floor;
+        let bottomRight = texDimU * v_floor + u_ceil;
+        let topRight = texDimU * v_ceil + u_ceil; 
+        let topLeft = texDimU * v_ceil + u_floor;
 
-        // 3. Interpolate linearly in u (use interpolateColor()). 
+       // 3. Interpolate linearly in u (use interpolateColor()). 
         //    You can access the color at index 'idx' using texture[idx].
+        // where do we get alpha from? Is it the distance of u_floor to the og u?
+        let uBottomInterpolatedColor = interpolateColor(texture[bottomLeft], texture[bottomRight], u - u_floor);
+        let uTopInterpolatedColor = interpolateColor(texture[topLeft], texture[topRight], u - u_floor);
 
         // 4. Interpolate linearly in v (use interpolateColor()).
+        let finalInterpolatedColor = interpolateColor(uBottomInterpolatedColor, uTopInterpolatedColor, v - v_floor);
+        
 
         // replace this line
-        return [0.7, 0.7, 0.7];
+        // now we need to interpolate the two interpolated colors in v 
+        return [finalInterpolatedColor[0], finalInterpolatedColor[1], finalInterpolatedColor[2]];
     }
 
     function Render() {
