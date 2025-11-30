@@ -278,6 +278,19 @@ Advanced05/fast:
 	$(MAKE) $(MAKESILENT) -f src/Advanced05/CMakeFiles/Advanced05.dir/build.make src/Advanced05/CMakeFiles/Advanced05.dir/build
 .PHONY : Advanced05/fast
 
+#=============================================================================
+# Target rules for targets named Advanced06
+
+# Build rule for target.
+Advanced06: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Advanced06
+.PHONY : Advanced06
+
+# fast build rule for target.
+Advanced06/fast:
+	$(MAKE) $(MAKESILENT) -f src/Advanced06/CMakeFiles/Advanced06.dir/build.make src/Advanced06/CMakeFiles/Advanced06.dir/build
+.PHONY : Advanced06/fast
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -295,6 +308,7 @@ help:
 	@echo "... Advanced03"
 	@echo "... Advanced04"
 	@echo "... Advanced05"
+	@echo "... Advanced06"
 	@echo "... CG"
 	@echo "... SDL2-static"
 	@echo "... SDL2main"
