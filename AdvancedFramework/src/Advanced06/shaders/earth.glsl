@@ -163,8 +163,8 @@ void main() {
 		// Make sure that the transition is smooth by using the GLSL function mix().
         
         if(useColor) { //Note: 'useColor' is passed as a uniform and can be enabled in the GUI.
-            dayColor = vec3(1); //<- TODO: read from the texture 'earthColor' here
-            nightColor = vec3(0); //<- TODO: read from the texture 'earthNight' here
+            dayColor = texture(earthColor, tc).rgb; //<- TODO: read from the texture 'earthColor' here
+            nightColor = texture(earthNight, tc).rgb; //<- TODO: read from the texture 'earthNight' here
         }
 
         if(useClouds) {
@@ -179,13 +179,25 @@ void main() {
             dayColor *= clouds;
 		}
 
-        vec3 color_diffuse = sunColor * dayColor * max(0, dot(n, l)); // <- change this line for 6.5a)
+        // blend between day and night colors based on lighting
+        float ndotl = dot(n, l);
+        // day contribution: lit by the sun
+        vec3 dayContribution = sunColor * dayColor * max(0.0, ndotl);
+        // night contribution: emissive, visible on the dark side
+        // smoothstep creates a smooth transition between night and day
+        float nightVisibility = 1.0 - smoothstep(-0.2, 0.2, ndotl);
+        vec3 nightContribution = nightColor * nightVisibility;
+        // combine both contributions
+        vec3 color_diffuse = dayContribution + nightContribution;
 
         // TODO 6.5 b)
         // Read and use the specular intensity value stored in the 'earthSpec' texture.
-		// The texture stores values between 0 and 1. Scale these values to [0, 0.7] and 
+		// The texture stores values between 0 and 1. Scale these values to [0, 0.7] and
 		// then clamp values smaller than 0.2 to 0.2 to obtain a natural look.
-        vec3 color_specular = sunColor * pow(max(0.0, dot(v, r)), 20); // <-- modify this line with the specular intensity value
+        float specIntensity = texture(earthSpec, tc).r; // read specular coefficient from texture
+        specIntensity = specIntensity * 0.7; // scale from [0,1] to [0,0.7]
+        specIntensity = max(specIntensity, 0.2); // clamp values smaller than 0.2 to 0.2
+        vec3 color_specular = sunColor * pow(max(0.0, dot(v, r)), 20) * specIntensity;
 
         color = color_diffuse + color_specular;
     }
