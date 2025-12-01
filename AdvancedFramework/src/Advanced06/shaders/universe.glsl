@@ -25,19 +25,40 @@ layout (location = 0) out vec4 out_color;
 in vec3 position;
 
 void main() {
-
     //TODO 6.4 b)
 
-    // 1. Compute world position of current fragment.
-	//	  Use the matrix 'projView' to do so.
-    vec4 wp = vec4(0); // <-- replace this line
+    // 1. compute world position of current fragment.
+    //    use the matrix 'projView' to do so.
+    
+    // the position coming from the vertex shader is in clip space (screen space)
+    // we need to transform it back to world space
+    // projView = projection * view, so to go backwards we need the inverse
+    mat4 invProjView = inverse(projView);
+    
+    // position is in clip space, so we convert it to a vec4 with w=1
+    vec4 clipSpacePos = vec4(position.xy, position.z, 1.0);
+    
+    // transform from clip space to world space
+    vec4 wp = invProjView * clipSpacePos;
+    
+    // perspective divide to get actual 3D position
+    wp = wp / wp.w;
 
-    // 2. Compute view direction.
-	//	  Use the variable 'cameraPos' to do so.
-    vec3 direction; // <-- replace this line
+    // 2. compute view direction.
+    //    use the variable 'cameraPos' to do so.
+    
+    // direction from camera to the fragment (normalized)
+    // this tells us which direction we're looking
+    vec3 direction = normalize(vec3(wp) - cameraPos);
 
-    // 3. Convert view direction to texture coordinates and read from the 'color' texture.
-    vec2 tc = vec2(0); // <-- replace this line
-    out_color = texture(color,tc);
-
+    // 3. convert view direction to texture coordinates and read from the 'color' texture.
+    
+    // first convert the direction (cartesian) to spherical coordinates
+    vec2 sphericalCoords = cartesianToSpherical(direction);
+    
+    // then convert spherical to texture coordinates [0,1]
+    vec2 tc = sphericalToTexture(sphericalCoords);
+    
+    // finally sample the universe texture at those coordinates
+    out_color = texture(color, tc);
 }
