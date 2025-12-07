@@ -79,7 +79,18 @@ function Basic2(canvas, steps) {
         //              to return the newly created transform
         //              instead of the parent transform.
 
-        return parent;
+
+
+
+        let transform = document.createElement("transform");
+
+        //set transformation and scale attribute
+        transform.setAttribute("translation", translation);
+        transform.setAttribute("scale", "0.33 0.33 0.33");
+
+        parent.appendChild(transform);
+
+        return transform;
     }
 
     function createScene(canvas, remove_children=false) {
