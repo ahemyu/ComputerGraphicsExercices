@@ -108,11 +108,25 @@ class DepthBuffer {
         //              (depthTestMode) and the depth value in fixed point representation.
         //              depthTestMode: 0 = no depth test (always pass), 1 = pass if less, -1 = pass if greater
         //              Depth testing takes place in the fragment shader.
-        if (true) { // adapt this condition
-            this.data[x] = newValue;
-            return true;
-        }
+        /* 
+            Your task is to implement the depth test in DepthBuffer.TestAndSetFragment. 
+            This method compares the old value with the fragment depth value, sets the new depth value if it passes the test and returns the result of the test. 
+            Note that the depth buffer stores and compares depth values with a low precision fix point representation. 
+        */
 
+        if (depthTestMode == 0) {
+            return true;
+        } else if (depthTestMode == 1) {
+            if (newValue < oldValue) {
+                this.data[x] = newValue;
+                return true;
+            }
+        } else if (depthTestMode == -1) {
+            if (newValue > oldValue) {
+                this.data[x] = newValue;
+                return true;
+            }
+        }
         return false;
     }
 }
@@ -318,22 +332,22 @@ class RenderingPipeline {
         const bx = b[0] / b[2];
         const bz = b[1] / b[2];
         
-        //sign of crossproduct defines the winding order (CCW or CW)
+        // direction vector from a to b
+        const dx = bx - ax;
+        // we don't actually need dz so do not define it
         
-        const crossProduct = (ax * bz) - (az * bx); 
-
+        // normal to the primitive is (dz, -dx)
+        // so if dx < 0 normal points toward +z and thus back-facing
+        // if dx > 0 normal points toward -z and thus front-facing
+        
         if(this.culling == 1){
             //backface culling
-            // if the cp is positive, we have CW order, so we need to cull this primitive
-            if (crossProduct > 0) {
+            if (dx < 0) {
                 return true; 
             }
-
         }else if(this.culling == -1){
             //frontface culling
-
-            // if crossproduct is pos, we have CCW order, so we need to cull
-            if (crossProduct < 0){
+            if (dx > 0){
                 return true;
             }
         }
