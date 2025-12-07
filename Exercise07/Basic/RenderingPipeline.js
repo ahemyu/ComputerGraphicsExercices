@@ -263,10 +263,13 @@ class RenderingPipeline {
         //              You have to iterate over all indices in the ibo (every two ibo entries form a primitive,
         //              e.g. ibo[0] and ibo[1] are the indices of the first primitive).
         //              The result can best be seen in the canonical volume.
-        let primitives = new Array(); // Also change the size of this array.
 
+        let primitives = new Array(); // TODO: This needs to be an array of arrays, but in total it shall have int(ibo.length/2) many elements
 
-
+        for(let i = 0; i <= ibo.length -2; i+=2){
+            //TODO: add the correct primiticve consisting of 2 vertices at vertex[ibo[i]] and vertex[ibo[i+1]]
+            primitives.push([vertexStream[ibo[i]], vertexStream[ibo[i+1]]])
+        }
         if (this.verbose) console.log("    - #primitives [out]: " + primitives.length);
 
         return primitives;
@@ -307,7 +310,35 @@ class RenderingPipeline {
         //              the result can also be viewed there.
         //              You can assume that all primitives are defined consistently, following a
         //              convention similar to the CCW convention for triangles in 3D.
-        return false; // Change this line: At the moment, nothing is culled.
+        
+        //dehomogenize the coords first (divide x and z components by w)
+        const ax = a[0] / a[2];
+        const az = a[1] / a[2];
+        
+        const bx = b[0] / b[2];
+        const bz = b[1] / b[2];
+        
+        //sign of crossproduct defines the winding order (CCW or CW)
+        
+        const crossProduct = (ax * bz) - (az * bx); 
+
+        if(this.culling == 1){
+            //backface culling
+            // if the cp is positive, we have CW order, so we need to cull this primitive
+            if (crossProduct > 0) {
+                return true; 
+            }
+
+        }else if(this.culling == -1){
+            //frontface culling
+
+            // if crossproduct is pos, we have CCW order, so we need to cull
+            if (crossProduct < 0){
+                return true;
+            }
+        }
+
+        return false;
     }
 
     /**
