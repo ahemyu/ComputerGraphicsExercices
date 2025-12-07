@@ -1,3 +1,5 @@
+const { createElement } = require("react");
+
 function Basic2(canvas, steps) {
 
     if (canvas.id == "fractal") {
@@ -27,6 +29,14 @@ function Basic2(canvas, steps) {
         //              their usage in createScene().
 
         let shape = document.createElement("shape");
+        let cube = document.createElement("cube");
+        shape.appendChild(cube);
+        
+        let material = document.createElement("material");
+        material.setAttribute("color", "1 1 1");
+
+        shape.appendChild(material);
+
         return shape;
     }
 
