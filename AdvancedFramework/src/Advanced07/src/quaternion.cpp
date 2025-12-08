@@ -12,8 +12,11 @@ Quaternion::Quaternion(vec3 axis, float angle) {
     // TODO 7.3 a)
     // Initialize with classic axis angle rotation as defined in the lecture.
 	// Change the following two lines!
-	real = 1;
-	img = vec3(0);
+
+    // the real part is cos of half of the angle
+	real = cos(angle/2);
+    // imaginary part is the axis multiplied by sin of half of the angle
+	img = axis * sin(angle/2);
 }
 
 mat3 Quaternion::toMat3() {
