@@ -44,14 +44,30 @@ void FPSCamera::turn(vec2 relMouseMovement) {
 	float dy = sensitivity * relMouseMovement.y;
 
     // TODO 7.4 b)
-    // Implement the camera turning with the mouse.jjk
+    // Implement the camera turning with the mouse
     // - Create the quaternions representing the x and y axis rotation.
     // - The local x axis of the camera must always be parallel to the ground!
     // - Forbid upside-down turning: (newOrientation * vec3(0,1,0)).y should be > 0.
 	//	 Otherwise, only use the rotation around the y axis.
 
+
+    
+    //create the quatewrnions for the two rotations: 
+    // to turn in x dirction we need the y axis
+    Quaternion turnX = Quaternion(vec3(0,1,0), dx); //we use the global y-axis to stay planted on the feet
+    //to turn in y direction we need x axis
+    Quaternion turnY = Quaternion(vec3(1,0,0), dy); //we use local x-axis to be able to independently move our "head"
+    
+    //multiply turnX from left(global) and turnY from right (local)
     // compute newOrientation from currentTransformation.orientation
     Quaternion newOrientation;
+    newOrientation = turnX * currentTransformation.orientation * turnY;
+    
+    //TODO: hanle upside-down turning, so dy<=0
+    if((newOrientation * vec3(0,1,0)).y <= 0) {
+        // only do 
+        newOrientation = turnX * currentTransformation.orientation;
+    }
 
     // When you are done, set current transformation and last transformation so that we do not interpolate mouse motion
     // (Don't change these two lines!).
