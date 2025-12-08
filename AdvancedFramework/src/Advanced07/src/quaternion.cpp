@@ -54,33 +54,63 @@ mat4 Quaternion::toMat4() {
 float Quaternion::norm() const {
     // TODO 7.3 b)
     // Compute the L2 norm of this vector.
-    return 0;
+
+    // the l2 norm is sqrt(elementwise mult(q))
+    return sqrt((real * real) + (img.x * img.x) + (img.y * img.y) + (img.z * img.z));
 }
 
 Quaternion Quaternion::normalize() {
     // TODO 7.3 b)
     // Normalize this quaternion.
+    // we need to divide each component of the quat by it's norm
+
+    float norm = this->norm();
+
+    real = real / norm;
+    img.x = img.x / norm;
+    img.y = img.y / norm;
+    img.z = img.z / norm;
     return *this;
 }
 
 Quaternion Quaternion::conjugate() const {
     // TODO 7.3 b)
 	// Return the conjugate of this quaternion.
+
+    // conjugate is  just the imaginary coeff with sign flipped
     Quaternion result;
+    result.real = real;
+    result.img.x = -1 * img.x;
+    result.img.y = -1 * img.y;
+    result.img.z = -1 * img.z;
+
     return result;
 }
 
 Quaternion Quaternion::inverse() const {
     // TODO 7.3 b)
 	// Return the inverse of this quaternion.
+
+    //inverse is the conjugate divided by the norm^2
     Quaternion result;
+    float norm = this->norm();
+
+    Quaternion conj = conjugate();
+    result.real = real / (norm * norm);
+    result.img.x = conj.img.x / (norm * norm); 
+    result.img.y = conj.img.y / (norm * norm); 
+    result.img.z = conj.img.z / (norm * norm); 
+
     return result;
 }
 
 float dot(Quaternion x, Quaternion y) {
     // TODO 7.3 b)
 	// Compute the dot product of x and y.
-    return 0;
+
+    // easy, just multiply real parts first and then add the dot product of the img parts
+
+    return x.real * y.real + ((x.img.x * y.img.x) + (x.img.y * y.img.y) + (x.img.z * y.img.z));
 }
 
 Quaternion operator*(Quaternion l, Quaternion r) {
