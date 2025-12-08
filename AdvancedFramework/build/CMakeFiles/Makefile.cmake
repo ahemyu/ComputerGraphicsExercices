@@ -16,6 +16,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/CMakeLists.txt"
   "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced05/CMakeLists.txt"
   "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced06/CMakeLists.txt"
+  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/CMakeLists.txt"
   "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/CMakeLists.txt"
   "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/CMakeLists.txt"
   "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/SDL/SDL2.spec.in"
@@ -120,6 +121,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "src/Advanced04/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Advanced05/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/Advanced06/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/Advanced07/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -134,4 +136,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "src/Advanced04/CMakeFiles/Advanced04.dir/DependInfo.cmake"
   "src/Advanced05/CMakeFiles/Advanced05.dir/DependInfo.cmake"
   "src/Advanced06/CMakeFiles/Advanced06.dir/DependInfo.cmake"
+  "src/Advanced07/CMakeFiles/Advanced07.dir/DependInfo.cmake"
   )

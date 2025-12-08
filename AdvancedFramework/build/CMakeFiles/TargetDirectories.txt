@@ -56,3 +56,10 @@
 /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced06/CMakeFiles/install.dir
 /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced06/CMakeFiles/install/local.dir
 /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced06/CMakeFiles/install/strip.dir
+/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/CMakeFiles/Advanced07.dir
+/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/CMakeFiles/edit_cache.dir
+/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/CMakeFiles/rebuild_cache.dir
+/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/CMakeFiles/list_install_components.dir
+/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/CMakeFiles/install.dir
+/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/CMakeFiles/install/local.dir
+/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/CMakeFiles/install/strip.dir
