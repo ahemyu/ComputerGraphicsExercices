@@ -66,7 +66,7 @@ void FPSCamera::turn(vec2 relMouseMovement) {
     //TODO: hanle upside-down turning, so dy<=0
     if((newOrientation * vec3(0,1,0)).y <= 0) {
         // only do 
-        newOrientation = turnX * currentTransformation.orientation;
+        newOrientation = currentTransformation.orientation;
     }
 
     // When you are done, set current transformation and last transformation so that we do not interpolate mouse motion
@@ -120,6 +120,19 @@ void FPSCamera::updatePosition(float dt) {
 	// - Change vy according to the earth acceleration.
     // - y should not drop below startY.
     float& y = currentTransformation.position.y;
+    bool spacePressed =keyBoardState[SDL_SCANCODE_SPACE];
+    if (spacePressed && y == startY){
+        vy = 5.0;
+    }
+    //change vy according to earth acceleration 
+    vy += dt * -9.81;
+    y += dt * vy; //update y position based on current velocity;
+    y = max(y, startY); // y cannot drop below start height
+
+    //if it is on start height, set velocity to 0
+    if (y == startY){
+        vy = 0.0;
+    }
 }
 
 void FPSCamera::updateOrientation(bool capture) {
