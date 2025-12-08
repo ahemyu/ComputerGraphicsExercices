@@ -117,20 +117,52 @@ Quaternion operator*(Quaternion l, Quaternion r) {
     // TODO 7.3 c)
     // Perform quaternion-quaternion multiplication as defined in the lecture.
 	// Hint: You can use the glm function for vector products.
+
+    // if l = (a,b), r = (c, d), result shall be: (a*c - b * d, a*d + b*c + b x d)
+
+
     Quaternion result;
+    result.real = (l.real * r.real) - (l.img.x * r.img.x + l.img.y * r.img.y + l.img.z * r.img.z);
+
+    vec3 first = l.real * r.img;
+    vec3 second  = r.real * l.img;
+    vec3 third = cross(l.img, r.img);
+
+    result.img = first + second + third;
+
     return result;
 }
 
 vec3 operator*(Quaternion l, vec3 r) {
     // TODO 7.3 c)
     // Rotate the vector 'r' with the quaternion 'l'.
-    return vec3(0);
+
+    //first transform v into a quat
+    Quaternion q_r;
+    q_r.real = 0;
+    q_r.img.x = r.x;
+    q_r.img.y = r.y;
+    q_r.img.z = r.z;
+
+    // now get the rotation  by q * q_r * q^-1
+
+    // we have to call the operator* for quats twice
+    Quaternion temp = operator*(l, q_r);
+    Quaternion res = operator*(temp, l.inverse());
+
+    //the imaginary part of the result is the rotated vector
+
+    return res.img;
 }
 
 Quaternion operator*(Quaternion l, float r) {
     // TODO 7.3 c)
     // Perform quaternion-scalar multiplication.
     Quaternion result;
+
+    result.real = l.real * r;
+    result.img = r * l.img;
+
     return result;
 }
 
@@ -138,6 +170,9 @@ Quaternion operator+(Quaternion l, Quaternion r) {
     // TODO 7.3 c)
 	// Return the sum of the two quaternions.
     Quaternion result;
+
+    result.real = l.real + r.real;
+    result.img = l.img + r.img;
     return result;
 }
 
