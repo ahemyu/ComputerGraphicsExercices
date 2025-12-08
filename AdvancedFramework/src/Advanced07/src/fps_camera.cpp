@@ -18,9 +18,25 @@ void FPSCamera::translate(float dx, float dz, float dt) {
     // Make sure that the final velocity is parallel to the x-z plane.
 	// Take cameraSpeed into account.
 
-    //Change these two lines...
-    vec3 velocity = vec3(1, 0, 0) * cameraSpeed;
-    currentTransformation.position += vec3(0, 1, 0) * dt;
+    if(dx == 0 && dz == 0){
+        return;
+    }
+
+    // this vector is in camera space, we need to transform it to world space
+    vec3 v = vec3(dx, 0, dz);
+    vec3 v_world = currentTransformation.orientation * v; //apparently one can just write "*" and the compiler gets it? 
+
+    //to prevent flying, set y component to 0
+    v_world[1] = 0;
+
+    //normalize bc we are flattening the y component 
+    v_world = normalize(v_world);
+
+    //multiply by camera speed to get velocity
+    vec3 velocity = v_world * cameraSpeed;
+
+    //finally update the position
+    currentTransformation.position += velocity * dt;
 }
 
 void FPSCamera::turn(vec2 relMouseMovement) {
@@ -28,7 +44,7 @@ void FPSCamera::turn(vec2 relMouseMovement) {
 	float dy = sensitivity * relMouseMovement.y;
 
     // TODO 7.4 b)
-    // Implement the camera turning with the mouse.
+    // Implement the camera turning with the mouse.jjk
     // - Create the quaternions representing the x and y axis rotation.
     // - The local x axis of the camera must always be parallel to the ground!
     // - Forbid upside-down turning: (newOrientation * vec3(0,1,0)).y should be > 0.
@@ -54,7 +70,30 @@ void FPSCamera::updatePosition(float dt) {
     // S - Backward
     // A - Left
     // D - Right
-    bool dPressed = keyBoardState[SDL_SCANCODE_D]; // example of how to get the keystate
+    bool wPressed = keyBoardState[SDL_SCANCODE_W]; //forward
+    bool sPressed = keyBoardState[SDL_SCANCODE_S]; //backward 
+    bool aPressed = keyBoardState[SDL_SCANCODE_A]; // left
+    bool dPressed = keyBoardState[SDL_SCANCODE_D]; // exa of how to get the keystate
+
+    float dx = 0.0;
+    float dz = 0.0;
+
+    if(wPressed){
+        dz -=1;
+    }
+    if(sPressed){
+
+        dz+=1;
+    }
+    if(aPressed){
+
+        dx -= 1;
+    }
+    if(dPressed){
+
+        dx += 1;
+    }
+    translate(dx, dz, dt);
 
     // TODO 7.4 c)
     // Implement a simple jumping behaviour when pressing "space" (= SDL_SCANCODE_SPACE).
