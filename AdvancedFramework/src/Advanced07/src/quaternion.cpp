@@ -84,7 +84,7 @@ Quaternion Quaternion::conjugate() const {
     result.img.y = -1 * img.y;
     result.img.z = -1 * img.z;
 
-    return result;
+    return result.normalize();
 }
 
 Quaternion Quaternion::inverse() const {
@@ -101,7 +101,7 @@ Quaternion Quaternion::inverse() const {
     result.img.y = conj.img.y / (norm * norm); 
     result.img.z = conj.img.z / (norm * norm); 
 
-    return result;
+    return result.normalize();
 }
 
 float dot(Quaternion x, Quaternion y) {
@@ -130,7 +130,7 @@ Quaternion operator*(Quaternion l, Quaternion r) {
 
     result.img = first + second + third;
 
-    return result;
+    return result.normalize();
 }
 
 vec3 operator*(Quaternion l, vec3 r) {
@@ -152,7 +152,7 @@ vec3 operator*(Quaternion l, vec3 r) {
 
     //the imaginary part of the result is the rotated vector
 
-    return res.img;
+    return res.img; 
 }
 
 Quaternion operator*(Quaternion l, float r) {
@@ -183,9 +183,20 @@ Quaternion slerp(Quaternion x, Quaternion y, float t) {
     // Spherical linear interpolation (slerp) of quaternions.
 
     // Compute the interpolated quaternion and return it normalized.
+
+    //do the division by zero check
+    float dot_x_y = dot(x,y);
+    if(dot_x_y > 1 - epsilon){
+        //treat quaternions as 4d vectors and do linear interpolation
+        return operator+(operator*(x, (1-t)), operator*(y, t)).normalize();   
+    }
 	
-    Quaternion result;
-    return result;
+    //first we need to get the angle between the quats with: omega = acos(dot(x,y)/ norm(x)*norm(y))
+    float angle = acos(dot_x_y/(x.norm()*y.norm()));
+
+    // now the formula is q(t) = (sin((1-t) * omega)/ sin(omega)) * x + y * (sin(t * omega)/sin(omega))
+    Quaternion result = operator+(operator*(x, (sin((1-t) * angle)/ sin(angle))), operator*(y, (sin(t * angle)/sin(angle))));
+    return result.normalize();
 }
 
 std::ostream& operator<<(std::ostream &str, Quaternion r) {
