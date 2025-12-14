@@ -1,0 +1,319 @@
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./resources/css/print.css">
+
+    <meta name="lecture" content="Computer Graphics">
+    <meta name="exerciseNr" content="8">
+    <meta name="exercisePrefix" content="Exercise">
+    <meta name="term" content="Winter Term 2025/26">
+    <meta name="dueDate" content="December 15, 2025, 23:55">
+
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}}); </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+    <script type="text/javascript" src="./resources/js/sheet.js"></script>
+</head>
+
+<body>
+
+    <page size="A4">
+        <content>
+
+            <exercise prefix="Basic Exercises" title="Game Engines - Godot" points=10>
+                <p>
+                    This exercise sheet revolves around <a href="https://godotengine.org/">Godot</a> as an example game engine.
+                    Using game engines, you can quickly prototype both 2D and 3D programs using their powerful built-in properties such as physics, lighting and behavior through simple scripting.
+                    Godot is a simple yet powerful open-source engine, commonly used for smaller (indie) game titles for example, with support for most platforms.
+                    See the <a href="https://godotengine.org/showcase/">Godot showcase</a> for examples and the <a href="https://docs.godotengine.org/en/4.2/index.html">Godot documentation</a> for reference.
+                </p>
+                <p>
+                    For the Basic and Advanced exercise, we want you to program a small game from scratch.
+                    Exceptionally, the Advanced part will build upon the Basic part this time, so we ask you to work on the exercises in order.
+                    The Basic part will implement the basic mechanics, whereas the Advanced part will add further features and visual fidelity.
+                    This exercise uses <b>Godot 4.2.1</b>, which you can download either from StudOn, or the <a href="https://godotengine.org/download/archive/4.2.1-stable/">Godot website</a>.
+                    The Godot engine also runs in the <a href="https://editor.godotengine.org/releases/4.2.1.stable/">browser</a>, however advanced rendering features are only available in the native version.
+                </p>
+                <p>
+                    The game consists of a player controllable ball rolling on a circular plane with coins spawning at random locations.
+                    Both the player and the coins have a polarity, which either attracts or repels the coins from the player.
+                    The goal is to push as many coins out of game area as possible by moving and switching the polarity of the ball without getting hit.
+                    The game ends if either the player has fallen off the edge, or has been hit too often.
+                </p>
+      
+                <task title="Polarity Ball: Part I" points=10 submitfile="Game.zip">
+
+                    <center>
+                        <img src="images/reference_basic.png" width=600>
+                    </center>
+
+                    <subtask title="Main Scene Graph and GameObjects" points="2">
+                        <p>
+                            Open Godot in the "Local Projects" tab (press "Cancel" if there's a pop-up window) and select "+ New".
+                            Call your project "Polarity Ball" and pick a suitable folder on disk where the project will be stored.
+                            You will finally zip and submit this folder as your solution of this exercise.
+                            Select the "Forward+" Renderer and press "Create & Edit".
+                        </p>
+                        <p>
+                            This will launch you into the main editor with the scene graph and file system tabs on the left, the main window with the world space coordinate system in the middle, and the Inspector/Node/History tabs on the right.
+                            You can switch between 2D, 3D and the script editor in the top middle.
+                            Start off by creating a "3D Scene" root node on the left, rename the "Node3D" node to "Main" and save the scene to "main.tscn" by pressing Crtl+S.
+                            You can launch the game at any time by pressing 'F5' (select the current scene when queried), pause the game with 'F7' and close the game again with 'F8'.
+                            However, there's nothing to see yet, since there is noting in our scene. So let's change that!
+                        </p>
+                        <p>
+                            As a first step, you will create the ground plane, player ball, camera and a spot light source.
+                            Every object in Godot is a "Node", which can be attached to the scene graph and has a transformation, affecting all its children.
+                            There exists a lot of pre-defined Node subclasses, for example Meshes, Physics enabled objects, Cameras, Light sources and many more.
+                            You can create them by right clicking the root node ("Main") in the left tab and selecting "Add Child Node".
+                            Now create the following:
+                        </p>
+                        <ul>
+                            <li>
+                                <b>Ground plane</b>:
+                                Create a "StaticBody3D" node as child of "Main" and rename it to "Ground".
+                                Add a "MeshInstance3D" node as child node of "Ground".
+                                Select the "MeshInstance3D" node in the Scene tab, which opens the node's properties in the Inspector tab on the right.
+                                Click on the currently "empty" Mesh property and create a new "CylinderMesh".
+                                Click on the small Image of the Cylinder next to the "Mesh" property, which opens a sub-menu.
+                                Set the top and bottom radii to 50 and the height to 1, to setup the game area.
+                                To enable collisions, we need to add a collision shape to the "Ground" node (<b>not</b> the MeshInstance3D!).
+                                Add a "CollisionShape3D" node to "Ground" and analogously add a new "CylinderShape3D" in the "Shape" property of the node.
+                                You should now see a small wireframe cylinder in the center. Adjust the "Height" and "Radius" properties of the collision shape to match the Mesh.
+                            </li>
+                            <li>
+                                <b>Player ball</b>:
+                                Create a "RigidBody3D" node as child of "Main" and rename it to "Player".
+                                Analogous to the ground plane, Create a sphere mesh and add a collision shape with a radius of 2 (height = 4).
+                                Translate the player ball to y=3 via the "Transform" property of the "Player" node.
+                            </li>
+                            <li>
+                                <b>Camera</b>:
+                                Create a "Camera3D" node as child of "Main" and change its position and rotation so it can see the ball.
+                                We will program the behavior of the camera later so the exact position does not matter.
+                            </li>
+                            <li>
+                                <b>Spot light source</b>:
+                                Create a "SpotLight3D" node as child of "Main", move it to y=50 and rotate by -90° along the x-axis (pointing down).
+                                You can either use the editor or the node's "Transform" property.
+                                Set its "Range" to 100 and "Angle" to 50.
+                                Finally, set the "Energy" of the "Light" node to 250 and select the "Shadow" property to check the "Enabled" box.
+                            </li>
+                        </ul>
+                        <p>
+                            You now got a basic scene setup and should be able to see the player ball and the ground plane colliding when starting the game.
+                        </p>
+                    </subtask>
+
+                    <subtask title="Ball Control: Input, Physics and Scripting" points="2">
+                        <p>
+                            We now want to allow control of the ball using the underlying physics engine.
+                            To do so, go to "Project->Project Settings->Input Map" using the context menu.
+                            Add five new actions: "move_up", "move_down", "move_left", "move_right" and "change_polarity".
+                            For each new action, click the "+" icon on the right of list and bind map a key to it.
+                            An example binding would be "WASD" for movement and the spacebar to change polarity, but feel free to add your own, possibly even a gamepad.
+                        </p>
+                        <p>
+                            To tell the engine how the ball should react to inputs, right click the "Player" node and select "Attach Script".
+                            This opens the built-in scripting editor using the GDScript language, which is quite similar to both JavaScript and Python.
+                            See the <a href="https://docs.godotengine.org/en/4.2/tutorials/scripting/gdscript/gdscript_basics.html">documentation</a> for reference.
+                            You can also hit F1 and type a class name, for example "Node3D", to access the documentation in-engine.
+                            Each node has a <code>_ready()</code>, <code>_process(delta)</code> and <code>_physics_process(delta)</code> function, which we can extend for our use-case.
+                            Create a <code>_physics_process(delta)</code> function (hint: Ctrl+Space for completion) and check for inputs using <code>Input.is_action_pressed(name)</code>.
+                            Apply a force to the ball along the X and Z coordinates based on the inputs using <code>apply_central_force(Vector3(1,0,0))</code>, for example.
+                            The coordinate system is defined as X right, Y up and -Z forward.
+                            Multiply the force by some "speed" of your choice and the "delta" argument, which contains the time since last frame in seconds to decouple movement speed and framerate.
+                            You should now be able to move the ball around the ground plane.
+                        </p>
+                    </subtask>
+
+                    <subtask title="Camera Control: Simple Animation and Transforms" points="2">
+                        <p>
+                            Next is a simple camera animation.
+                            Attach a script to the "Camera" node and extend the <code>_process(delta)</code> function.
+                            Either create a new member variable and increment it by "delta" each frame, or query the time in seconds since the game started in using <code>Time.get_ticks_usec() / 1000000.0</code>.
+                            Using this variable, move the camera along a circle on the xz-plane of radius 50 at y=25.
+                            You can set the position of the camera using its <code>position</code> member variable.
+                            The camera should complete one full rotation in thirty seconds.
+                            Additionally, call the <code>look_at(pos, Vector3.UP)</code> function in the camera node to rotate the camera's transformation to always face the ball.
+                            You can access the player node via moving up and down in the scene graph: use <code>get_parent()</code> to go up in the tree and <code>get_node(name)</code> to get a child node by name.
+                            Access the <code>position</code> member of the "Player" node to set the camera's look at point.
+                            It should now always face the ball is it rotates.
+                        </p>
+                        <p>
+                            You might have noticed that the ball is hard to control as the camera rotates, since the force applied to the ball is fixed and not linked to the camera, so let's change that next.
+                            Return to the script attached to the "Player" node.
+                            Instead of applying a force to the ball in a fixed direction, we now want to apply a force along the view-space up/down/left/right directions mapped to the world-space x/z plane.
+                            To this end, find the "Camera" node using the scene graph and its <code>transform</code> member, which is a 3x4 matrix containing its full transformation (rotation, scale and translation).
+                            We only need the <code>transform.basis</code>, which is a orthonormal 3x3 matrix, containing the rotation from camera to world space (i.e. the inverse camera normal matrix).
+                            Use this matrix to find the respective world-space direction you want to push the ball in (based on the view-space up/down/left/right direction) and apply a force into this direction instead of a fixed one.
+                            Limit and normalize this direction to the x/z plane in world-space to avoid pushing the ball in world-space Y direction.
+                            The ball should now be intuitively controllable again.
+                        </p>
+                    </subtask>
+
+                    <subtask title="Coins: Scene Instancing and Randomness" points="2">
+                        <p>
+                            In order to be able to spawn multiple coins by scripting, we need to design the coin as a separate scene.
+                            Create a new 3D Scene using the context menu (or Ctrl+N), rename the main node to "Coin" and save it as "coin.tscn".
+                            Change the type of the root node to "RigidBody3D" via right clicking the root node and selecting "Change Type".
+                            Similar to before, add a MeshInstance3D, a CylinderMesh and cylinder collision shape as its children.
+                            Set the radius of both cylinders to 1, height to 0.25 and rotate them by 90° around the x-axis, such that it resembles the shape of a standing coin.
+                        </p>
+                        <p>
+                            Attach a script to the root node of the "Coin" scene.
+                            Modify the <code>_ready()</code> function to initialize the position of the coin to a random position on a circle of radius 50 on the x/z-plane at y=25.
+                            You can use <code>randf()</code> to get a random float in [0, 1].
+                            A simple sampling strategy is sufficient.
+                            Optionally, you can also randomize the coin's rotation, or its <code>angular_velocity</code>, to make the coins spin randomly.
+                        </p>
+                        <p>
+                            Go back to the "Main" scene and attach a script to the root node.
+                            Add a "coin_scene" member variable and assign it to a preload of the "Coin" scene: <code>preload("res://coin.tscn")</code>.
+                            Thus, we can now instance this scene programmatically using <code>add_child(coin_scene.instantiate())</code>.
+                            Start by spawning one coin per second and scale the rate up over time to make the game progressively more difficult over time.
+                            You should now see coins appearing at random positions which collide both with the ball and the ground plane.
+                        </p>
+                        <p>
+                            In theory, we now could create an infinite amount of coins which would still be simulated even if they got pushed off the ground plane.
+                            To avoid this, check whether the position on the y-axis is at or below -10 in <code>_process()</code> of each coin. 
+                            Call <code>queue_free()</code> if this is the case to flag the coin for (later) destruction.
+                            You might notice that the coins spawn at the exact same positions each time the game is run.
+                            Add a call to <code>randomize()</code> in the <code>_ready()</code> function of the "Main" script to vary the random seed each time.
+                        </p>
+                    </subtask>
+
+                    <subtask title="Game Mechanics: Forces and Lose Condition" points="2">
+                        <p>
+                            In order to round up the Basic version of the game, we now add a basic lose condition and make the coins interact with the player ball.
+                            The lose condition for now is simply if the player falls off the ground plane.
+                            Add a check to the "Player" node and stop the game if the player falls of the platform by setting <code>get_tree().paused = true</code>.
+                            Finally, add a <code>_physics_process()</code> function to the "Coin" script, fetch the "Player" node from the scene graph and compute the direction and distance to the player.
+                            We assume the polarity of the coins and ball to always match, i.e. forces always apply away from the ball.
+                            Apply a force to the coin directed away from the ball, scaled by the inverse square of their distance.
+                            Tune this effect such that far away coins are nearly unaffected and close coins get pushed away strongly.
+                            Try to push as many coins off the platform without falling off!
+                        </p>
+                    </subtask>
+
+                </task>
+                <p>
+                    This wraps up the Basic version of the game, simply zip the Godot project folder and upload it to StudOn to submit.
+                    However, if you're also doing the Advanced Exercises (or just for fun) continue below.
+                </p>
+
+            </exercise>
+        </content>
+    </page>
+
+    <page size="A4">
+        <content>
+
+            <exercise prefix="Advanced Exercises" title="Game Engines - Godot" points=10>
+
+                <task title="Polarity Ball: Part II" points=10 submitfile="Game.zip">
+                
+                    <center>
+                        <img src="images/reference_adv.png" width=600>
+                    </center>
+                   
+                    <subtask title="Game Mechanics: Polarity and Materials" points="3">
+                        <p>
+                            To bring polarity into polarity ball after all, add a member variable to both the "Player" and the "Coin" nodes which flags them as either positively or negatively charged.
+                            The player ball starts with a random polarity, but its polarity may be flipped by the "change_polarity" input (see Basic 1b and use <code>is_action_just_pressed</code> to only get a single event per input).
+                            Each coin gets a random polarity assigned on spawn, which remains unchanged for its lifetime.
+                        </p>
+                        <p>
+                            In order to be able to see the polarity of the ball and coins during gameplay, create a new material using <code>StandardMaterial3D.new()</code> for each coin.
+                            Set its <code>albedo_color</code> to either red or blue based on its polarity, <code>metallic</code> to 0.8 and <code>roughness</code> to 0.25.
+                            Feel free to experiment with (or even randomize) more material parameters.
+                            Set the <code>material_override</code> property of the "MeshInstance3D" node to this newly created material to see its effect.
+                            Proceed analogously with the "Player" node and take care to update the respective material properties when switching the polarity.
+                        </p>
+                        <p>
+                            Now to considering polarity when computing the force acting between the ball and the coins.
+                            Objects with mismatching polarity should attract each other, while objects with matching polarity get pushed away.
+                            Implement this behavior and make sure to support changing polarity of the ball.
+                            For even more commotion, use <code>add_central_impulse</code> to apply an impulse (also scaled by the inverse square law) to the coins each time the polarity of the ball is changed to create a strong pushback effect.
+                            Finally, we want the coins to affect the player as well.
+                            Find a way to iterate over all coins in the player node and apply a (small) force for each coin, analogously to how the ball affects the coins.
+                        </p>
+					</subtask>
+
+                    <subtask title="Game Mechanics: Score, Health and Physics Tuning" points="3">
+                        <p>
+                            To round up the game mechanics, we want to add a score board, proper lose condition and the ability to restart the game.
+                            Add a "Label" node as child of the Main node, rename it to "Score" and attach a script to it.
+                            Define two member variables, "score" and "hitpoints" and initialize them to zero and ten, respectively.
+                            Set the <code>text</code> member variable of the score node in the <code>_process()</code> function to show the hitpoints and score on screen.
+                            Use the "2D" view in the editor to move the text on screen and the "Inspector" tab on the right to set the color and font size using the "Theme Overrides" property.
+                            Add two functions to the score script: <code>_on_Coin_hit()</code> and <code>_on_Coin_free()</code>, which either increments the score, or decrements the hitpoints, respectively.
+                            Call <code>_on_Coin_free</code> for each coin that has been pushed off the platform before it gets deleted.
+                            In order to detect collisions between coins and the ball, we need to enable contact monitoring.
+                            Look for the "Solver" property of the RigidBody3D player node, enable contact monitoring and set the max contacts reported to 1 (per frame).
+                            Now change to the "Node" tab next to "Inspector" on the right side of the editor and look for the "body_entered" signal of RigidBody3D.
+                            Right click this signal, select "Connect" and select the Player node.
+                            This will open the script editor, where a new function has been added: <code>_on_body_entered(body)</code>, which will be called for any body the player ball collides with.
+                            In order to filter for collisions with coins only and ignore the ground plate, we can add each coin to a group when they spawn using <code>add_to_group("coin")</code>.
+                            This way, we can check whether the colliding body <code>is_in_group("coin")</code> and only subtract from the hitpoints when colliding with a coin.
+                            If the hitpoints reach zero, stop the game similar to Basic 1e.
+                            You can then restart the game again using <code>get_tree().reload_current_scene()</code> via a timer or input action.
+                        </p>
+                        <p>
+                            We've now implemented all of the game's mechanics.
+                            In order to make the game challenging and fun, you may spend some time to fine-tune the physics, for example set the mass of each "RigidBody3D" to something sensible, fine-tune the apllied forces/impulses, the coin spawn rate, ball movement etc.
+                            You could also define (or randomize) a PhysicsMaterials for each RigidBody3D, where you can further tune physical properties of each object.
+                        </p>
+					</subtask>
+
+					<subtask title="Visual Fidelity: PBR Rendering and Visual Effects" points="2">
+						<p>
+                            Download the ZIP containing physically-based rendering (PBR) textures from StudOn.
+                            Included are a set of PBR textures and a spherical environment map.
+                            We now want to write a simple shader, which applies a PBR material to the ground plane, which is then used by the internal lighting engine.
+                            To this end, select the "MeshInstance3D" of the ground plane, open the sub-menu for the cylinder mesh and create a new "ShaderMaterial".
+                            This creates a new shader file with a pre-defined no-op vertex and fragment shader in the Godot shading language, which is very similar to GLSL with some modifications (see the <a href="https://docs.godotengine.org/en/4.2/tutorials/shaders/shader_reference/shading_language.html">documentation</a>).
+                            The most important property for us are the <a href="https://docs.godotengine.org/en/4.2/tutorials/shaders/shader_reference/spatial_shader.html#built-ins">shader built-ins</a> like "VERTEX", "NORMAL", "ALBEDO", or "ROUGHNESS", which we can read from or write to.
+                            Declare a <code>varying vec2 tc</code> and five <code>uniform sampler2D tex</code> for texture coordinates and the five included PBR textures: albedo, normalmap, roughness, metallic and ambient occlusion (AO).
+                            Every uniform you just created can now also be found in the "Shader Parameters" tab of the "ShaderMaterial" in the inspector tab of the editor.
+                            Use the GUI to load (or drag and drop) the material textures to the respective uniforms.
+                            Compute a sensible texture coordinate based on <code>VERTEX</code> in the vertex shader (the ground plane has a radius of 50) and store it in <code>tc</code>.
+                            In the fragment shader, set the built-in variables "ALBEDO", "NORMAL_MAP", "ROUGHNESS", "METALLIC" and "AO" to the content of the respective textures using a standard <code>texture</code> lookup from GLSL.
+                            You should now see the effect of the material directly in the engine.
+                        </p>
+                        <p>
+                            Now for the world environment.
+                            Create a new "WorldEnvironment" node as child of "Main".
+                            Use the inspector to set the background mode to "Sky", create a new "Sky" and "PanoramaSkyMaterial" where the included environment map has to be loaded into the "Panorama" property, analogously to the material textures.
+                            You should now see a background in the scene, which also affects the lighting.
+                            The brightness of the environment can be adjusted using the "Energy Multiplier" property.
+                        </p>
+                        <p>
+                            Finally, the part where the game engine shines: visual effects.
+                            Go to "Project->Project Settings->General->Rendering->Anti Aliasing" via the context menu and check "Use TAA" to enable temporal anti-aliasing.
+                            In the "WorldEnvironment" node, set the tonemapping mode to "ACES", enable Screen-Space Reflections (SSR), Screen-Space Ambient Occlusion (SSAO), SDF-based global illumination (SDFGI), Glow and Volumetric Fog and observe their effect.
+                            Tune these method's parameters to your liking and adjust the brightness of the environment and spot light source to taste.
+                            The game should look good visually, but still be in a playable state, of course.
+                        </p>
+					</subtask>
+					
+					<subtask title="Freestyle!" points="2">
+						<p>
+							Now it is your turn, get creative!
+                            Add some additional features, mechanics, eye candy, particle systems, power-ups, procedural shaders, you name it, to the game.
+                            There's a host of freely available (for non-commercial use) assets at <a href="https://polyhaven.com/all">PolyHaven</a>, or shaders at <a href="https://www.shadertoy.com/">Shadertoy</a>, for example.
+                            Include a "freestyle.txt" in the Godot project files with a brief explanation of what you did.
+                            Have fun!
+						</p>
+					</subtask>
+
+                    To submit, simply zip the Godot project folder, as with the Basic exercise, and upload it to StudOn.
+                    Try to keep the size of your game in check to avoid hitting the StudOn upload limit.
+
+                </task>
+            </exercise>
+        </content>
+    </page>
+</body>
