@@ -881,6 +881,7 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
         let backgroundColor = new Vec(0.0, 0.0, 0.0);
         let pixelColors = [];
 
+        //for first test case we have 4 number pixels
         // iterate over all pixels of the virtual sensor
         for (let pixelIdx = 0; pixelIdx < nPixels; ++pixelIdx) {
             // compute pixel position in world space
@@ -888,13 +889,11 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
             let pixelPos = eye.add(viewDir.sca(nearPlane)).add(sensorSpan.sca(y));
             let ray;
             // TODO 9.1a)   Set up primary ray based on the camera origin (eye) and the current pixel position (pixelPos).
-            //              ray = new Ray(origin, dir);
-
+            ray = new Ray(eye, pixelPos.sub(eye));
 
             let pixelColor;
             // TODO 9.1a)   Start ray tracing at iteration 0 and use an initial weight of 1.0.
-            //              pixelColor = traceRay(...);
-
+            pixelColor = traceRay(ray, 0, 1.0);
 
             if (pixelColor) pixelColors.push(pixelColor);
             else pixelColors.push(backgroundColor);
