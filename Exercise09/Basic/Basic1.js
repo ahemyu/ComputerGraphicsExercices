@@ -292,8 +292,29 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
                 //              (Mat.mul(vec) and Mat.inv() respectively)
                 //              Also be sure to check whether the distance of the intersection lies between t_min and t_max.
 
+               // rays: t_min, t_max, p0, directon 
+               // Line p0, directon, normal
+        
+                // So the matrix will be [[ray.dir.x, -lineDir.x], [ray.dir.y, -lineDir.y]] and b will be [(line.p0 - ray.p0).x, (line.p0 - ray.p0).y]
+                // by doing A^-1 * b we get the x and y coords of the intersection point
+                let matrix = new Mat([ray.dir.x, ray.dir.y], [-lineDir.x, -lineDir.y]);
+                let b = this.p0.sub(ray.p0)
 
+                let matrix_inverse = matrix.inv(); 
+                let intersection = matrix_inverse.mul(b);
+                console.log(intersection);
+                //check if t is inside t_min and t_max, if not ignore it
+                if(intersection[0] < ray.t_min || intersection[0] > ray.t_max){
+                  return result; // this is still null
+                }
+                // we also need to check if s is between 0 and 1 bc otherwise the point would not be on the line
+                if(intersection[1] < 0 || intersection[1] > 1){
+                  return result; //also still null
+                }
 
+                let intersectionPoint = ray.p0.add(ray.dir.sca(intersection[0]));
+                // point is ray.p0 + t_ray * ray dir
+                result = new Intersection(intersection[0], this.material, this.normal(), intersectionPoint );
             }
 
             return result;
