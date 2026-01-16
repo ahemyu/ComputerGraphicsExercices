@@ -177,11 +177,14 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
                 case MaterialType.perfectMirror:
                     {
                         // TODO: Reflect the ray perfectly!
-                        // ...
-                        // return new Ray(intersection.point, reflectedDir, this.generation + 1);
+                        // we need to calculate the relecftion direction 
+                        // for that we need the formular 𝑟⃗ = 𝑣⃗ − 2 (𝑣⃗ ∘ 𝑛) ⋅ 𝑛
+                        // this.dir is the v of the equation so we need to find the normal somehow. 
+                        // the intersection stores the normal so we can just use that one
+                        let reflectedDir = this.dir.sub(intersection.normal.sca(2 * dot(this.dir, intersection.normal)));
+                        return new Ray(intersection.point, reflectedDir, this.generation + 1);
 
                     }
-                    break;
                 case MaterialType.perfectDiffuse:
                     {
                         // TODO: Reflect the ray to a random direction in the hemisphere around the intersection normal!
@@ -191,11 +194,12 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
                         //         To do so you can use the helper function rotationMatrix()!
                         //         (the result of which you can apply to the normal by using Mat.mul(vec) from num.js)
                         // ...
+                        let randomNumber = deterministicRandom();
+                        console.log(randomNumber);
                         // return new Ray(intersection.point, reflectedDir, this.generation + 1);
 
 
                     }
-                    break;
             }
 
 
@@ -283,7 +287,7 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
             let lineDir = this.direction();
             if (!isVecParallel(lineDir, ray.dir)) {
 
-                // TODO 9.1b)   Intersect the ray with the line.
+                // 9.1b)   Intersect the ray with the line.
                 //              If there is an intersection, return an Intersection "object",
                 //              e.g. result = new Intersection(t_intersect, this.material, this.normal(), intersectionPoint);!
                 //              Only handle the case where you have a single intersection or no intersection (ray is not parallel to line).
@@ -302,7 +306,6 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
 
                 let matrix_inverse = matrix.inv(); 
                 let intersection = matrix_inverse.mul(b);
-                console.log(intersection);
                 //check if t is inside t_min and t_max, if not ignore it
                 if(intersection[0] < ray.t_min || intersection[0] > ray.t_max){
                   return result; // this is still null
@@ -909,11 +912,11 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
             let y = pixelSize * (pixelIdx - nPixels / 2.0 + 0.5);
             let pixelPos = eye.add(viewDir.sca(nearPlane)).add(sensorSpan.sca(y));
             let ray;
-            // TODO 9.1a)   Set up primary ray based on the camera origin (eye) and the current pixel position (pixelPos).
+            // 9.1a)   Set up primary ray based on the camera origin (eye) and the current pixel position (pixelPos).
             ray = new Ray(eye, pixelPos.sub(eye));
 
             let pixelColor;
-            // TODO 9.1a)   Start ray tracing at iteration 0 and use an initial weight of 1.0.
+            // 9.1a)   Start ray tracing at iteration 0 and use an initial weight of 1.0.
             pixelColor = traceRay(ray, 0, 1.0);
 
             if (pixelColor) pixelColors.push(pixelColor);
