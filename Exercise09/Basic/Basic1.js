@@ -176,7 +176,7 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
             switch (intersection.material.type) {
                 case MaterialType.perfectMirror:
                     {
-                        // TODO: Reflect the ray perfectly!
+                        //Reflect the ray perfectly!
                         // we need to calculate the relecftion direction 
                         // for that we need the formular 𝑟⃗ = 𝑣⃗ − 2 (𝑣⃗ ∘ 𝑛) ⋅ 𝑛
                         // this.dir is the v of the equation so we need to find the normal somehow. 
@@ -187,7 +187,7 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
                     }
                 case MaterialType.perfectDiffuse:
                     {
-                        // TODO: Reflect the ray to a random direction in the hemisphere around the intersection normal!
+                        //Reflect the ray to a random direction in the hemisphere around the intersection normal!
                         // Hint: - Use deterministicRandom() to generate a seeded random number in [0, 1].
                         //       - To sample a direction in the hemisphere around the normal,
                         //         you can rotate the normal with a random angle between [-PI/2, +PI/2].
@@ -195,9 +195,15 @@ function Basic1(canvas, pSceneID, pIntersectObjects, pIndirectLight, pMaxRecursi
                         //         (the result of which you can apply to the normal by using Mat.mul(vec) from num.js)
                         // ...
                         let randomNumber = deterministicRandom();
-                        console.log(randomNumber);
-                        // return new Ray(intersection.point, reflectedDir, this.generation + 1);
+                        // generate a random angle between [-pi/2, +pi/2] using the randomNumber (0 should yield -pi/2, 1 should yield pi/2, and then interpolate everything in between)
+                        let angle = (randomNumber * Math.PI) - Math.PI/2;
 
+                        // rotate the normal by that random angle using rotationMatrix(). 
+                        let rotation = rotationMatrix(angle);
+                        // apply the result to the normal using Mat.mul(normal)
+                        let reflectedDir = rotation.mul(intersection.normal);
+            
+                        return new Ray(intersection.point, reflectedDir, this.generation + 1);
 
                     }
             }
