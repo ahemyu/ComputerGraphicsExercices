@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/build",
+  "command": "/usr/bin/g++ -D_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING -I/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/.. -I/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/. -g   -DASSIGNMENT_DIRECTORY=\"/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09\" -o CMakeFiles/Advanced09.dir/src/cg.o -c /home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/src/cg.cpp",
+  "file": "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/src/cg.cpp",
+  "output": "CMakeFiles/Advanced09.dir/src/cg.o"
+},
+{
+  "directory": "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/build",
+  "command": "/usr/bin/g++ -D_SILENCE_EXPERIMENTAL_FILESYSTEM_DEPRECATION_WARNING -I/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/.. -I/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/. -g   -DASSIGNMENT_DIRECTORY=\"/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09\" -o CMakeFiles/Advanced09.dir/src/main.o -c /home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/src/main.cpp",
+  "file": "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced09/src/main.cpp",
+  "output": "CMakeFiles/Advanced09.dir/src/main.o"
+}
+]

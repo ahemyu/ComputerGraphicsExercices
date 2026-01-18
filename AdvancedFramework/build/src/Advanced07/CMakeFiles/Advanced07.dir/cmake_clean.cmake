@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Advanced07.dir/link.d"
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/Advanced07"
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/Advanced07.pdb"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/Advanced07"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/Advanced07.pdb"
   "CMakeFiles/Advanced07.dir/src/cg.cpp.o"
   "CMakeFiles/Advanced07.dir/src/cg.cpp.o.d"
   "CMakeFiles/Advanced07.dir/src/fps_camera.cpp.o"

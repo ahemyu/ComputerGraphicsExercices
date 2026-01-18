@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/src/glew.c" "submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.o" "gcc" "submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.o.d"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/submodules/glew-cmake/src/glew.c" "submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.o" "gcc" "submodules/glew-cmake/CMakeFiles/libglew_static.dir/src/glew.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

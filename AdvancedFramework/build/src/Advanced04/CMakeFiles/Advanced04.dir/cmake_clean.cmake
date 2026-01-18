@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Advanced04.dir/link.d"
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/Advanced04"
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/Advanced04.pdb"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/Advanced04"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/Advanced04.pdb"
   "CMakeFiles/Advanced04.dir/src/cg.cpp.o"
   "CMakeFiles/Advanced04.dir/src/cg.cpp.o.d"
   "CMakeFiles/Advanced04.dir/src/main.cpp.o"

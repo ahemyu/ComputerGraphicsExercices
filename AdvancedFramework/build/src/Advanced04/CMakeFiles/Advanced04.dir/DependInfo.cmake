@@ -8,9 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/src/cg.cpp" "src/Advanced04/CMakeFiles/Advanced04.dir/src/cg.cpp.o" "gcc" "src/Advanced04/CMakeFiles/Advanced04.dir/src/cg.cpp.o.d"
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/src/main.cpp" "src/Advanced04/CMakeFiles/Advanced04.dir/src/main.cpp.o" "gcc" "src/Advanced04/CMakeFiles/Advanced04.dir/src/main.cpp.o.d"
-  "" "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/Advanced04" "gcc" "src/Advanced04/CMakeFiles/Advanced04.dir/link.d"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/src/cg.cpp" "src/Advanced04/CMakeFiles/Advanced04.dir/src/cg.cpp.o" "gcc" "src/Advanced04/CMakeFiles/Advanced04.dir/src/cg.cpp.o.d"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced04/src/main.cpp" "src/Advanced04/CMakeFiles/Advanced04.dir/src/main.cpp.o" "gcc" "src/Advanced04/CMakeFiles/Advanced04.dir/src/main.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

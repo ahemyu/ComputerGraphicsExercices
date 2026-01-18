@@ -1,4 +1,4 @@
-# Install script for directory: /home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src
+# Install script for directory: /home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -29,7 +29,7 @@ endif()
 
 # Install shared libraries without execute permission?
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "0")
+  set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
 # Is this installation the result of a crosscompile?
@@ -37,39 +37,38 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set path to fallback-tool for dependency-resolution.
+# Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
   set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced03/cmake_install.cmake")
+  include("/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced03/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced04/cmake_install.cmake")
+  include("/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced04/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced05/cmake_install.cmake")
+  include("/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced05/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced06/cmake_install.cmake")
+  include("/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced06/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/cmake_install.cmake")
+  include("/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced07/cmake_install.cmake")
 endif()
 
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/build/src/install_local_manifest.txt"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced09/cmake_install.cmake")
 endif()
+

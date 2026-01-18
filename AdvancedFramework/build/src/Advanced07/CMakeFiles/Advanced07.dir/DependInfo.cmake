@@ -8,11 +8,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/src/cg.cpp" "src/Advanced07/CMakeFiles/Advanced07.dir/src/cg.cpp.o" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/src/cg.cpp.o.d"
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/src/fps_camera.cpp" "src/Advanced07/CMakeFiles/Advanced07.dir/src/fps_camera.cpp.o" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/src/fps_camera.cpp.o.d"
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/src/main.cpp" "src/Advanced07/CMakeFiles/Advanced07.dir/src/main.cpp.o" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/src/main.cpp.o.d"
-  "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/src/quaternion.cpp" "src/Advanced07/CMakeFiles/Advanced07.dir/src/quaternion.cpp.o" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/src/quaternion.cpp.o.d"
-  "" "/home/ahemyu/Desktop/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/Advanced07" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/link.d"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/src/cg.cpp" "src/Advanced07/CMakeFiles/Advanced07.dir/src/cg.cpp.o" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/src/cg.cpp.o.d"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/src/fps_camera.cpp" "src/Advanced07/CMakeFiles/Advanced07.dir/src/fps_camera.cpp.o" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/src/fps_camera.cpp.o.d"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/src/main.cpp" "src/Advanced07/CMakeFiles/Advanced07.dir/src/main.cpp.o" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/src/main.cpp.o.d"
+  "/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/src/Advanced07/src/quaternion.cpp" "src/Advanced07/CMakeFiles/Advanced07.dir/src/quaternion.cpp.o" "gcc" "src/Advanced07/CMakeFiles/Advanced07.dir/src/quaternion.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
