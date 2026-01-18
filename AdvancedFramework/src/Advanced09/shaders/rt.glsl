@@ -132,25 +132,23 @@ vec3 trace(Ray ray)
 
 void main() {
 
-   // TODO 9.2 a)
+    // 9.2 a)
     // Primary ray setup
 	// Have a look at the definition of struct "Ray" in rt.h.
     // For every pixel, one ray is cast into the scene. This first ray is called the primary ray. 
     // Compute the origin and direction of the primary ray in the main function of the fragment shader in rt.glsl.
-    //TODO: Backproject the current fragment to world space using the projView matrix.
+    // Backproject the current fragment to world space using the projView matrix.
     // The origin is the camera position stored in the uniform cameraPos.
      
 	// Use "position" which is passed from the vertex shader.
-    // TODO: Compute origin and direction 
-    // this is the origin: cameraPos
     Ray primaryRay;
     primaryRay.origin = cameraPos;
     // so we have the position from vertex shader but it is in clip space. We need it in 3d world coords to actually compute the direction. 
-    // TODO: use inverse of projView matrix to get position in world space 
+    // use inverse of projView matrix to get position in world space 
     // problem: position is 3d and projView is 4d, so we need to use hom coords to perform the mult
     vec4 positionHomo = vec4(position, 1.0);
     vec4 positionWorldHomo = inverse(projView) *  positionHomo;
-    // TODO: dehomogenize coords by dividing by last component and only use first 3 components
+    // dehomogenize coords by dividing by last component and only use first 3 components
     vec3 positionWorldDehomo = vec3(positionWorldHomo[0] * 1/positionWorldHomo[3], positionWorldHomo[1]* 1/positionWorldHomo[3], positionWorldHomo[2]* 1/positionWorldHomo[3]);
     vec3 direction = positionWorldDehomo - cameraPos;
     direction = normalize(direction);
