@@ -136,11 +136,20 @@ vec3 trace(Ray ray)
                                                                                                                                                                                                     
     color = (ambient + diffuse + specular) * sunIntensity * m.color; 
 
-    // TODO 9.2 f)
+    // 9.2 f)
     // Compute shadowing coefficient of the current point.
     // Shoot a ray from the hitpoint towards the sun.
     // Use the uniform shadowFactor.
+    Ray shadowRay;
+    shadowRay.origin = inter.hitPosition + EPSILON * inter.normal;
+    shadowRay.direction = -lightDir;
+    IntersectionResult dummy;
 
+    int id = intersectRayScene(shadowRay, dummy);
+    if(id != -1){
+        color = color * (1.0 - shadowFactor);
+    }
+    
     return color;
 }
 
