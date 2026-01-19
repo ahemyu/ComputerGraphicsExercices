@@ -79,7 +79,6 @@ int intersectRayScene(Ray ray, out IntersectionResult result)
     }
 
     tmp = intersectRayPlane(ray, objectData[PLANE]);
-    // TODO:
     // Keep track of the closest intersection
 
         if(tmp.tHit > 0 && tmp.tHit < tMin ){
@@ -122,15 +121,20 @@ vec3 trace(Ray ray)
 
     vec3 color = vec3(0.0);
 
-    // TODO 9.2 e)
+    // 9.2 e)
     // Compute the illumination with Phong shading.
     // Use the uniform "lightDir".
     // Note: The normal and the position of the hitpoint are stored in IntersectionResult.
 	// Use 0.1 as ambient, 0.7 as specular and 1.0 as diffuse coefficient. 
 	// The shininess exponent should be 40.
 	// Take the variable "sunIntensity" into account.
-	// Replace the following dummy line.
-	color = m.color;
+
+    float ambient = 0.1;                                                                                                                                                                              
+    float diffuse = 1.0 * max(0.0, dot(inter.normal, -lightDir));                                                                                                                                                        
+    vec3 r = reflect(-lightDir, inter.normal);
+    float specular = 0.7 * pow(max(0.0, dot(r, -ray.direction)), 40.0);                                                                                                                                            
+                                                                                                                                                                                                    
+    color = (ambient + diffuse + specular) * sunIntensity * m.color; 
 
     // TODO 9.2 f)
     // Compute shadowing coefficient of the current point.
