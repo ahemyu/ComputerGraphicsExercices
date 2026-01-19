@@ -70,25 +70,36 @@ int intersectRayScene(Ray ray, out IntersectionResult result)
     for (int i = 0; i < NUM_SPHERES; ++i)
     {
         tmp = intersectRaySphere(ray, objectData[i]);
-        // TODO:
         // Keep track of the closest intersection
+        if(tmp.tHit > 0 && tmp.tHit < tMin ){
+            tMin = tmp.tHit;
+            objectId = i;
+            result = tmp;
+        }
     }
 
     tmp = intersectRayPlane(ray, objectData[PLANE]);
     // TODO:
     // Keep track of the closest intersection
 
+        if(tmp.tHit > 0 && tmp.tHit < tMin ){
+            tMin = tmp.tHit;
+            objectId = PLANE;
+            result = tmp;
+        }
 
     tmp = intersectRaySpikeball(ray,objectData[SPIKEBALL]);
-    // TODO:
     // Keep track of the closest intersection
 
+        if(tmp.tHit > 0 && tmp.tHit < tMin ){
+            tMin = tmp.tHit;
+            objectId = SPIKEBALL;
+            result = tmp;
+        }
 
     //return object id of closest intersection (object ids defined at the beginning of the fragment shader)
     return objectId;
 }
-
-
 
 
 vec3 trace(Ray ray)
