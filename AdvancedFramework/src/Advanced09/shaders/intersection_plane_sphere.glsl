@@ -49,11 +49,51 @@ IntersectionResult intersectRayPlane(Ray ray, vec4 planeData) {
 IntersectionResult intersectRaySphere(Ray ray, vec4 sphereData) {
     vec3 c = sphereData.xyz;
     float r = sphereData.w;
+    vec3 d = normalize(ray.direction);
+    vec3 o = ray.origin;
+
+    float t;
+
+    // so we need to solve for t in: |dt + o-c|^2 = r^2
+    // after some trafos we get: t = -dot(d, m) +- sqrt(dot(d, m)^2 - |m|^2 + r^2) where m = o - c
+    vec3 m = o - c;
+    float dDotM = dot(d, m);
+    float discriminant = dDotM * dDotM - dot(m, m) + r * r;
+
+    if (discriminant < 0.0) {
+        // no real solution - ray misses sphere
+        return noIntersection;
+    }
+
+    float t1 = -dDotM - sqrt(discriminant);
+    float t2 = -dDotM + sqrt(discriminant);
+
+    // pick the smaller positive t
+    if (t1 > 0.0) {
+        t = t1;
+    } else if (t2 > 0.0) {
+        t = t2;
+    } else {
+        // both intersections are behind the camera
+        return noIntersection;
+    }
+
+    // calculate intersection point with found t
+    vec3 p = d * t + o;
+
+    vec3 n = normalize(p - c); // normal is vec from center to hitpoint
 
     // TODO 9.2 c)
     // Ray-Sphere Intersection
 	// You can use "noIntersection" defined in rt.glsl.
 	// Note that t has to be positive for the sphere to be in front of the camera:
 	// Make sure that you cannot see objects behind the camera.
-    return noIntersection;
+    IntersectionResult result;
+    result.isIntersection = true;
+    result.tHit = t;
+    result.normal = n; 
+    result.hitPosition = p;
+    result.epsilon = EPSILON;
+
+    return result;
 }
