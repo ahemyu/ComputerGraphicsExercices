@@ -183,7 +183,6 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
          */
         constructor(primitives) {
             this.primitives = primitives;
-            console.log(primitives);
 
             // 10.1 a)     Compute the axis-aligned bounding box
             //                  for the object. The box should be defined by 
@@ -457,19 +456,36 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
                     // This node should be an inner node from now on.
                     node.isInner = true;
 
+
                     // 1. Compute the split position (x value for split along x axis,
                     //    y value for split along y axis). 
                     //    You can use the functions sort_along_x() and sort_along_y() 
                     //    in order to get a sorted copy of the objects in the node.
                     //    Use the objects' bounding boxes to determine the right split 
                     //    location, which must be in between the two neighbouring
-                    //    bounding boxes! (midway between [first.min, second.max])
+                    //    bounding boxes! (midway between [first.min, second.max]) //TODO: should this rather be [first.max, second.min]? 
                     //    Keep in mind that for an odd amount of polygons the right/lower
                     //    node (with the higher x/y values) should contain the extra polygon.
+                    // these are objects with: aabb, aabb_primitives, primitives
+                    let midIndex = Math.floor(node.children.length / 2) - 1; //-1 bc we start indexing with 0 ofc
                     if (node.splitAxis == 'x') {
-                        // ...
+                        // we store the aabbs like this: [[x_min, y_min], [x_max, y_max]]
+                        let sorted_x = sort_along_x(node.children);
+                        // then if it is odd, I need to take the middle two bounding boxes for the split
+                        // if it is uneven, the right/lower half should have one more object than the left half
+                        //objects at length//2 (left) and length//2 + 1 (right) (should work fdor odd and even length (?))
+                        let left_obj_x = sorted_x[midIndex].aabb[1][0];
+                        let right_obj_x = sorted_x[midIndex + 1].aabb[0][0];
+
+                        node.splitPosition = (left_obj_x + right_obj_x) / 2;
+
                     } else {
                         // ...
+                        let sorted_y = sort_along_y(node.children);
+                        let left_obj_y = sorted_y[midIndex].aabb[1][1];
+                        let right_obj_y = sorted_y[midIndex + 1].aabb[0][1];
+
+                        node.splitPosition = (left_obj_y + right_obj_y) / 2;
                     }
 
                     // 2. Iterate over the objects in the node and assign them to
