@@ -183,15 +183,43 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
          */
         constructor(primitives) {
             this.primitives = primitives;
+            console.log(primitives);
 
-            // TODO 10.1 a)     Compute the axis-aligned bounding box
+            // 10.1 a)     Compute the axis-aligned bounding box
             //                  for the object. The box should be defined by 
             //                  its bottom left (smallest x- and y-value) and
             //                  its top right corner (highest x- and y-value).
 
             // 1. Compute the axis-aligned bounding box!
             //    Replace the following dummy line.
-            this.aabb = []; // should be in this format: [[min_x, min_y],[max_x, max_y]]
+            let x_min = Infinity;
+            let x_max = -Infinity;
+            let y_min = Infinity;
+            let y_max = -Infinity;
+
+            for(const primitive of primitives){
+               // each primitive is object like this: {
+                //   "p0": [
+                //     187.41520668199882,
+                //     146.4998044539243
+                //   ],
+                //   "p1": [
+                //     185.0347117350691,
+                //     173.34454930832067
+                //   ],
+                //   "color": [
+                //     0.45250727627717424,
+                //     0.5563853605599434,
+                //     0.48690709596124293
+                //   ]
+                // }
+
+                x_min = Math.min(x_min, primitive.p0[0], primitive.p1[0])
+                y_min = Math.min(y_min, primitive.p0[1], primitive.p1[1]);
+                x_max = Math.max(x_max, primitive.p0[0], primitive.p1[0]);
+                y_max = Math.max(y_max, primitive.p0[1], primitive.p1[1]);
+            }
+            this.aabb = [[x_min, y_min], [x_max, y_max]]; // should be in this format: [[min_x, min_y],[max_x, max_y]]
 
 
             // 2. Compute the primitives to graphically represent the
@@ -199,8 +227,24 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
             //    Be careful to pass the line's start and end point as Vecs.
             //    You have to draw the lines counter-clockwise, otherwise the testcases wont work!
             let color = new Vec(0.1, 0.1, 0.1);
-            this.aabb_primitives = [];
+            // counter clockwise means: 
+            //  from (x_min, y_min) to (x_max, y_min)
+            // then from (x_max, y_min) to (x_max, y_max)
+            // then from (x_max, y_max) to (x_min, y_max)
+            // then from (x_min, y_max) to (x_min, y_min)
+            // edit: no it does not bc on canvas y growns downward!
+            // so it should actually be: 
 
+            //  from (x_min, y_min) to (x_min, y_max)
+            // then from (x_min, y_max) to (x_max, y_max)
+            // then from (x_max, y_max) to (x_max, y_min)
+            // then from (x_max, y_min) to (x_min, y_min)
+            this.aabb_primitives = [
+                new Line(new Vec(x_min, y_min), new Vec(x_min, y_max), color), 
+                new Line(new Vec(x_min, y_max), new Vec(x_max, y_max), color), 
+                new Line(new Vec(x_max, y_max), new Vec(x_max, y_min), color), 
+                new Line(new Vec(x_max, y_min), new Vec(x_min, y_min), color), 
+            ];
         }
 
         /**
