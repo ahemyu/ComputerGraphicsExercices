@@ -496,11 +496,21 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
                     let objectsRight = [];
                     for (let i = 0; i < node.children.length; i++) {
                         let obj = node.children[i];
-                        if (node.splitAxis == 'x') {
-                            // ...
-                        } else {
-                            // ...
-                        }
+                        if (node.splitAxis == 'x') {                                                                                                                           
+                            if (obj.aabb[0][0] <= node.splitPosition) {  // x_min is on or left of split                                                                       
+                                objectsLeft.push(obj);                                                                                                                         
+                            }                                                                                                                                                  
+                            if (obj.aabb[1][0] >= node.splitPosition) {  // x_max is on or right of split                                                                      
+                                objectsRight.push(obj);                                                                                                                        
+                            }                                                                                                                                                  
+                        } else {                                                                                                                                               
+                            if (obj.aabb[0][1] <= node.splitPosition) {  // y_min is on or above split                                                                         
+                                objectsLeft.push(obj);                                                                                                                         
+                            }                                                                                                                                                  
+                            if (obj.aabb[1][1] >= node.splitPosition) {  // y_max is on or below split                                                                         
+                                objectsRight.push(obj);                                                                                                                        
+                            }                                                                                                                                                  
+                        }            
                     }
 
                     // 3. Create two new leafs with the appropriate objects, aabb and splitAxis.
