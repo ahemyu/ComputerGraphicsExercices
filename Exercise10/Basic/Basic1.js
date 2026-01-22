@@ -85,25 +85,56 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
          */
         intersect(aabb, context){
             let result = null;
-            // TODO 10.1 c)     Compute the intersection point of this ray with the given
+            // 10.1 c)     Compute the intersection point of this ray with the given
             //                  axis-aligned bounding box if there is one.
 
             // 1. Compute the distance to the entry and exit points for the two (x and y) slabs
             //    and compute both the first exit point and the last entry point.
-            let tminx, tmaxx, tminy, tmaxy = 0;
-            let enter = tminx;
-            let exit = tmaxx;
+            let xmin = aabb[0][0];
+            let xmax = aabb[1][0];
+            let ymin = aabb[0][1];
+            let ymax = aabb[1][1];
 
+            let tminx = (xmin - this.pos.x) / this.dir.x;
+            let tmaxx = (xmax - this.pos.x) / this.dir.x;
+            let tminy = (ymin - this.pos.y) / this.dir.y;
+            let tmaxy = (ymax - this.pos.y) / this.dir.y;
+
+            let enter_x = null;
+            let exit_x = null;
+            let enter_y = null;
+            let exit_y = null;
+
+            if(this.dir.x < 0){
+              //dir.x is negative so we enter from max and leave from min
+              enter_x = tmaxx;
+              exit_x = tminx;
+            }else{
+              enter_x = tminx;
+              exit_x = tmaxx;
+            }
+            if(this.dir.y < 0){
+              //same here
+              enter_y = tmaxy;
+              exit_y= tminy;
+            }else{
+              enter_y = tminy;
+              exit_y = tmaxy;
+            }
+            // to know the enter t we need to take the bigger one of the two (bc then the ray is in both slabs)
+            let enter = Math.max(enter_x, enter_y);
+            // to know the exit t we need to take the smaller one of the two (bc then the ray has left the box already)
+            let exit = Math.min(exit_x, exit_y);
 
             // 2. Check if there is an intersection with the AABB
             //    by making sure the intersections of both slabs
             //    overlaps and the exit point is not behind the ray.
             //    If there is an intersection return a new 
             //    Intersection object containing this ray and the entry distance.
-            if (enter > 0) {
-                // result = ...;
-            }
-
+            // check if slabs overlap and ray is not behind (meaning it does not exit behind eye)
+              if(exit > 0 && exit >= enter){
+                result = new Intersection(this, enter);
+              }
             return result;
         }
     }
@@ -447,7 +478,7 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
             while (stack.length != 0) {
                 let node = stack.pop();
 
-                // TODO 10.1 b)     Build the kd-tree structure by
+                // DO 10.1 b)     Build the kd-tree structure by
                 //                  splitting nodes which contain 
                 //                  too many triangles.
 
@@ -463,7 +494,7 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
                     //    in order to get a sorted copy of the objects in the node.
                     //    Use the objects' bounding boxes to determine the right split 
                     //    location, which must be in between the two neighbouring
-                    //    bounding boxes! (midway between [first.min, second.max]) //TODO: should this rather be [first.max, second.min]? 
+                    //    bounding boxes! (midway between [first.min, second.max]) //should this rather be [first.max, second.min]?: I think so, maybe mistake
                     //    Keep in mind that for an odd amount of polygons the right/lower
                     //    node (with the higher x/y values) should contain the extra polygon.
                     // these are objects with: aabb, aabb_primitives, primitives
@@ -496,20 +527,20 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
                     for (let i = 0; i < node.children.length; i++) {
                         let obj = node.children[i];
                         if (node.splitAxis == 'x') {                
-                            if (obj.aabb[0][0] <= node.splitPosition) {  // x_min is on or left of split                                                                       
-                                objectsLeft.push(obj);                                                                                                                         
-                            }                                                                                                                                                  
+                            if (obj.aabb[0][0] <= node.splitPosition) {  // x_min is on or left of split
+                                objectsLeft.push(obj);
+                            }
                             if (obj.aabb[1][0] >= node.splitPosition) {  // x_max is on or right of split                                                                      
-                                objectsRight.push(obj);                                                                                                                        
-                            }                                                                                                                                                  
-                        } else {                                                                                                                                               
+                              objectsRight.push(obj);
+                            }
+                        } else {
                             if (obj.aabb[0][1] <= node.splitPosition) {  // y_min is on or above split                                                                         
                                 objectsLeft.push(obj);                                                                                                                         
-                            }                                                                                                                                                  
+                            }
                             if (obj.aabb[1][1] >= node.splitPosition) {  // y_max is on or below split                                                                         
                                 objectsRight.push(obj);                                                                                                                        
                             }                                                                                                                                                  
-                        }            
+                        }
                     }
 
                     // 3. Create two new leafs with the appropriate objects, aabb and splitAxis.
