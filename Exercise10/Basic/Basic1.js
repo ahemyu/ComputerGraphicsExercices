@@ -480,7 +480,6 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
                         node.splitPosition = (left_obj_x + right_obj_x) / 2;
 
                     } else {
-                        // ...
                         let sorted_y = sort_along_y(node.children);
                         let left_obj_y = sorted_y[midIndex].aabb[1][1];
                         let right_obj_y = sorted_y[midIndex + 1].aabb[0][1];
@@ -496,7 +495,7 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
                     let objectsRight = [];
                     for (let i = 0; i < node.children.length; i++) {
                         let obj = node.children[i];
-                        if (node.splitAxis == 'x') {                                                                                                                           
+                        if (node.splitAxis == 'x') {                
                             if (obj.aabb[0][0] <= node.splitPosition) {  // x_min is on or left of split                                                                       
                                 objectsLeft.push(obj);                                                                                                                         
                             }                                                                                                                                                  
@@ -518,12 +517,20 @@ export function Basic1(canvas, pRaySource, pRayTarget, pDrawRay, pNumPolygons, p
                     //    the stack for further splitting.
                     let leftChild;
                     let rightChild;
+                    let parentAabb = node.aabb;
                     if (node.splitAxis == 'x') {
-                        // ...
+                        leftChild = new KdNode(false, [parentAabb[0], [node.splitPosition, parentAabb[1][1]]], objectsLeft, 'y', node.splitPosition);
+                        rightChild = new KdNode(false, [[node.splitPosition, parentAabb[0][1]], parentAabb[1]], objectsRight, 'y', node.splitPosition);
+
                     } else {
-                        // ...
+                        leftChild = new KdNode(false, [parentAabb[0], [parentAabb[1][0], node.splitPosition]], objectsLeft, 'x', node.splitPosition);
+                        rightChild = new KdNode(false, [[parentAabb[0][0], node.splitPosition], parentAabb[1]], objectsRight, 'x', node.splitPosition);
                     }
-                    // ...
+                    // first right/lower child for efficiency
+                    stack.push(rightChild);
+                    stack.push(leftChild);
+                    // set the children prop of current node these children
+                    node.children = [leftChild, rightChild];
                 }
             }
         }
