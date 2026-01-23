@@ -72,3 +72,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced09/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced10/cmake_install.cmake")
+endif()
+

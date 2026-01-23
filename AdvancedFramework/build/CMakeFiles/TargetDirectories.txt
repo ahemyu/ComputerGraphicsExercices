@@ -70,3 +70,10 @@
 /home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced09/CMakeFiles/install.dir
 /home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced09/CMakeFiles/install/local.dir
 /home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced09/CMakeFiles/install/strip.dir
+/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced10/CMakeFiles/Advanced10.dir
+/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced10/CMakeFiles/edit_cache.dir
+/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced10/CMakeFiles/rebuild_cache.dir
+/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced10/CMakeFiles/list_install_components.dir
+/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced10/CMakeFiles/install.dir
+/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced10/CMakeFiles/install/local.dir
+/home/ahemyu/projects/uni/ComputerGraphicsExercices/AdvancedFramework/build/src/Advanced10/CMakeFiles/install/strip.dir
