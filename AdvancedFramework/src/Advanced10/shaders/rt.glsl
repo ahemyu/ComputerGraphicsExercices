@@ -65,10 +65,18 @@ layout (location = 0) out vec4 out_color;
 
 float fresnel(float n1, float n2, float cosThetaI)
 {
-    // TODO 10.2 b)
+    //  10.2 b)
     // Compute the reflectance with the fresnel equation.
-    // Handle total internal reflection!
-    return 1;
+    // use sin(x)^2  + cos(x)^2 = 1, bc we get the cos of the angle as input
+    float q = 1 - pow((n1/n2) * sqrt(1 - cosThetaI * cosThetaI), 2);
+    // Handle total internal reflection
+    if (q < 0){
+        return 1;
+    }
+    float rss = (n1 * cosThetaI - n2 * sqrt(q))/(n1 * cosThetaI+ n2 * sqrt(q));
+    float rps = (n1 * sqrt(q) - n2 * cosThetaI)/(n1 * sqrt(q) + n2 * cosThetaI);
+
+    return 1.0/2.0 * (pow(rss, 2) + pow(rps, 2));
 }
 
 
