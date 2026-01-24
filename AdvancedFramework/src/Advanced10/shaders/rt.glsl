@@ -218,15 +218,14 @@ vec3 trace(Ray primaryRay)
             cosTheta = dot(N, -node.ray.direction);
         }
 
-        // TODO 10.2 d)
+        // 10.2 d)
         // Compute the weights R, T, and D
         // Use the function "fresnel".
         // Note: The glass coefficient is stored in the material "m.glass"
 
-        float R = 0;
-        float T = 0;
-        float D = 1;
-
+        float R = node.intensity * fresnel(n1, n2, cosTheta);
+        float T = node.intensity * m.glass * (1.0 - fresnel(n1, n2, cosTheta));
+        float D = node.intensity * (1.0 - m.glass) * (1.0 - fresnel(n1, n2, cosTheta));
 
         // Debugging of the first tree layer
         // Enable a debug mode in the GUI
