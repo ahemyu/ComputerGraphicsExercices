@@ -133,11 +133,8 @@ int intersectRayScene(Ray ray, out IntersectionResult result)
 
 }
 
-
-
 #define MAX_STACK_SIZE 32
 #define INTENSITY_EPSILON 0.001
-
 
 #define push(X) stack[stackSize++] = (X)
 #define pop(X) stack[--stackSize]
@@ -207,8 +204,19 @@ vec3 trace(Ray primaryRay)
         // TODO 10.2 c)
         // - Compute cosTheta
         // - Check for an inner collision and handle it accordingly
-        float cosTheta;
-
+        // get angle by dot product of surface normal and ray.direction
+        float cosTheta = dot(N, -node.ray.direction); //we use -dir bc they point in kinda opposite directions
+        if(cosTheta < 0){
+            //we have an inner collision
+            // swap n1 and n2
+            float temp = n1;
+            n1 = n2;
+            n2 = temp;
+            // flip direction of surface normal
+            N = -N;
+            // recompute cosTheta with new surface normal
+            cosTheta = dot(N, -node.ray.direction);
+        }
 
         // TODO 10.2 d)
         // Compute the weights R, T, and D
