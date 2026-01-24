@@ -153,7 +153,6 @@ vec3 trace(Ray primaryRay)
     int stackSize = 0;
     TraceNode stack[MAX_STACK_SIZE];
 
-    // TODO
     // Push primaryRay to stack
 
     TraceNode primary;
@@ -166,13 +165,12 @@ vec3 trace(Ray primaryRay)
     // Process all nodes on the stack
     while(stackSize > 0)
     {
-        // TODO
         // Pop top node from stack
         TraceNode node;
         TraceNode n = pop(node); //TODO: this seems stupid, why not just assign it to node right away?
         node = n;
 
-        // TODO 10.2 a)
+        // 10.2 a)
         // Already termination
         // - if intensity < INTENSITY_EPSILON
         if(node.intensity < INTENSITY_EPSILON){continue;}
@@ -201,7 +199,7 @@ vec3 trace(Ray primaryRay)
 
         vec3 N = normalize(inter.normal);
 
-        // TODO 10.2 c)
+        // 10.2 c)
         // - Compute cosTheta
         // - Check for an inner collision and handle it accordingly
         // get angle by dot product of surface normal and ray.direction
@@ -238,9 +236,25 @@ vec3 trace(Ray primaryRay)
         if(!refraction){ D += T; T = 0;}
 
         //======= Reflection ========
-        // TODO 10.2 e)
-        // Compute reflected ray.
-        // Create a "TraceNode" and push it on the stack
+        // 10.2 e)
+        //  Compute reflected ray.
+        // Compute the direction of the reflected ray. Use the glsl function reflect.
+        vec3 reflectedDir = reflect(node.ray.direction, N); //TODO: I think this needs to be negative but not sure
+
+        // Compute the origin of the reflection ray (Don't forget to offset by epsilon in the correct direction!).
+        // so isn't the origin of the intersection just literally the hitPoint of the inter?
+        vec3 reflectedOrigin = inter.hitPosition + EPSILON * N; //TODO: Not sure what is meant by "offset with epsilon in "correct" direction"
+        //create reflection ray
+        Ray reflectedRay;
+        reflectedRay.origin = reflectedOrigin;
+        reflectedRay.direction = reflectedDir;
+        // Create a TraceNode object with the correct parameters.
+        TraceNode reflectedNode;
+        reflectedNode.ray = reflectedRay;
+        reflectedNode.intensity = R;
+        reflectedNode.depth = node.depth + 1;
+        // push it on the stack
+        push(reflectedNode);
 
         //======== Refraction ========
         // TODO 10.2 f)
@@ -264,7 +278,7 @@ vec3 trace(Ray primaryRay)
             vec3 spec = 0.3 * pow(max(0.0, dot(v, r)), 40)* vec3(1) ;
             vec3 amb = m.color * 0.1;
 
-            color += ((diff +  spec)*s + amb) * sunIntensity * D * node.intensity;
+            color += ((diff +  spec)*s + amb) * sunIntensity * D;//* node.intensity; //NOTE FOR WHOEVER READS THIS: commenting this out actually lead to my solution looking exactly the same as in the reference screenshot (after subtask e)
 
         }
     }
