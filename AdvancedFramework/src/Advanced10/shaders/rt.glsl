@@ -239,27 +239,45 @@ vec3 trace(Ray primaryRay)
         // 10.2 e)
         //  Compute reflected ray.
         // Compute the direction of the reflected ray. Use the glsl function reflect.
-        vec3 reflectedDir = reflect(node.ray.direction, N); //TODO: I think this needs to be negative but not sure
+        vec3 reflectionDir = reflect(node.ray.direction, N);
 
         // Compute the origin of the reflection ray (Don't forget to offset by epsilon in the correct direction!).
         // so isn't the origin of the intersection just literally the hitPoint of the inter?
-        vec3 reflectedOrigin = inter.hitPosition + EPSILON * N; //TODO: Not sure what is meant by "offset with epsilon in "correct" direction"
+        vec3 reflectionOrigin = inter.hitPosition + EPSILON * N;
         //create reflection ray
-        Ray reflectedRay;
-        reflectedRay.origin = reflectedOrigin;
-        reflectedRay.direction = reflectedDir;
+        Ray reflectionRay;
+        reflectionRay.origin = reflectionOrigin;
+        reflectionRay.direction = reflectionDir;
         // Create a TraceNode object with the correct parameters.
-        TraceNode reflectedNode;
-        reflectedNode.ray = reflectedRay;
-        reflectedNode.intensity = R;
-        reflectedNode.depth = node.depth + 1;
+        TraceNode reflectionNode;
+        reflectionNode.ray = reflectionRay;
+        reflectionNode.intensity = R;
+        reflectionNode.depth = node.depth + 1;
         // push it on the stack
-        push(reflectedNode);
+        push(reflectionNode);
 
         //======== Refraction ========
         // TODO 10.2 f)
-        // Compute refracted ray.
         // Create a "TraceNode" and push it on the stack
+
+        // Compute the direction of the refracted ray. Use the glsl function refract.
+        // Note: refract returns a zero vector in case of total internal reflection.
+        vec3 refractionDir = refract(node.ray.direction, N, n1/n2);
+
+        // Compute the origin of the refracted ray (Don't forget to offset by epsilon in the correct direction!).
+        vec3 refractionOrigin = inter.hitPosition + EPSILON * -N; // -N here bc we want to go cast into other medium
+        // Compute refracted ray.
+        Ray refractionRay;
+        refractionRay.origin = refractionOrigin;
+        refractionRay.direction = refractionDir;
+
+        // Create a TraceNode object with the correct parameters.
+        TraceNode refractionNode;
+        refractionNode.ray = refractionRay;
+        refractionNode.intensity = T;
+        refractionNode.depth = node.depth + 1;
+        // Push the new node to the stack.
+        push(refractionNode);
 
         //======= Diffuse =======
         {
